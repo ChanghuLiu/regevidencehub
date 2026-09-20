@@ -1,0 +1,19 @@
+{
+  "name": "RegEvidenceHub",
+  "description": "Evidence-linked regulatory preflight portfolio for AI agents and automated workflows.",
+  "url": "https://regevidencehub.com/",
+  "capabilities": {
+    "portfolioDiscovery": true,
+    "deterministicDecisionProducts": true,
+    "evidenceLinked": true,
+    "freshnessAware": true,
+    "failClosed": true
+  },
+  "products": [
+    {"name":"UK Taxi PHV Licensing","url":"https://taxi.regevidencehub.com/","mcp":"https://taxi.regevidencehub.com/ai/mcp"},
+    {"name":"CQC Provider Compliance","url":"https://cqc.regevidencehub.com/","mcp":"https://cqc.regevidencehub.com/ai/mcp"},
+    {"name":"UK Premises Licence Preflight","url":"https://premises.regevidencehub.com/","mcp":"https://premises.regevidencehub.com/ai/mcp"},
+    {"name":"England Works Watch","url":"https://works.regevidencehub.com/","mcp":"https://works.regevidencehub.com/ai/mcp"}
+  ],
+  "safety": "Regulatory preflight information only; not legal advice, regulator approval, or a guarantee of compliance."
+}
