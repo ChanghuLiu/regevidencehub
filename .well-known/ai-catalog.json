@@ -15,8 +15,8 @@
       "humanEntry": "https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub",
       "humanAction": "Start a free licensing readiness check; full report price is shown before payment.",
       "humanPayment": "Stripe checkout after readiness",
-      "url": "https://taxi.regevidencehub.com/ai/mcp",
-      "commercialUrl": "https://taxi.regevidencehub.com/mcp",
+      "url": "https://uk-taxi-phv-mcp-production.up.railway.app/ai/mcp",
+      "commercialUrl": "https://uk-taxi-phv-mcp-production.up.railway.app/mcp",
       "agentPayment": "x402"
     },
     {
@@ -27,8 +27,8 @@
       "humanEntry": "https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub",
       "humanAction": "Start a free structured statutory-notification readiness check; qualified cases can continue to a paid report.",
       "humanPayment": "Stripe checkout; price confirmed before payment",
-      "url": "https://cqc.regevidencehub.com/ai/mcp",
-      "commercialUrl": "https://cqc.regevidencehub.com/mcp",
+      "url": "https://cqc-provider-mcp-production.up.railway.app/ai/mcp",
+      "commercialUrl": "https://cqc-provider-mcp-production.up.railway.app/mcp",
       "agentPayment": "x402"
     },
     {
@@ -39,8 +39,8 @@
       "humanEntry": "https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub",
       "humanAction": "Start a structured premises-licensing report workflow; current report offer is confirmed before payment.",
       "humanPayment": "Stripe checkout",
-      "url": "https://premises.regevidencehub.com/ai/mcp",
-      "commercialUrl": "https://premises.regevidencehub.com/mcp",
+      "url": "https://uk-premises-licence-mcp-production.up.railway.app/ai/mcp",
+      "commercialUrl": "https://uk-premises-licence-mcp-production.up.railway.app/mcp",
       "agentPayment": "x402"
     },
     {
@@ -51,8 +51,8 @@
       "humanEntry": "https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub",
       "humanAction": "Start Sponsor Monitoring Report — £49 for repeated access during a 30-day entitlement period, no subscription.",
       "humanPayment": "Stripe checkout",
-      "url": "https://works.regevidencehub.com/ai/mcp",
-      "commercialUrl": "https://works.regevidencehub.com/mcp",
+      "url": "https://england-works-watch-production.up.railway.app/ai/mcp",
+      "commercialUrl": "https://england-works-watch-production.up.railway.app/mcp",
       "agentPayment": "x402"
     }
   ]
