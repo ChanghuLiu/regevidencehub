@@ -187,6 +187,16 @@ code {
   background: var(--accent-soft);
   border-radius: 0 12px 12px 0;
 }
+.install-card { margin-top: 22px; }
+.install-card h2 { margin: 0 0 8px; font-size: clamp(1.65rem, 3vw, 2.25rem); letter-spacing: -.03em; }
+.install-card > p { max-width: 760px; }
+.copy-row { display: flex; align-items: stretch; gap: 10px; margin: 18px 0 22px; }
+.copy-row code { flex: 1; display: flex; align-items: center; min-height: 46px; padding: .65rem .8rem; background: #f7f9fc; }
+.copy-button { min-width: 112px; cursor: pointer; font: inherit; }
+.install-steps { margin: 0; padding-left: 1.25rem; }
+.install-steps li { margin: 7px 0; }
+.test-prompt { margin-top: 18px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: #f7f9fc; }
+.test-prompt strong { display: block; margin-bottom: 6px; }
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); }
 th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -212,5 +222,7 @@ th { background: #f3f6fa; font-size: .9rem; }
   .hero { padding-top: 62px; }
   .grid, .grid-4 { grid-template-columns: 1fr; }
   .endpoint { grid-template-columns: 1fr; }
+  .copy-row { flex-direction: column; }
+  .copy-button { width: 100%; }
   .footer-grid { grid-template-columns: 1fr; }
 }
