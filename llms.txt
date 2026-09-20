@@ -46,6 +46,7 @@ Commercial MCP: https://works.regevidencehub.com/mcp
 
 Evidence model: https://regevidencehub.com/evidence/
 Developer access: https://regevidencehub.com/developers/
+Claude custom connector installation: https://regevidencehub.com/claude.html
 Grok custom connector installation: https://regevidencehub.com/grok.html
 Pricing: https://regevidencehub.com/pricing/
 Support: https://regevidencehub.com/support/
