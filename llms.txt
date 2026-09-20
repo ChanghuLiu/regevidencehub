@@ -1,0 +1,40 @@
+# RegEvidenceHub
+
+Evidence-linked regulatory decisions for AI agents and automated workflows.
+
+RegEvidenceHub is a portfolio of bounded UK regulatory preflight products. Core regulatory checks use deterministic structured rules and evidence controls rather than a server-side LLM decision path. When required evidence is changed, unavailable, conflicting, or insufficient, affected conclusions fail closed to review rather than being guessed.
+
+Products:
+
+1. UK Taxi PHV Licensing
+   Website: https://taxi.regevidencehub.com/
+   AI-safe MCP: https://taxi.regevidencehub.com/ai/mcp
+   Commercial MCP: https://taxi.regevidencehub.com/mcp
+   Scope: taxi and private-hire licensing preflight and cross-authority comparison for supported authorities.
+
+2. CQC Provider Compliance
+   Website: https://cqc.regevidencehub.com/
+   AI-safe MCP: https://cqc.regevidencehub.com/ai/mcp
+   Commercial MCP: https://cqc.regevidencehub.com/mcp
+   Scope: CQC provider registration, readiness, registration changes and statutory notifications in England.
+
+3. UK Premises Licence Preflight
+   Website: https://premises.regevidencehub.com/
+   AI-safe MCP: https://premises.regevidencehub.com/ai/mcp
+   Commercial MCP: https://premises.regevidencehub.com/mcp
+   Scope: Licensing Act 2003 triggers and supported local-authority policy preflight.
+
+4. England Works Watch
+   Website: https://works.regevidencehub.com/
+   AI-safe MCP: https://works.regevidencehub.com/ai/mcp
+   Commercial MCP: https://works.regevidencehub.com/mcp
+   Scope: Skilled Worker sponsor change-impact preflight.
+
+Evidence model: https://regevidencehub.com/evidence/
+Developer access: https://regevidencehub.com/developers/
+Pricing: https://regevidencehub.com/pricing/
+Support: https://regevidencehub.com/support/
+Privacy: https://regevidencehub.com/privacy/
+Terms: https://regevidencehub.com/terms/
+
+Important boundary: regulatory preflight information only. Not legal advice, regulator approval, or a guarantee of compliance.
