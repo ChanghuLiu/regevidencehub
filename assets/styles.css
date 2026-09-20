@@ -155,7 +155,7 @@ code {
 }
 
 .band {
-  margin: 34px 0;
+  margin: 34px auto;
   border: 1px solid #cbd8ee;
   border-radius: 22px;
   padding: 34px;
