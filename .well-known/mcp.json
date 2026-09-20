@@ -1,13 +1,38 @@
 {
   "name": "RegEvidenceHub",
-  "description": "Portfolio directory for RegEvidenceHub remote MCP services.",
+  "description": "Portfolio directory for RegEvidenceHub remote MCP services and human regulatory workflows.",
   "servers": [
-    {"name":"UK Taxi PHV Licensing","transport":"streamable-http","url":"https://taxi.regevidencehub.com/ai/mcp","commercialUrl":"https://taxi.regevidencehub.com/mcp"},
-    {"name":"CQC Provider Compliance","transport":"streamable-http","url":"https://cqc.regevidencehub.com/ai/mcp","commercialUrl":"https://cqc.regevidencehub.com/mcp"},
-    {"name":"UK Premises Licence Preflight","transport":"streamable-http","url":"https://premises.regevidencehub.com/ai/mcp","commercialUrl":"https://premises.regevidencehub.com/mcp"},
-    {"name":"England Works Watch","transport":"streamable-http","url":"https://works.regevidencehub.com/ai/mcp","commercialUrl":"https://works.regevidencehub.com/mcp"}
+    {
+      "name": "UK Taxi PHV Licensing",
+      "transport": "streamable-http",
+      "url": "https://taxi.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://taxi.regevidencehub.com/mcp",
+      "humanEntry": "https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub"
+    },
+    {
+      "name": "CQC Provider Compliance",
+      "transport": "streamable-http",
+      "url": "https://cqc.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://cqc.regevidencehub.com/mcp",
+      "humanEntry": "https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub"
+    },
+    {
+      "name": "UK Premises Licence Preflight",
+      "transport": "streamable-http",
+      "url": "https://premises.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://premises.regevidencehub.com/mcp",
+      "humanEntry": "https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub"
+    },
+    {
+      "name": "England Works Watch",
+      "transport": "streamable-http",
+      "url": "https://works.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://works.regevidencehub.com/mcp",
+      "humanEntry": "https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub"
+    }
   ],
   "links": {
+    "products": "https://regevidencehub.com/products/",
     "developers": "https://regevidencehub.com/developers/",
     "evidence": "https://regevidencehub.com/evidence/",
     "pricing": "https://regevidencehub.com/pricing/",
