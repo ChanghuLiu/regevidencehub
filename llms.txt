@@ -28,19 +28,19 @@ Commercial MCP: https://cqc.regevidencehub.com/mcp
 
 ### 3. UK Premises Licence Preflight
 Scope: Licensing Act 2003 triggers and supported local-authority policy preflight.
-Human workflow: https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub
+Human workflow: https://premises.regevidencehub.com/licensing-report?src=regevidencehub
 Human action: start the structured premises-licensing report workflow; the current report offer is confirmed before payment.
 Brand product URL: https://regevidencehub.com/products/premises.html
-AI-safe MCP: https://uk-premises-licence-mcp-production.up.railway.app/ai/mcp
-Commercial MCP: https://uk-premises-licence-mcp-production.up.railway.app/mcp
+AI-safe MCP: https://premises.regevidencehub.com/ai/mcp
+Commercial MCP: https://premises.regevidencehub.com/mcp
 
 ### 4. England Works Watch
 Scope: Skilled Worker sponsor change-impact preflight and official-source monitoring.
-Human workflow: https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub
+Human workflow: https://works.regevidencehub.com/monitoring-report?src=regevidencehub
 Human action: start Sponsor Monitoring Report; current published human/business offer is £49 for repeated access during a 30-day entitlement period, no subscription.
 Brand product URL: https://regevidencehub.com/products/works.html
-AI-safe MCP: https://england-works-watch-production.up.railway.app/ai/mcp
-Commercial MCP: https://england-works-watch-production.up.railway.app/mcp
+AI-safe MCP: https://works.regevidencehub.com/ai/mcp
+Commercial MCP: https://works.regevidencehub.com/mcp
 
 ## Portfolio pages
 
