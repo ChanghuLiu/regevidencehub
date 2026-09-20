@@ -18,28 +18,28 @@
   "products": [
     {
       "name": "UK Taxi PHV Licensing",
-      "url": "https://taxi.regevidencehub.com/",
+      "url": "https://regevidencehub.com/products/taxi.html",
       "humanEntry": "https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub",
       "humanAction": "Start a free licensing readiness check",
       "mcp": "https://uk-taxi-phv-mcp-production.up.railway.app/ai/mcp"
     },
     {
       "name": "CQC Provider Compliance",
-      "url": "https://cqc.regevidencehub.com/",
+      "url": "https://regevidencehub.com/products/cqc.html",
       "humanEntry": "https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub",
       "humanAction": "Start a free statutory-notification readiness check",
       "mcp": "https://cqc-provider-mcp-production.up.railway.app/ai/mcp"
     },
     {
       "name": "UK Premises Licence Preflight",
-      "url": "https://premises.regevidencehub.com/",
+      "url": "https://regevidencehub.com/products/premises.html",
       "humanEntry": "https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub",
       "humanAction": "Start a structured premises-licensing report",
       "mcp": "https://uk-premises-licence-mcp-production.up.railway.app/ai/mcp"
     },
     {
       "name": "England Works Watch",
-      "url": "https://works.regevidencehub.com/",
+      "url": "https://regevidencehub.com/products/works.html",
       "humanEntry": "https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub",
       "humanAction": "Start sponsor monitoring",
       "mcp": "https://england-works-watch-production.up.railway.app/ai/mcp"
