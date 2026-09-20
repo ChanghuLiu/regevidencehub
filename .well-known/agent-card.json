@@ -19,16 +19,16 @@
     {
       "name": "UK Taxi PHV Licensing",
       "url": "https://regevidencehub.com/products/taxi.html",
-      "humanEntry": "https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub",
+      "humanEntry": "https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub",
       "humanAction": "Start a free licensing readiness check",
-      "mcp": "https://uk-taxi-phv-mcp-production.up.railway.app/ai/mcp"
+      "mcp": "https://taxi.regevidencehub.com/ai/mcp"
     },
     {
       "name": "CQC Provider Compliance",
       "url": "https://regevidencehub.com/products/cqc.html",
-      "humanEntry": "https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub",
+      "humanEntry": "https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub",
       "humanAction": "Start a free statutory-notification readiness check",
-      "mcp": "https://cqc-provider-mcp-production.up.railway.app/ai/mcp"
+      "mcp": "https://cqc.regevidencehub.com/ai/mcp"
     },
     {
       "name": "UK Premises Licence Preflight",
