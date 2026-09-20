@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Add RegEvidenceHub to Claude</title>
+  <meta name="description" content="Install RegEvidenceHub's four evidence-linked UK regulatory MCP connectors in Claude using branded HTTPS endpoints.">
+  <link rel="canonical" href="https://regevidencehub.com/claude.html">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Claude connectors</span>
+      <h1>Add RegEvidenceHub to Claude</h1>
+      <p>Install any of the four public, payment-free regulatory navigation and preflight connectors as Claude custom connectors using their branded HTTPS MCP endpoints.</p>
+      <div class="callout"><strong>Current Claude distribution:</strong> these remote MCP endpoints can be added as custom connectors. Public Connectors Directory publication is a separate Anthropic review process.</div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Install on an individual Claude account</h2>
+      <ol class="install-steps">
+        <li>Open <strong>Customize → Connectors</strong>.</li>
+        <li>Select <strong>+</strong>, then <strong>Add custom connector</strong>.</li>
+        <li>Enter the suggested connector name below and paste its Server URL.</li>
+        <li>Add the connector, enable it for a conversation, and run the first test prompt.</li>
+      </ol>
+      <p class="section-intro">Claude supports remote custom connectors on Free, Pro, Max, Team, and Enterprise plans. Free accounts are limited to one custom connector.</p>
+
+      <div class="grid">
+        <article class="card install-card">
+          <span class="kicker">Taxi & private hire</span>
+          <h3>RegEvidenceHub — UK Taxi PHV</h3>
+          <div class="copy-row"><code>https://taxi.regevidencehub.com/ai/mcp</code><button class="button copy-button" type="button" data-copy="https://taxi.regevidencehub.com/ai/mcp">Copy URL</button></div>
+          <div class="test-prompt"><strong>First test</strong>List supported authorities, then run a Birmingham preflight for an applicant aged 27 who has held a driving licence for exactly two years.</div>
+          <p><a class="text-link" href="/products/taxi.html">Taxi product details →</a></p>
+        </article>
+
+        <article class="card install-card">
+          <span class="kicker">Health & social care</span>
+          <h3>RegEvidenceHub — CQC Compliance</h3>
+          <div class="copy-row"><code>https://cqc.regevidencehub.com/ai/mcp</code><button class="button copy-button" type="button" data-copy="https://cqc.regevidencehub.com/ai/mcp">Copy URL</button></div>
+          <div class="test-prompt"><strong>First test</strong>Choose the right workflow for an already-registered provider that wants to add a new regulated activity, then list the facts needed.</div>
+          <p><a class="text-link" href="/products/cqc.html">CQC product details →</a></p>
+        </article>
+
+        <article class="card install-card">
+          <span class="kicker">Licensing Act 2003</span>
+          <h3>RegEvidenceHub — UK Premises Licensing</h3>
+          <div class="copy-row"><code>https://premises.regevidencehub.com/ai/mcp</code><button class="button copy-button" type="button" data-copy="https://premises.regevidencehub.com/ai/mcp">Copy URL</button></div>
+          <div class="test-prompt"><strong>First test</strong>Check whether Westminster City Council is supported, then list the starting facts for on-premises alcohol sales.</div>
+          <p><a class="text-link" href="/products/premises.html">Premises product details →</a></p>
+        </article>
+
+        <article class="card install-card">
+          <span class="kicker">Sponsor compliance</span>
+          <h3>RegEvidenceHub — UK Sponsor Change</h3>
+          <div class="copy-row"><code>https://works.regevidencehub.com/ai/mcp</code><button class="button copy-button" type="button" data-copy="https://works.regevidencehub.com/ai/mcp">Copy URL</button></div>
+          <div class="test-prompt"><strong>First test</strong>Assess a permanent Skilled Worker salary decrease with role and work location unchanged. Do not assume whether the same salary option remains met.</div>
+          <p><a class="text-link" href="/products/works.html">Sponsor product details →</a></p>
+        </article>
+      </div>
+
+      <div class="callout"><strong>Team and Enterprise:</strong> an organization Owner or Primary Owner adds a custom web connector from Organization settings → Connectors. Directory publication also requires Team or Enterprise organization access.</div>
+      <div class="callout"><strong>Safety boundary:</strong> use only facts you provide. These public AI-safe surfaces are read-only and do not expose checkout, x402 payment, or paid commercial tool flows.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Evidence-linked regulatory preflight for people, businesses and AI agents.</p></div><div class="footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a></div><div class="footer-links"><strong>Company</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></div><div class="container footer-note">RegEvidenceHub provides regulatory preflight and workflow support. It is not legal advice, regulator approval, or a guarantee of compliance.</div></footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
