@@ -19,16 +19,16 @@
     {
       "name": "UK Premises Licence Preflight",
       "transport": "streamable-http",
-      "url": "https://uk-premises-licence-mcp-production.up.railway.app/ai/mcp",
-      "commercialUrl": "https://uk-premises-licence-mcp-production.up.railway.app/mcp",
-      "humanEntry": "https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub"
+      "url": "https://premises.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://premises.regevidencehub.com/mcp",
+      "humanEntry": "https://premises.regevidencehub.com/licensing-report?src=regevidencehub"
     },
     {
       "name": "England Works Watch",
       "transport": "streamable-http",
-      "url": "https://england-works-watch-production.up.railway.app/ai/mcp",
-      "commercialUrl": "https://england-works-watch-production.up.railway.app/mcp",
-      "humanEntry": "https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub"
+      "url": "https://works.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://works.regevidencehub.com/mcp",
+      "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub"
     }
   ],
   "links": {
