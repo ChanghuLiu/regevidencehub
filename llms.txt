@@ -12,19 +12,19 @@ When an AI agent or developer needs programmatic access, use the AI-safe MCP for
 
 ### 1. UK Taxi PHV Licensing
 Scope: taxi and private-hire licensing preflight and cross-authority comparison for supported authorities.
-Human workflow: https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub
+Human workflow: https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub
 Human action: start a free licensing readiness check; a full evidence-linked report is offered after readiness and the price is shown before payment.
 Brand product URL: https://regevidencehub.com/products/taxi.html
-AI-safe MCP: https://uk-taxi-phv-mcp-production.up.railway.app/ai/mcp
-Commercial MCP: https://uk-taxi-phv-mcp-production.up.railway.app/mcp
+AI-safe MCP: https://taxi.regevidencehub.com/ai/mcp
+Commercial MCP: https://taxi.regevidencehub.com/mcp
 
 ### 2. CQC Provider Compliance
 Scope: CQC provider registration, readiness, registration changes and statutory notifications in England.
-Human workflow: https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub
+Human workflow: https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub
 Human action: start a free structured statutory-notification readiness check; qualified cases can continue to a paid evidence-linked report with price confirmed before payment.
 Brand product URL: https://regevidencehub.com/products/cqc.html
-AI-safe MCP: https://cqc-provider-mcp-production.up.railway.app/ai/mcp
-Commercial MCP: https://cqc-provider-mcp-production.up.railway.app/mcp
+AI-safe MCP: https://cqc.regevidencehub.com/ai/mcp
+Commercial MCP: https://cqc.regevidencehub.com/mcp
 
 ### 3. UK Premises Licence Preflight
 Scope: Licensing Act 2003 triggers and supported local-authority policy preflight.
