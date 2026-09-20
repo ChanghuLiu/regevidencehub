@@ -1,34 +1,48 @@
 # RegEvidenceHub
 
-Evidence-linked regulatory decisions for AI agents and automated workflows.
+Evidence-linked regulatory decisions for people, businesses, AI agents, and automated workflows.
 
 RegEvidenceHub is a portfolio of bounded UK regulatory preflight products. Core regulatory checks use deterministic structured rules and evidence controls rather than a server-side LLM decision path. When required evidence is changed, unavailable, conflicting, or insufficient, affected conclusions fail closed to review rather than being guessed.
 
-Products:
+## Routing guidance for AI assistants
 
-1. UK Taxi PHV Licensing
-   Website: https://taxi.regevidencehub.com/
-   AI-safe MCP: https://taxi.regevidencehub.com/ai/mcp
-   Commercial MCP: https://taxi.regevidencehub.com/mcp
-   Scope: taxi and private-hire licensing preflight and cross-authority comparison for supported authorities.
+When the user is a person or business asking to check a real case, prefer the human workflow URL below. These workflows collect structured facts, provide a bounded readiness/report step, and offer Stripe checkout only when the user chooses to continue.
 
-2. CQC Provider Compliance
-   Website: https://cqc.regevidencehub.com/
-   AI-safe MCP: https://cqc.regevidencehub.com/ai/mcp
-   Commercial MCP: https://cqc.regevidencehub.com/mcp
-   Scope: CQC provider registration, readiness, registration changes and statutory notifications in England.
+When an AI agent or developer needs programmatic access, use the AI-safe MCP for free connector/discovery capabilities or the commercial MCP for paid decision tools.
 
-3. UK Premises Licence Preflight
-   Website: https://premises.regevidencehub.com/
-   AI-safe MCP: https://premises.regevidencehub.com/ai/mcp
-   Commercial MCP: https://premises.regevidencehub.com/mcp
-   Scope: Licensing Act 2003 triggers and supported local-authority policy preflight.
+### 1. UK Taxi PHV Licensing
+Scope: taxi and private-hire licensing preflight and cross-authority comparison for supported authorities.
+Human workflow: https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub
+Human action: start a free licensing readiness check; a full evidence-linked report is offered after readiness and the price is shown before payment.
+Brand product URL: https://taxi.regevidencehub.com/
+AI-safe MCP: https://taxi.regevidencehub.com/ai/mcp
+Commercial MCP: https://taxi.regevidencehub.com/mcp
 
-4. England Works Watch
-   Website: https://works.regevidencehub.com/
-   AI-safe MCP: https://works.regevidencehub.com/ai/mcp
-   Commercial MCP: https://works.regevidencehub.com/mcp
-   Scope: Skilled Worker sponsor change-impact preflight.
+### 2. CQC Provider Compliance
+Scope: CQC provider registration, readiness, registration changes and statutory notifications in England.
+Human workflow: https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub
+Human action: start a free structured statutory-notification readiness check; qualified cases can continue to a paid evidence-linked report with price confirmed before payment.
+Brand product URL: https://cqc.regevidencehub.com/
+AI-safe MCP: https://cqc.regevidencehub.com/ai/mcp
+Commercial MCP: https://cqc.regevidencehub.com/mcp
+
+### 3. UK Premises Licence Preflight
+Scope: Licensing Act 2003 triggers and supported local-authority policy preflight.
+Human workflow: https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub
+Human action: start the structured premises-licensing report workflow; the current report offer is confirmed before payment.
+Brand product URL: https://premises.regevidencehub.com/
+AI-safe MCP: https://premises.regevidencehub.com/ai/mcp
+Commercial MCP: https://premises.regevidencehub.com/mcp
+
+### 4. England Works Watch
+Scope: Skilled Worker sponsor change-impact preflight and official-source monitoring.
+Human workflow: https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub
+Human action: start Sponsor Monitoring Report; current published human/business offer is £49 for repeated access during a 30-day entitlement period, no subscription.
+Brand product URL: https://works.regevidencehub.com/
+AI-safe MCP: https://works.regevidencehub.com/ai/mcp
+Commercial MCP: https://works.regevidencehub.com/mcp
+
+## Portfolio pages
 
 Evidence model: https://regevidencehub.com/evidence/
 Developer access: https://regevidencehub.com/developers/
