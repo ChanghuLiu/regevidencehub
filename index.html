@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RegEvidenceHub — Evidence-linked regulatory decisions for AI agents</title>
+  <meta name="description" content="Evidence-linked UK regulatory preflight for AI agents and automated workflows, with structured decisions, source provenance, freshness monitoring, and fail-closed handling.">
+  <link rel="canonical" href="https://regevidencehub.com/">
+  <meta property="og:title" content="RegEvidenceHub">
+  <meta property="og:description" content="Evidence-linked regulatory decisions for AI agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://regevidencehub.com/">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/support/">Support</a><a class="button" href="/developers/#connect">Connect with MCP</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Regulatory infrastructure for AI</span>
+      <h1>Evidence-linked regulatory decisions for AI agents</h1>
+      <p>Turn fragmented UK regulatory guidance into structured preflight checks, comparisons, and change-impact decisions — with official-source links, freshness monitoring, and fail-closed handling when evidence is incomplete or conflicting.</p>
+      <div class="hero-actions"><a class="button" href="/products/">Explore products</a><a class="button secondary" href="/developers/#connect">Connect via MCP</a></div>
+      <div class="hero-panel"><strong>Designed for trustworthy automation.</strong> Core decision logic is deterministic and evidence-bounded. When current evidence cannot safely support a conclusion, the system reports review or missing information instead of guessing.</div>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="container">
+      <span class="eyebrow">Products</span>
+      <h2>Four focused regulatory products</h2>
+      <p class="section-intro">Each product has its own bounded scope, evidence model, MCP interfaces, and commercial decision surface.</p>
+      <div class="grid">
+        <article class="card"><span class="kicker">Taxi & private hire</span><h3>UK Taxi PHV Licensing</h3><p>Check taxi and private-hire licensing requirements across supported authorities. Run applicant preflight checks, compare authorities, and inspect the evidence behind the result.</p><a class="text-link" href="/products/taxi.html">Explore Taxi Licensing →</a></article>
+        <article class="card"><span class="kicker">Health & social care</span><h3>CQC Provider Compliance</h3><p>Evidence-linked preflight for CQC registration, regulated activities, application readiness, provider changes, and statutory notifications in England.</p><a class="text-link" href="/products/cqc.html">Explore CQC Compliance →</a></article>
+        <article class="card"><span class="kicker">Licensing Act 2003</span><h3>UK Premises Licence Preflight</h3><p>Assess licensing triggers, local-policy signals, missing facts, and cross-authority differences before a premises-licence application.</p><a class="text-link" href="/products/premises.html">Explore Premises Licensing →</a></article>
+        <article class="card"><span class="kicker">Sponsor compliance</span><h3>England Works Watch</h3><p>Check how salary, role, work-location, absence, sponsorship, TUPE, merger, and other changes affect Skilled Worker sponsor duties.</p><a class="text-link" href="/products/works.html">Explore Sponsor Compliance →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Why RegEvidenceHub</span>
+      <h2>From regulatory pages to decision-ready evidence</h2>
+      <p class="section-intro">Regulatory information is often spread across national guidance, council policy pages, PDFs, application guidance, and changing source material. RegEvidenceHub converts reviewed rules into structured decision logic while preserving the evidence boundary behind each result.</p>
+      <div class="grid-4">
+        <div class="card"><h3>Evidence-linked</h3><p>Results retain relevant source provenance instead of returning unsupported conclusions.</p></div>
+        <div class="card"><h3>Deterministic</h3><p>Core regulatory checks use structured rules rather than asking a language model to invent an answer.</p></div>
+        <div class="card"><h3>Freshness-aware</h3><p>Decision-bearing sources are monitored for change, availability, and unresolved conflicts.</p></div>
+        <div class="card"><h3>Fail closed</h3><p>When evidence cannot safely support a conclusion, the result is withheld or routed to review.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">How it works</span>
+      <h2>Built for agents and automated workflows</h2>
+      <div class="grid-4">
+        <div class="card step"><span class="step-num">1</span><h3>Supply facts</h3><p>The agent or workflow provides structured facts relevant to the regulatory question.</p></div>
+        <div class="card step"><span class="step-num">2</span><h3>Select rules</h3><p>The product applies the relevant reviewed regulatory rules for its bounded scope.</p></div>
+        <div class="card step"><span class="step-num">3</span><h3>Check evidence</h3><p>Source status and evidence dependencies are evaluated before a decision is relied on.</p></div>
+        <div class="card step"><span class="step-num">4</span><h3>Return a result</h3><p>The service returns a structured result, evidence context, and next action or review state.</p></div>
+      </div>
+      <div class="callout"><strong>The deterministic decision path does not require a server-side LLM.</strong></div>
+    </div>
+  </section>
+
+  <section class="section" id="connect">
+    <div class="container band">
+      <span class="eyebrow">MCP</span>
+      <h2>One portfolio, four AI connector surfaces</h2>
+      <p class="section-intro">RegEvidenceHub products expose remote MCP interfaces for AI assistants, agents, and workflow automation. AI-safe connector surfaces are separated from commercial MCP endpoints; available tools differ by product.</p>
+      <div class="endpoint"><strong>Taxi</strong><code>https://taxi.regevidencehub.com/ai/mcp</code></div>
+      <div class="endpoint"><strong>CQC</strong><code>https://cqc.regevidencehub.com/ai/mcp</code></div>
+      <div class="endpoint"><strong>Premises</strong><code>https://premises.regevidencehub.com/ai/mcp</code></div>
+      <div class="endpoint"><strong>Sponsor compliance</strong><code>https://works.regevidencehub.com/ai/mcp</code></div>
+      <p><a class="button" href="/developers/">Developer access</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Production automation</span>
+      <h2>Commercial decision endpoints stay separate</h2>
+      <p class="section-intro">Commercial MCP endpoints support higher-value regulatory decision workflows, automation, comparison, batch processing, and usage-based access where applicable. Pricing and decision capabilities are published by each product.</p>
+      <a class="button secondary" href="/pricing/">View pricing</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Evidence-linked regulatory preflight for AI agents and automated workflows.</p></div><div class="footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a></div><div class="footer-links"><strong>Company</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://github.com/ChanghuLiu">GitHub</a></div></div><div class="container footer-note">RegEvidenceHub provides regulatory preflight and workflow support. It is not legal advice, regulator approval, or a guarantee of compliance.</div></footer>
+</body>
+</html>
