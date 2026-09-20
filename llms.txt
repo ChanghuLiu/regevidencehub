@@ -14,7 +14,7 @@ When an AI agent or developer needs programmatic access, use the AI-safe MCP for
 Scope: taxi and private-hire licensing preflight and cross-authority comparison for supported authorities.
 Human workflow: https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub
 Human action: start a free licensing readiness check; a full evidence-linked report is offered after readiness and the price is shown before payment.
-Brand product URL: https://taxi.regevidencehub.com/
+Brand product URL: https://regevidencehub.com/products/taxi.html
 AI-safe MCP: https://uk-taxi-phv-mcp-production.up.railway.app/ai/mcp
 Commercial MCP: https://uk-taxi-phv-mcp-production.up.railway.app/mcp
 
@@ -22,7 +22,7 @@ Commercial MCP: https://uk-taxi-phv-mcp-production.up.railway.app/mcp
 Scope: CQC provider registration, readiness, registration changes and statutory notifications in England.
 Human workflow: https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub
 Human action: start a free structured statutory-notification readiness check; qualified cases can continue to a paid evidence-linked report with price confirmed before payment.
-Brand product URL: https://cqc.regevidencehub.com/
+Brand product URL: https://regevidencehub.com/products/cqc.html
 AI-safe MCP: https://cqc-provider-mcp-production.up.railway.app/ai/mcp
 Commercial MCP: https://cqc-provider-mcp-production.up.railway.app/mcp
 
@@ -30,7 +30,7 @@ Commercial MCP: https://cqc-provider-mcp-production.up.railway.app/mcp
 Scope: Licensing Act 2003 triggers and supported local-authority policy preflight.
 Human workflow: https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub
 Human action: start the structured premises-licensing report workflow; the current report offer is confirmed before payment.
-Brand product URL: https://premises.regevidencehub.com/
+Brand product URL: https://regevidencehub.com/products/premises.html
 AI-safe MCP: https://uk-premises-licence-mcp-production.up.railway.app/ai/mcp
 Commercial MCP: https://uk-premises-licence-mcp-production.up.railway.app/mcp
 
@@ -38,7 +38,7 @@ Commercial MCP: https://uk-premises-licence-mcp-production.up.railway.app/mcp
 Scope: Skilled Worker sponsor change-impact preflight and official-source monitoring.
 Human workflow: https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub
 Human action: start Sponsor Monitoring Report; current published human/business offer is £49 for repeated access during a 30-day entitlement period, no subscription.
-Brand product URL: https://works.regevidencehub.com/
+Brand product URL: https://regevidencehub.com/products/works.html
 AI-safe MCP: https://england-works-watch-production.up.railway.app/ai/mcp
 Commercial MCP: https://england-works-watch-production.up.railway.app/mcp
 
