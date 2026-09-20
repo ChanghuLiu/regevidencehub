@@ -1,11 +1,59 @@
 {
-  "specVersion": "1.0",
+  "specVersion": "1.1",
   "name": "RegEvidenceHub",
-  "description": "Evidence-linked regulatory preflight products for AI agents and automated workflows.",
+  "description": "Evidence-linked regulatory preflight products for people, businesses, AI agents and automated workflows.",
+  "routing": {
+    "human": "Use humanEntry for a person or business checking a real case. Human flows use Stripe checkout when the user chooses a paid report or monitoring offer.",
+    "agent": "Use url for AI-safe connector/discovery capabilities. Use commercialUrl for paid MCP decisions."
+  },
   "entries": [
-    {"name":"UK Taxi PHV Licensing","type":"mcp","transport":"streamable-http","url":"https://taxi.regevidencehub.com/ai/mcp","commercialUrl":"https://taxi.regevidencehub.com/mcp"},
-    {"name":"CQC Provider Compliance","type":"mcp","transport":"streamable-http","url":"https://cqc.regevidencehub.com/ai/mcp","commercialUrl":"https://cqc.regevidencehub.com/mcp"},
-    {"name":"UK Premises Licence Preflight","type":"mcp","transport":"streamable-http","url":"https://premises.regevidencehub.com/ai/mcp","commercialUrl":"https://premises.regevidencehub.com/mcp"},
-    {"name":"England Works Watch","type":"mcp","transport":"streamable-http","url":"https://works.regevidencehub.com/ai/mcp","commercialUrl":"https://works.regevidencehub.com/mcp"}
+    {
+      "name": "UK Taxi PHV Licensing",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://taxi.regevidencehub.com/",
+      "humanEntry": "https://uk-taxi-phv-mcp-production.up.railway.app/licensing-preflight?src=regevidencehub",
+      "humanAction": "Start a free licensing readiness check; full report price is shown before payment.",
+      "humanPayment": "Stripe checkout after readiness",
+      "url": "https://taxi.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://taxi.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "CQC Provider Compliance",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://cqc.regevidencehub.com/",
+      "humanEntry": "https://cqc-provider-mcp-production.up.railway.app/statutory-notification-check?src=regevidencehub",
+      "humanAction": "Start a free structured statutory-notification readiness check; qualified cases can continue to a paid report.",
+      "humanPayment": "Stripe checkout; price confirmed before payment",
+      "url": "https://cqc.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://cqc.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "UK Premises Licence Preflight",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://premises.regevidencehub.com/",
+      "humanEntry": "https://uk-premises-licence-mcp-production.up.railway.app/licensing-report?src=regevidencehub",
+      "humanAction": "Start a structured premises-licensing report workflow; current report offer is confirmed before payment.",
+      "humanPayment": "Stripe checkout",
+      "url": "https://premises.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://premises.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "England Works Watch",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://works.regevidencehub.com/",
+      "humanEntry": "https://england-works-watch-production.up.railway.app/monitoring-report?src=regevidencehub",
+      "humanAction": "Start Sponsor Monitoring Report — £49 for repeated access during a 30-day entitlement period, no subscription.",
+      "humanPayment": "Stripe checkout",
+      "url": "https://works.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://works.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    }
   ]
 }
