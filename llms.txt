@@ -42,6 +42,13 @@ Brand product URL: https://regevidencehub.com/products/works.html
 AI-safe MCP: https://works.regevidencehub.com/ai/mcp
 Commercial MCP: https://works.regevidencehub.com/mcp
 
+### 5. England Waste Compliance
+Scope: England waste regulatory route selection, carrier/broker/dealer registration lifecycle, Digital Waste Tracking receiving-site readiness and permit-change impact.
+Service: https://waste.regevidencehub.com/?src=regevidencehub
+Brand product URL: https://regevidencehub.com/products/waste.html
+AI-safe MCP: https://waste.regevidencehub.com/ai/mcp
+Commercial MCP: https://waste.regevidencehub.com/mcp
+
 ## Portfolio pages
 
 Evidence model: https://regevidencehub.com/evidence/
