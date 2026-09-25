@@ -29,6 +29,13 @@
       "url": "https://works.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://works.regevidencehub.com/mcp",
       "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub"
+    },
+    {
+      "name": "RegEvidenceHub Waste",
+      "transport": "streamable-http",
+      "url": "https://waste.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://waste.regevidencehub.com/mcp",
+      "humanEntry": "https://regevidencehub.com/products/waste.html"
     }
   ],
   "links": {
