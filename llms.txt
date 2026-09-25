@@ -35,9 +35,9 @@ AI-safe MCP: https://premises.regevidencehub.com/ai/mcp
 Commercial MCP: https://premises.regevidencehub.com/mcp
 
 ### 4. England Works Watch
-Scope: Skilled Worker sponsor change-impact preflight and official-source monitoring.
+Scope: Skilled Worker sponsor change-impact preflight and dated official-source decision evidence.
 Human workflow: https://works.regevidencehub.com/monitoring-report?src=regevidencehub
-Human action: start Sponsor Monitoring Report; current published human/business offer is £49 for repeated access during a 30-day entitlement period, no subscription.
+Human action: create a Sponsor Decision Evidence Check before a sponsor decision; current published human/business offer is £49 for a dated GOV.UK evidence checkpoint plus private re-check access to the same evidence for 30 days, no subscription or alerts.
 Brand product URL: https://regevidencehub.com/products/works.html
 AI-safe MCP: https://works.regevidencehub.com/ai/mcp
 Commercial MCP: https://works.regevidencehub.com/mcp
