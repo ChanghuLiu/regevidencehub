@@ -49,10 +49,22 @@
       "transport": "streamable-http",
       "brandUrl": "https://regevidencehub.com/products/works.html",
       "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub",
-      "humanAction": "Start Sponsor Monitoring Report — £49 for repeated access during a 30-day entitlement period, no subscription.",
+      "humanAction": "Create a Sponsor Decision Evidence Check — £49 for a dated GOV.UK evidence checkpoint plus 30-day private re-check access; no subscription or alerts.",
       "humanPayment": "Stripe checkout",
       "url": "https://works.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://works.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "RegEvidenceHub Waste",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://regevidencehub.com/products/waste.html",
+      "humanEntry": "https://regevidencehub.com/products/waste.html",
+      "humanAction": "No standalone Stripe report workflow; choose AI-safe connector or commercial MCP access.",
+      "humanPayment": "No standalone Stripe report workflow",
+      "url": "https://waste.regevidencehub.com/ai/mcp",
+      "commercialUrl": "https://waste.regevidencehub.com/mcp",
       "agentPayment": "x402"
     }
   ]
