@@ -42,6 +42,15 @@ Brand product URL: https://regevidencehub.com/products/works.html
 AI-safe MCP: https://works.regevidencehub.com/ai/mcp
 Commercial MCP: https://works.regevidencehub.com/mcp
 
+### 5. RegEvidenceHub Waste
+Scope: England waste-rule preflight for controlled-waste routes, waste carrier/broker/dealer registration, Digital Waste Tracking readiness, receiving-site duties, and permit-change questions.
+Human workflow: no standalone Stripe report workflow at this time; use the product page to choose AI-safe connector or commercial MCP access.
+Brand product URL: https://regevidencehub.com/products/waste.html
+AI-safe MCP: https://waste.regevidencehub.com/ai/mcp
+Commercial MCP: https://waste.regevidencehub.com/mcp
+Commercial prices: waste_rule_preflight $0.02 USDC; waste_carrier_broker_dealer_preflight $0.02; waste_digital_tracking_readiness $0.03; waste_permit_change_preflight $0.03.
+Boundary: do not infer hazardous status or waste codes from insufficient facts; no permit/registration issuance or filing submission.
+
 ## Portfolio pages
 
 Evidence model: https://regevidencehub.com/evidence/
