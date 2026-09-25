@@ -41,8 +41,15 @@
       "name": "England Works Watch",
       "url": "https://regevidencehub.com/products/works.html",
       "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub",
-      "humanAction": "Start sponsor monitoring",
+      "humanAction": "Create a Sponsor Decision Evidence Check — £49 for a dated GOV.UK evidence checkpoint plus 30-day private re-check access; no subscription or alerts.",
       "mcp": "https://works.regevidencehub.com/ai/mcp"
+    },
+    {
+      "name": "RegEvidenceHub Waste",
+      "url": "https://regevidencehub.com/products/waste.html",
+      "humanEntry": "https://regevidencehub.com/products/waste.html",
+      "humanAction": "Choose AI-safe connector or commercial MCP access; no standalone Stripe report workflow at this time.",
+      "mcp": "https://waste.regevidencehub.com/ai/mcp"
     }
   ],
   "safety": "Regulatory preflight information only; not legal advice, regulator approval, or a guarantee of compliance."
