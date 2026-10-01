@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Add RegEvidenceHub to Claude</title>
-  <meta name="description" content="Install RegEvidenceHub's five evidence-linked UK regulatory MCP connectors in Claude using branded HTTPS endpoints.">
+  <meta name="description" content="Connect Claude to eight RegEvidenceHub regulatory and technical-evidence services using branded HTTPS MCP endpoints.">
   <link rel="canonical" href="https://regevidencehub.com/claude.html">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
@@ -22,7 +22,7 @@
     <div class="container">
       <span class="eyebrow">Claude connectors</span>
       <h1>Add RegEvidenceHub to Claude</h1>
-      <p>Install any of the five public, payment-free regulatory navigation and preflight connectors as Claude custom connectors using their branded HTTPS MCP endpoints.</p>
+      <p>Connect Claude to regulatory navigation and technical-evidence tools using the branded Server URLs below. The five regulatory connectors are payment-free; technical audit services have separate access and payment boundaries.</p>
       <div class="callout"><strong>Current Claude distribution:</strong> these remote MCP endpoints can be added as custom connectors. Public Connectors Directory publication is a separate Anthropic review process.</div>
     </div>
   </section>
@@ -79,8 +79,36 @@
         </article>
       </div>
 
-      <div class="callout"><strong>Team and Enterprise:</strong> an organization Owner or Primary Owner adds a custom web connector from Organization settings → Connectors. Directory publication also requires Team or Enterprise organization access.</div>
-      <div class="callout"><strong>Safety boundary:</strong> use only facts you provide. These public AI-safe surfaces are read-only and do not expose checkout, x402 payment, or paid commercial tool flows.</div>
+      <div class="callout"><strong>Public directory:</strong> adding a custom connector does not publish it in Anthropic’s directory. Publishers on Pro, Max, Team or Enterprise can submit through the <a href="https://claude.com/docs/directory/publish">official developer portal</a>.</div>
+      <div class="callout"><strong>Safety boundary:</strong> use only facts you provide. The five regulatory AI surfaces above are read-only and do not expose checkout, x402 payment, or paid commercial tool flows.</div>
+      <h2>Technical evidence tools</h2>
+      <p class="section-intro">Check service information before starting an audit. These services expose commercial audit workflows; an audit may require paid access. Adding a connector does not itself make a purchase.</p>
+      <div class="grid">
+        <article class="card install-card">
+          <span class="kicker">Structured cabling</span>
+          <h3>RegEvidenceHub CableCert</h3>
+          <div class="copy-row"><code>https://cablecert.regevidencehub.com/mcp</code><button class="button copy-button" type="button" data-copy="https://cablecert.regevidencehub.com/mcp">Copy URL</button></div>
+          <div class="test-prompt"><strong>First test</strong>What inputs does CableCert accept, and what evidence-review decisions remain with a human reviewer?</div>
+          <p>Reconcile an owner-supplied cable inventory against certification CSV evidence. Reports missing, unexpected and retest evidence; it does not certify TIA compliance or accept contractor work.</p>
+          <p><a class="text-link" href="https://cablecert.regevidencehub.com/">CableCert documentation →</a></p>
+        </article>
+        <article class="card install-card">
+          <span class="kicker">FactoryTalk View CSV</span>
+          <h3>FactoryTalk Import Preflight</h3>
+          <div class="copy-row"><code>https://factorytalk.regevidencehub.com/mcp</code><button class="button copy-button" type="button" data-copy="https://factorytalk.regevidencehub.com/mcp">Copy URL</button></div>
+          <div class="test-prompt"><strong>First test</strong>What FactoryTalk import files can this service check, and what is its current payment status?</div>
+          <p>Check supported tag and alarm CSV import contracts before import. It does not connect to an HMI or PLC, import a project, or certify runtime or machine safety.</p>
+          <p><a class="text-link" href="https://factorytalk.regevidencehub.com/">FactoryTalk documentation →</a></p>
+        </article>
+        <article class="card install-card">
+          <span class="kicker">OPC UA NodeSet2 XML</span>
+          <h3>OPC UA NodeSet Gate</h3>
+          <div class="copy-row"><code>https://nodeset.regevidencehub.com/ai/mcp</code><button class="button copy-button" type="button" data-copy="https://nodeset.regevidencehub.com/ai/mcp">Copy URL</button></div>
+          <div class="test-prompt"><strong>First test</strong>What does the NodeSet compatibility service check, and what is its current payment status?</div>
+          <p>Compare baseline and candidate NodeSet2 XML revisions for static structural changes. Large-document uploads use temporary memory; results do not certify runtime interoperability or safety.</p>
+          <p><a class="text-link" href="https://nodeset.regevidencehub.com/">NodeSet documentation →</a></p>
+        </article>
+      </div>
     </div>
   </section>
 </main>

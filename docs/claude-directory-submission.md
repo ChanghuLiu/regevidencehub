@@ -1,115 +1,162 @@
-# Claude Connectors Directory submission package
+# Claude directory preparation — eight RegEvidenceHub products
 
-Prepared: 2026-09-20
+Updated: 2026-10-01. This guide supersedes the earlier four-product, Team/Enterprise-only packet.
 
-This package is for the four RegEvidenceHub public AI-safe remote MCP surfaces. It intentionally excludes the commercial `/mcp` endpoints and all x402/Stripe/payment flows.
+## Submission route and state
 
-## Shared submission facts
+Submit each remote server as a separate MCP connector at https://claude.ai/directory/manage.
+Pro, Max, Team and Enterprise accounts can submit; Free accounts cannot. Pro/Max use the account owner; Team/Enterprise use the appropriate organization permissions.
+A custom connector, a third-party directory request, an OpenAI review and an Anthropic directory submission are separate states. No Anthropic submission receipt is recorded here.
 
-- Company: RegEvidenceHub
-- Company website: https://regevidencehub.com/
-- Transport: Streamable HTTP
-- Connection type: Universal URL, one listing per product
-- Authentication: None
-- Access model: Public, read-only, payment-free connector surface
-- Documentation hub: https://regevidencehub.com/claude.html
+## Endpoint and access inventory
+
+| Product | Proposed branded server URL | Access boundary | Tools observed |
+| --- | --- | --- | ---: |
+| RegEvidenceHub — UK Taxi PHV Licensing | https://taxi.regevidencehub.com/ai/mcp | Public AI endpoint; payment-free and read-only | 5 |
+| RegEvidenceHub — CQC Provider Compliance | https://cqc.regevidencehub.com/ai/mcp | Public AI endpoint; payment-free and read-only | 4 |
+| RegEvidenceHub — UK Premises Licensing | https://premises.regevidencehub.com/ai/mcp | Public AI endpoint; payment-free and read-only | 4 |
+| RegEvidenceHub — UK Sponsor Change | https://works.regevidencehub.com/ai/mcp | Public AI endpoint; payment-free and read-only | 4 |
+| RegEvidenceHub Waste | https://waste.regevidencehub.com/ai/mcp | Public AI endpoint; payment-free and read-only | 9 |
+| RegEvidenceHub CableCert | https://cablecert.regevidencehub.com/mcp | Discovery/status without authentication; commercial audit/reviewer access needs verification | 3 |
+| FactoryTalk Import Preflight | https://factorytalk.regevidencehub.com/mcp | Discovery/status without authentication; commercial audit/reviewer access needs verification | 2 |
+| OPC UA NodeSet Gate | https://nodeset.regevidencehub.com/ai/mcp | Discovery/status without authentication; commercial audit/reviewer access needs verification | 5 |
+
+Oct 1 discovery checked 36 tools. Every tool has a title in its annotations and boolean readOnlyHint, destructiveHint and openWorldHint fields. This is metadata evidence, not proof that every tool has run in Claude.
+NodeSet's upload creation/append tools write temporary memory. Its uploaded audit consumes IDs. Do not classify all five NodeSet tools as read-only.
+
+## Listing and reviewer materials
+
+Use product documentation and privacy URLs, a working support contact, the existing product icon and accurate scope descriptions. Public support: launchcircle.server@gmail.com. Shared publisher website: https://regevidencehub.com/.
+The public installation guide is https://regevidencehub.com/claude.html. Five regulatory endpoints exclude commercial checkout/payment flows. The industrial candidates retain their existing commercial audit boundary; do not describe them as universally free.
+
+## Remaining gates
+
+1. Publisher access: last observed Claude account was Free. Confirm a paid plan before portal submission.
+2. Run each exposed tool in Claude; retain actual prompts, tool arguments and outcomes. Do not attest from tools/list, an OpenAI result or a Grok connection alone.
+3. Reuse and verify each product icon. Existing FactoryTalk and NodeSet directory PNGs are 512 × 512; other assets must be obtained from their existing releases.
+4. Establish reviewer access for commercial audits without changing paid execution policy or making a self-funded payment to manufacture evidence.
+5. Complete company/identity and the portal's actual category selections. The authorized publisher must complete policy/terms acknowledgments.
+6. For the no-auth regulatory surfaces, explain that no test login is required; do not invent credentials.
+7. Submit, then record the actual Anthropic receipt and review state. Do not mark these drafts submitted or published.
+
+## Current official references
+
+- https://claude.com/docs/directory/publish
+- https://claude.com/docs/connectors/building/submission
+- https://claude.com/docs/connectors/building/review-criteria
+
+OpenAI review submissions and existing Grok connections are preserved. Selection Lab remains internal and is excluded.
+
+## Product listing drafts
+
+### 1. RegEvidenceHub — UK Taxi PHV Licensing
+
+- Proposed slug: regevidencehub-uk-taxi-phv
+- One-liner: Evidence-linked taxi and PHV licensing preflight for supported England authorities.
+- Documentation: https://regevidencehub.com/products/taxi.html
+- Privacy: https://regevidencehub.com/privacy/
 - Support: https://regevidencehub.com/support/
-- Privacy policy: https://regevidencehub.com/privacy/
-- Terms: https://regevidencehub.com/terms/
-- Suggested categories: Legal, Productivity
-- Personal health data: No. CQC tooling is provider-compliance workflow guidance and explicitly instructs users not to submit patient records or full care files.
-- Sponsored content: No
-- Financial transactions: No
-- Conversation-data collection: No beyond bounded request/tool inputs needed to answer the call and operational telemetry described by the product service.
-- Tool behavior: Read-only. Each exposed tool carries a title and `readOnlyHint: true`.
-- Test account credentials: Not applicable because these public AI-safe endpoints do not require authentication.
-- Allowed link URIs: None required; these connector tools do not use `ui/open-link`.
-- Reviewer test method: Exercise every exposed tool through Claude as a custom connector or MCP Inspector before submission.
+- Behavior: read_only
+- Access: This selected public AI endpoint is payment-free; commercial endpoints are excluded.
 
-## 1. UK Taxi PHV Licensing
+Read-only licensing preflight for supported England taxi and private-hire authorities. List coverage, inspect source freshness, check one-authority applicant or fleet facts, and compare supported authorities. Results preserve missing facts and source review states. This connector does not submit applications, issue licences or provide legal advice.
 
-- Server URL: https://taxi.regevidencehub.com/ai/mcp
-- Server name: RegEvidenceHub — UK Taxi PHV Licensing
-- Tagline: Evidence-linked taxi and PHV licensing preflight
-- Suggested permanent slug: regevidencehub-uk-taxi-phv
-- Documentation URL: https://regevidencehub.com/products/taxi.html
-- Read/write classification: Read-only
-- Account or plan prerequisite: None
-- Primary use cases:
-  - List supported England taxi/private-hire licensing authorities.
-  - Check official-source freshness and review state.
-  - Run a bounded one-authority licensing preflight from user-supplied facts.
-  - Compare supported authorities without inferring missing applicant facts.
-- Listing description:
-  RegEvidenceHub UK Taxi PHV Licensing provides read-only, evidence-linked preflight for supported England taxi and private-hire licensing authorities. Claude can list supported authorities, inspect official-source freshness, run a bounded applicant or fleet preflight, and compare requirements across supported authorities. The connector uses deterministic regulatory rules and fails closed when evidence or critical facts are insufficient. It does not expose payment, checkout, regulator approval, or legal advice.
-- First reviewer prompt:
-  List supported authorities, then run a Birmingham preflight for an applicant aged 27 who has held a driving licence for exactly two years.
-- Expected safety behavior:
-  Treat exact-boundary or conflicting source conditions explicitly and do not invent licensing-authority approval.
+First reviewer prompt: Which England taxi and private-hire licensing authorities can this service check?
 
-## 2. CQC Provider Compliance
+### 2. RegEvidenceHub — CQC Provider Compliance
 
-- Server URL: https://cqc.regevidencehub.com/ai/mcp
-- Server name: RegEvidenceHub — CQC Provider Compliance
-- Tagline: CQC provider compliance workflow navigation
-- Suggested permanent slug: regevidencehub-cqc-compliance
-- Documentation URL: https://regevidencehub.com/products/cqc.html
-- Read/write classification: Read-only
-- Account or plan prerequisite: None
-- Primary use cases:
-  - Choose the appropriate CQC provider-registration, provider-change, or statutory-notification workflow.
-  - Check official evidence/source status.
-  - Identify bounded fact categories required before a compliance preflight.
-  - Avoid inferring provider status, regulated activities, locations, manager roles, or event facts.
-- Listing description:
-  RegEvidenceHub CQC Provider Compliance is a read-only navigator for England CQC provider-registration, provider-change, and statutory-notification workflows. Claude can identify the relevant workflow, inspect evidence status, and list the bounded facts needed for a later preflight. The connector is designed to use only user-supplied facts and not to infer missing provider, activity, location, role, or incident information. It does not expose payment, checkout, patient-record processing, CQC approval, or legal advice.
-- First reviewer prompt:
-  Choose the right workflow for an already-registered provider that wants to add a new regulated activity, then list the facts needed.
-- Expected safety behavior:
-  Ask for missing compliance facts instead of defaulting or inferring them.
+- Proposed slug: regevidencehub-cqc-compliance
+- One-liner: Navigate CQC registration, provider-change and statutory-notification workflows.
+- Documentation: https://regevidencehub.com/products/cqc.html
+- Privacy: https://regevidencehub.com/privacy/
+- Support: https://regevidencehub.com/support/
+- Behavior: read_only
+- Access: This selected public AI endpoint is payment-free; commercial endpoints are excluded.
 
-## 3. UK Premises Licensing
+Read-only guidance for England CQC provider-registration, provider-change and statutory-notification workflows. Identify the relevant workflow, inspect official evidence status and list the fact categories needed for a preflight. It does not infer provider facts, process patient records, file with CQC or provide clinical or legal decisions.
 
-- Server URL: https://premises.regevidencehub.com/ai/mcp
-- Server name: RegEvidenceHub — UK Premises Licensing
-- Tagline: UK premises licensing workflow preflight
-- Suggested permanent slug: regevidencehub-uk-premises-licensing
-- Documentation URL: https://regevidencehub.com/products/premises.html
-- Read/write classification: Read-only
-- Account or plan prerequisite: None
-- Primary use cases:
-  - List supported local licensing authorities.
-  - Check whether a named authority is supported.
-  - Prepare the minimum facts for a Licensing Act 2003 premises workflow.
-  - Avoid inferring local policy for unsupported authorities.
-- Listing description:
-  RegEvidenceHub UK Premises Licensing provides read-only discovery and preflight preparation for supported local licensing authorities and Licensing Act 2003 workflows. Claude can list supported authorities, check support for a named authority, and identify the facts needed before a premises-licensing preflight. The connector uses only user-supplied facts and does not infer local rules for unsupported authorities. It does not issue licensing decisions, expose payment or checkout, represent regulator approval, or provide legal advice.
-- First reviewer prompt:
-  Check whether Westminster City Council is supported, then list the starting facts for on-premises alcohol sales.
-- Expected safety behavior:
-  Do not infer missing authority, venue, activity, alcohol, hours, exemption, or local-policy facts.
+First reviewer prompt: What can the CQC compliance connector help a provider prepare?
 
-## 4. UK Sponsor Change
+### 3. RegEvidenceHub — UK Premises Licensing
 
-- Server URL: https://works.regevidencehub.com/ai/mcp
-- Server name: RegEvidenceHub — UK Sponsor Change
-- Tagline: UK Skilled Worker sponsor change preflight
-- Suggested permanent slug: regevidencehub-uk-sponsor-change
-- Documentation URL: https://regevidencehub.com/products/works.html
-- Read/write classification: Read-only
-- Account or plan prerequisite: None
-- Primary use cases:
-  - List supported Skilled Worker sponsor-change events.
-  - Check official GOV.UK sponsor-guidance freshness.
-  - Assess salary, role, work-location, absence, delayed-start, stopping-sponsorship, TUPE, merger, takeover, and organization changes.
-  - Return AFFECTED, NOT_AFFECTED, REVIEW_REQUIRED, or INSUFFICIENT_INPUT without inventing missing compliance facts.
-- Listing description:
-  RegEvidenceHub UK Sponsor Change is a read-only evidence-linked preflight for UK Skilled Worker sponsor-duty changes. Claude can check supported event types, inspect official GOV.UK evidence status, and assess common employee or organization changes with deterministic rules. Missing facts remain missing so the engine can return INSUFFICIENT_INPUT instead of guessing. The connector does not expose payment, checkout, Home Office approval, or legal advice.
-- First reviewer prompt:
-  Assess a permanent Skilled Worker salary decrease with role and work location unchanged. Do not assume whether the same salary option remains met.
-- Expected safety behavior:
-  Preserve omitted facts such as `same_salary_option_still_met` as missing and return an insufficient-input state when required.
+- Proposed slug: regevidencehub-uk-premises-licensing
+- One-liner: Prepare supported premises-licensing workflows without guessing local policies.
+- Documentation: https://regevidencehub.com/products/premises.html
+- Privacy: https://regevidencehub.com/privacy/
+- Support: https://regevidencehub.com/support/
+- Behavior: read_only
+- Access: This selected public AI endpoint is payment-free; commercial endpoints are excluded.
 
-## External portal gate
+Read-only preparation for supported local licensing authorities and Licensing Act 2003 workflows. List coverage, check one authority and identify the facts needed for a premises-licensing preflight. The connector does not issue licensing decisions, infer unsupported local rules, submit filings or process payment.
 
-Remote MCP directory submission itself must be performed from a Claude Team or Enterprise organization by an Owner/Primary Owner or another Enterprise member with the delegated Directory permission. Until that organization-level portal access exists, the four endpoints remain installable as Claude custom connectors but cannot be submitted to the public Connectors Directory from an individual Claude plan.
+First reviewer prompt: What does this premises-licensing connector support?
+
+### 4. RegEvidenceHub — UK Sponsor Change
+
+- Proposed slug: regevidencehub-uk-sponsor-change
+- One-liner: Evidence-linked preflight for UK Skilled Worker sponsor-duty changes.
+- Documentation: https://regevidencehub.com/products/works.html
+- Privacy: https://regevidencehub.com/privacy/
+- Support: https://regevidencehub.com/support/
+- Behavior: read_only
+- Access: This selected public AI endpoint is payment-free; commercial endpoints are excluded.
+
+Read-only sponsor-duty change preflight using user-supplied Skilled Worker and organization facts. List supported change events, check GOV.UK evidence status and assess bounded salary, role, location, absence or organizational changes. Missing decisive facts remain missing. The connector does not file Home Office reports, approve immigration status or provide legal representation.
+
+First reviewer prompt: What UK sponsor changes can this connector help screen?
+
+### 5. RegEvidenceHub Waste
+
+- Proposed slug: regevidencehub-england-waste
+- One-liner: Evidence-linked England waste routes, registration readiness and permit-change preflight.
+- Documentation: https://waste.regevidencehub.com/plugin
+- Privacy: https://waste.regevidencehub.com/plugin/privacy
+- Support: https://regevidencehub.com/support/
+- Behavior: read_only
+- Access: This selected public AI endpoint is payment-free; commercial endpoints are excluded.
+
+Read-only England waste-operation preflight, carrier/broker/dealer registration lifecycle guidance, Digital Waste Tracking receiving-site readiness and current-versus-proposed permit-change screening. The public AI endpoint is payment-free. It preserves missing or conflicted facts and source evidence. It does not assign waste codes, determine hazardous classification, submit regulatory records or approve operations.
+
+First reviewer prompt: Show the England scope and supported waste-operation roles and activities.
+
+### 6. RegEvidenceHub CableCert
+
+- Proposed slug: regevidencehub-cablecert
+- One-liner: Reconcile cable certification CSV evidence against an owner-supplied link inventory.
+- Documentation: https://cablecert.regevidencehub.com/
+- Privacy: https://cablecert.regevidencehub.com/privacy
+- Support: https://cablecert.regevidencehub.com/support
+- Behavior: read_only
+- Access: Discovery/status is no-auth; commercial audit/payment and reviewer access require final verification. No settlement/payment performed.
+
+Structured-cabling certification evidence QA from contractor CSV exports. Inspect available fields, reconcile expected cable IDs, identify missing/unexpected links, trace duplicate or retest lineage and compare an owner-supplied expected test limit. It reports evidence exceptions with source provenance; it does not certify cabling, determine TIA compliance, establish safety or accept contractor work. Audit access may require payment under the commercial endpoint.
+
+First reviewer prompt: Inspect a CSV with Cable ID, Test Summary and Test Limit columns and identify the available evidence fields.
+
+### 7. FactoryTalk Import Preflight
+
+- Proposed slug: factorytalk-import-preflight
+- One-liner: Check FactoryTalk View tag and alarm CSV import contracts before import.
+- Documentation: https://factorytalk.regevidencehub.com/
+- Privacy: https://factorytalk.regevidencehub.com/privacy
+- Support: https://factorytalk.regevidencehub.com/support
+- Behavior: read_only
+- Access: Discovery/status is no-auth; commercial audit/payment and reviewer access require final verification. No settlement/payment performed.
+
+Deterministic static checks for supported FactoryTalk View tag, digital-alarm and analog-alarm CSV import layouts. Reports schema markers, record-shape errors, required-field issues, duplicate names and bounded alarm-contract findings. It does not connect to a PLC/HMI, import files, validate runtime behavior, commission equipment or certify machine safety. Audit access may require payment under the commercial endpoint.
+
+First reviewer prompt: Check a supported official FactoryTalk View tag CSV before import.
+
+### 8. OPC UA NodeSet Gate
+
+- Proposed slug: opc-ua-nodeset-gate
+- One-liner: Compare OPC UA NodeSet2 XML revisions for deterministic structural compatibility findings.
+- Documentation: https://nodeset.regevidencehub.com/
+- Privacy: https://nodeset.regevidencehub.com/privacy
+- Support: https://nodeset.regevidencehub.com/support
+- Behavior: read plus temporary in-memory writes and upload consumption
+- Access: Discovery/status is no-auth; commercial audit/payment and reviewer access require final verification. No settlement/payment performed.
+
+Static compatibility preflight between baseline and candidate OPC UA NodeSet2 XML revisions. Identifies additions, removals and bounded type/reference changes while resolving namespace identities. A temporary chunked-upload workflow supports larger documents and consumes upload IDs after audit. Results do not certify runtime interoperability, commissioning or safety. Audit/payment behavior on the candidate AI path still needs reviewer-access verification.
+
+First reviewer prompt: What does the NodeSet compatibility service check and what does it not certify?
