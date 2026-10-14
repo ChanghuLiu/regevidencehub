@@ -1,6 +1,6 @@
 {
   "name": "RegEvidenceHub",
-  "description": "Evidence-linked regulatory preflight portfolio for people, businesses, AI agents and automated workflows.",
+  "description": "Eight bounded products: five UK regulatory preflight workflows and three industrial QA tools. Free connector tools are identified separately from metered commercial audits.",
   "url": "https://regevidencehub.com/",
   "capabilities": {
     "portfolioDiscovery": true,
@@ -12,8 +12,8 @@
     "remoteMcp": true
   },
   "routing": {
-    "human": "Use humanEntry for a person or business checking a real case.",
-    "agent": "Use mcp for AI-safe connector/discovery capabilities."
+    "human": "Use humanEntry for product information or a guided human workflow. Industrial products currently use an MCP client for file audits.",
+    "agent": "Use mcp for the five payment-free regulatory connectors. Use commercialMcp for paid decision calls. Industrial products expose free information/status/setup tools and separately metered audit tools."
   },
   "products": [
     {
@@ -21,36 +21,81 @@
       "url": "https://regevidencehub.com/products/taxi.html",
       "humanEntry": "https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub",
       "humanAction": "Start a free licensing readiness check",
-      "mcp": "https://taxi.regevidencehub.com/ai/mcp"
+      "mcp": "https://taxi.regevidencehub.com/ai/mcp",
+      "commercialMcp": "https://taxi.regevidencehub.com/mcp"
     },
     {
       "name": "CQC Provider Compliance",
       "url": "https://regevidencehub.com/products/cqc.html",
       "humanEntry": "https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub",
       "humanAction": "Start a free statutory-notification readiness check",
-      "mcp": "https://cqc.regevidencehub.com/ai/mcp"
+      "mcp": "https://cqc.regevidencehub.com/ai/mcp",
+      "commercialMcp": "https://cqc.regevidencehub.com/mcp"
     },
     {
       "name": "UK Premises Licence Preflight",
       "url": "https://regevidencehub.com/products/premises.html",
       "humanEntry": "https://premises.regevidencehub.com/licensing-report?src=regevidencehub",
       "humanAction": "Start a structured premises-licensing report",
-      "mcp": "https://premises.regevidencehub.com/ai/mcp"
+      "mcp": "https://premises.regevidencehub.com/ai/mcp",
+      "commercialMcp": "https://premises.regevidencehub.com/mcp"
     },
     {
       "name": "England Works Watch",
       "url": "https://regevidencehub.com/products/works.html",
       "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub",
       "humanAction": "Create a Sponsor Decision Evidence Check — £49 for a dated GOV.UK evidence checkpoint plus 30-day private re-check access; no subscription or alerts.",
-      "mcp": "https://works.regevidencehub.com/ai/mcp"
+      "mcp": "https://works.regevidencehub.com/ai/mcp",
+      "commercialMcp": "https://works.regevidencehub.com/mcp"
     },
     {
       "name": "RegEvidenceHub Waste",
       "url": "https://regevidencehub.com/products/waste.html",
-      "humanEntry": "https://regevidencehub.com/products/waste.html",
-      "humanAction": "Choose AI-safe connector or commercial MCP access; no standalone Stripe report workflow at this time.",
-      "mcp": "https://waste.regevidencehub.com/ai/mcp"
+      "humanEntry": "https://waste.regevidencehub.com/compliance-report?src=regevidencehub",
+      "humanAction": "Start a free structured readiness check, then review the £19 England Waste Compliance Preflight Report offer with 24-hour access before payment.",
+      "mcp": "https://waste.regevidencehub.com/ai/mcp",
+      "humanPayment": "Stripe report offer: £19, 24-hour access",
+      "commercialMcp": "https://waste.regevidencehub.com/mcp"
+    },
+    {
+      "name": "CableCert QA",
+      "url": "https://regevidencehub.com/products/cablecert.html",
+      "humanEntry": "https://regevidencehub.com/products/cablecert.html",
+      "humanAction": "Review the product scope and connect an MCP client; free service information and CSV inspection do not run the full audit.",
+      "humanPayment": "Commercial MCP: $0.01 USDC per audit; shared-platform one-report offer: $19 USD, 24-hour redemption window.",
+      "freeTools": [
+        "cablecert_service_info",
+        "inspect_certification_package"
+      ],
+      "commercialMcp": "https://cablecert.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "FactoryTalk Import Preflight",
+      "url": "https://regevidencehub.com/products/factorytalk.html",
+      "humanEntry": "https://regevidencehub.com/products/factorytalk.html",
+      "humanAction": "Review the supported CSV scope and connect an MCP client; the free status tool does not validate files.",
+      "humanPayment": "Commercial MCP: $0.007 USDC per audit call; no prepaid package is listed in the current shared-platform product registry.",
+      "freeTools": [
+        "factorytalk_product_status"
+      ],
+      "commercialMcp": "https://factorytalk.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "OPC UA NodeSet Compatibility Gate",
+      "url": "https://regevidencehub.com/products/nodeset.html",
+      "humanEntry": "https://regevidencehub.com/products/nodeset.html",
+      "humanAction": "Review the supported XML scope and connect an MCP client; free status and upload-setup tools do not run the compatibility audit.",
+      "humanPayment": "Commercial MCP: $0.005 USDC per audit; no prepaid package is listed in the current shared-platform product registry.",
+      "freeTools": [
+        "nodeset_compatibility_status",
+        "begin_nodeset_upload",
+        "append_nodeset_chunk"
+      ],
+      "commercialMcp": "https://nodeset.regevidencehub.com/mcp",
+      "agentPayment": "x402"
     }
   ],
-  "safety": "Regulatory preflight information only; not legal advice, regulator approval, or a guarantee of compliance."
+  "safety": "Regulatory and industrial preflight information only; not legal advice, regulator approval, engineering certification, operational safety approval, or a guarantee of compliance."
 }

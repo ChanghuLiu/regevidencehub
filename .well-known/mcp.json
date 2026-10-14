@@ -1,41 +1,67 @@
 {
   "name": "RegEvidenceHub",
-  "description": "Portfolio directory for RegEvidenceHub remote MCP services and human regulatory workflows.",
+  "description": "Directory of all eight RegEvidenceHub remote MCP products. Five regulatory products include separate free connector endpoints; industrial audit endpoints are metered.",
   "servers": [
     {
       "name": "UK Taxi PHV Licensing",
       "transport": "streamable-http",
       "url": "https://taxi.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://taxi.regevidencehub.com/mcp",
-      "humanEntry": "https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub"
+      "humanEntry": "https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub",
+      "payment": "commercial MCP calls may be metered; see product pricing"
     },
     {
       "name": "CQC Provider Compliance",
       "transport": "streamable-http",
       "url": "https://cqc.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://cqc.regevidencehub.com/mcp",
-      "humanEntry": "https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub"
+      "humanEntry": "https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub",
+      "payment": "commercial MCP calls may be metered; see product pricing"
     },
     {
       "name": "UK Premises Licence Preflight",
       "transport": "streamable-http",
       "url": "https://premises.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://premises.regevidencehub.com/mcp",
-      "humanEntry": "https://premises.regevidencehub.com/licensing-report?src=regevidencehub"
+      "humanEntry": "https://premises.regevidencehub.com/licensing-report?src=regevidencehub",
+      "payment": "commercial MCP calls may be metered; see product pricing"
     },
     {
       "name": "England Works Watch",
       "transport": "streamable-http",
       "url": "https://works.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://works.regevidencehub.com/mcp",
-      "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub"
+      "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub",
+      "payment": "commercial MCP calls may be metered; see product pricing"
     },
     {
       "name": "RegEvidenceHub Waste",
       "transport": "streamable-http",
       "url": "https://waste.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://waste.regevidencehub.com/mcp",
-      "humanEntry": "https://regevidencehub.com/products/waste.html"
+      "humanEntry": "https://regevidencehub.com/products/waste.html",
+      "payment": "commercial MCP calls may be metered; see product pricing"
+    },
+    {
+      "name": "CableCert QA",
+      "transport": "streamable-http",
+      "url": "https://cablecert.regevidencehub.com/mcp",
+      "productPage": "https://regevidencehub.com/products/cablecert.html",
+      "payment": "free information/inspection tools; $0.01 USDC per full audit; $19 one-report platform offer"
+    },
+    {
+      "name": "FactoryTalk Import Preflight",
+      "transport": "streamable-http",
+      "url": "https://factorytalk.regevidencehub.com/mcp",
+      "productPage": "https://regevidencehub.com/products/factorytalk.html",
+      "payment": "free status tool; $0.007 USDC per audit call; no prepaid web package listed"
+    },
+    {
+      "name": "OPC UA NodeSet Compatibility Gate",
+      "transport": "streamable-http",
+      "url": "https://nodeset.regevidencehub.com/mcp",
+      "productPage": "https://regevidencehub.com/products/nodeset.html",
+      "payment": "free status/upload setup tools; $0.005 USDC per audit; no prepaid web package listed"
     }
   ],
   "links": {
