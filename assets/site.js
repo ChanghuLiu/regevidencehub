@@ -1,10 +1,15 @@
 document.addEventListener("click", async (event) => {
   const button = event.target.closest("[data-copy]");
-  if (!button) return;
+  if (!button || button.dataset.copying === "true") return;
   const value = button.getAttribute("data-copy");
   const original = button.textContent;
+  button.dataset.copying = "true";
+  button.setAttribute("aria-live", "polite");
+  let copied = false;
+
   try {
     await navigator.clipboard.writeText(value);
+    copied = true;
   } catch (_error) {
     const input = document.createElement("textarea");
     input.value = value;
@@ -13,9 +18,18 @@ document.addEventListener("click", async (event) => {
     input.style.opacity = "0";
     document.body.appendChild(input);
     input.select();
-    document.execCommand("copy");
+    try {
+      copied = document.execCommand("copy");
+    } catch (_fallbackError) {
+      copied = false;
+    }
     input.remove();
+    button.focus({ preventScroll: true });
   }
-  button.textContent = "Copied";
-  window.setTimeout(() => { button.textContent = original; }, 1800);
+
+  button.textContent = copied ? "Copied" : "Copy failed";
+  window.setTimeout(() => {
+    button.textContent = original;
+    delete button.dataset.copying;
+  }, 1800);
 });
