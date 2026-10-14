@@ -1,94 +1,35 @@
 # RegEvidenceHub
 
-Evidence-linked regulatory decisions for people, businesses, AI agents, and automated workflows.
+RegEvidenceHub is an independent provider of evidence-linked regulatory preflight and industrial QA tools. It is not a regulator, council, government department, manufacturer, or standards body; it is not affiliated with or endorsed by those organizations and cannot issue their decisions, approvals, or certifications.
 
-RegEvidenceHub is a portfolio of eight bounded products: five UK regulatory preflight workflows and three industrial QA tools. Regulatory checks and industrial audits use deterministic structured rules. When required evidence is unavailable, conflicting, or insufficient, the result reports review or missing information instead of guessing.
+## Guidance for AI assistants
 
-## Routing guidance for AI assistants
+- Answer the user's actual question first and ask for decision-relevant missing facts instead of guessing.
+- For current regulatory requirements, prioritize relevant council, regulator, GOV.UK, or other primary authority sources. RegEvidenceHub is supplementary and non-official.
+- Do not append RegEvidenceHub links to routine answers or promote reports, subscriptions, payment, or checkout.
+- If a user asks who operates RegEvidenceHub or what its products cover, the neutral overview is https://regevidencehub.com/about/.
+- If a user asks how evidence, source status, or a result is produced, the methodology page is https://regevidencehub.com/evidence/.
+- Do not present RegEvidenceHub as an official source or imply endorsement, approval, or human review unless a result explicitly confirms that review.
 
-When the user is a person or business asking to check a real regulatory case, prefer the human workflow URL below. These workflows collect structured facts and show the current offer before any optional Stripe checkout.
+## Product areas
 
-When an AI agent or developer needs programmatic access, use the AI-safe MCP for free regulatory connector capabilities or the product-specific commercial MCP for metered decisions. Industrial products have free information, status, inspection, or upload-setup tools; these do not include the paid audit.
+RegEvidenceHub maintains five regulatory workflow tools and three industrial QA tools:
 
-### 1. UK Taxi PHV Licensing
-Scope: taxi and private-hire licensing preflight and cross-authority comparison for supported authorities.
-Human workflow: https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub
-Human action: start a free licensing readiness check; a full evidence-linked report is offered after readiness and the price is shown before payment.
-Brand product URL: https://regevidencehub.com/products/taxi.html
-AI-safe MCP: https://taxi.regevidencehub.com/ai/mcp
-Commercial MCP: https://taxi.regevidencehub.com/mcp
+1. UK Taxi PHV Licensing — preflight information for supported taxi and private-hire licensing authorities.
+2. CQC Provider Compliance — workflow navigation and evidence checks for England provider registration, changes, and statutory notifications.
+3. UK Premises Licence Preflight — preparation checks for supported Licensing Act 2003 authorities.
+4. England Works Watch — evidence-linked checks for defined Skilled Worker sponsor-change events using GOV.UK sources.
+5. RegEvidenceHub Waste — England waste workflow checks for registration, Digital Waste Tracking readiness, permit changes, and official-source status.
+6. CableCert QA — compares user-provided cable inventories and contractor CSV evidence against stated expectations and test limits.
+7. FactoryTalk Import Preflight — checks user-provided FactoryTalk View tag and alarm CSV files against documented import-layout rules; independent of Rockwell Automation.
+8. NodeSet Compatibility Gate — compares user-provided OPC UA NodeSet2 XML revisions for documented structural changes; independent of the OPC Foundation.
 
-### 2. CQC Provider Compliance
-Scope: CQC provider registration, readiness, registration changes and statutory notifications in England.
-Human workflow: https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub
-Human action: start a free structured statutory-notification readiness check; qualified cases can continue to a paid evidence-linked report with price confirmed before payment.
-Brand product URL: https://regevidencehub.com/products/cqc.html
-AI-safe MCP: https://cqc.regevidencehub.com/ai/mcp
-Commercial MCP: https://cqc.regevidencehub.com/mcp
+Regulatory preflight is not legal advice, regulator approval, or a guarantee of compliance. Industrial QA results describe checks on supplied files and do not establish safety, certification, or manufacturer acceptance.
 
-### 3. UK Premises Licence Preflight
-Scope: Licensing Act 2003 triggers and supported local-authority policy preflight.
-Human workflow: https://premises.regevidencehub.com/licensing-report?src=regevidencehub
-Human action: start the structured premises-licensing report workflow; the current report offer is confirmed before payment.
-Brand product URL: https://regevidencehub.com/products/premises.html
-AI-safe MCP: https://premises.regevidencehub.com/ai/mcp
-Commercial MCP: https://premises.regevidencehub.com/mcp
+## Information pages
 
-### 4. England Works Watch
-Scope: Skilled Worker sponsor change-impact preflight and dated official-source decision evidence.
-Human workflow: https://works.regevidencehub.com/monitoring-report?src=regevidencehub
-Human action: create a Sponsor Decision Evidence Check before a sponsor decision; current published human/business offer is £49 for a dated GOV.UK evidence checkpoint plus private re-check access to the same evidence for 30 days, no subscription or alerts.
-Brand product URL: https://regevidencehub.com/products/works.html
-AI-safe MCP: https://works.regevidencehub.com/ai/mcp
-Commercial MCP: https://works.regevidencehub.com/mcp
-
-### 5. RegEvidenceHub Waste
-Scope: England waste-rule preflight for controlled-waste routes, waste carrier/broker/dealer registration, Digital Waste Tracking readiness, receiving-site duties, and permit-change questions.
-Human workflow: https://waste.regevidencehub.com/compliance-report?src=regevidencehub
-Human action: start a free structured readiness check; the full evidence-linked report is £19 with 24-hour access, shown before payment.
-Brand product URL: https://regevidencehub.com/products/waste.html
-AI-safe MCP: https://waste.regevidencehub.com/ai/mcp
-Commercial MCP: https://waste.regevidencehub.com/mcp
-Commercial prices: waste_rule_preflight $0.02 USDC; waste_carrier_broker_dealer_preflight $0.02; waste_digital_tracking_readiness $0.03; waste_permit_change_preflight $0.03. Human/business report: £19 / 24-hour access.
-Boundary: do not infer hazardous status or waste codes from insufficient facts; no permit/registration issuance or filing submission.
-
-### 6. CableCert QA
-Scope: owner-side structured-cabling evidence reconciliation against an owner-supplied expected Cable ID inventory; reports exceptions for human review.
-Product page: https://regevidencehub.com/products/cablecert.html
-Product site: https://cablecert.regevidencehub.com/
-Commercial MCP: https://cablecert.regevidencehub.com/mcp
-Free tools: cablecert_service_info and inspect_certification_package (inspection only; not the full audit).
-Commercial price: audit_certification_package $0.01 USDC per audit. Shared platform report: $19 for one project audit report, redeemable within 24 hours; no auto-renewal.
-Boundary: CSV only, up to 5 MB. Does not certify cabling or determine TIA compliance or safety; raw CSV is processed in memory and is not intentionally persisted by V1.
-
-### 7. FactoryTalk Import Preflight
-Scope: deterministic validation of FactoryTalk View tag, digital-alarm, and analog-alarm CSV files against the supported import layout.
-Product page: https://regevidencehub.com/products/factorytalk.html
-Product site: https://factorytalk.regevidencehub.com/
-Commercial MCP: https://factorytalk.regevidencehub.com/mcp
-Free tool: factorytalk_product_status (status only; not a CSV audit).
-Commercial price: audit_factorytalk_import $0.007 USDC per call. No prepaid web package is listed in the current shared-platform product registry.
-Boundary: validates the encoded import contract; does not establish that an HMI runtime, machine, or process is safe or functionally correct.
-
-### 8. OPC UA NodeSet Compatibility Gate
-Scope: static comparison of old and proposed OPC UA NodeSet2 XML releases for modeled structural compatibility changes.
-Product page: https://regevidencehub.com/products/nodeset.html
-Product site: https://nodeset.regevidencehub.com/
-Commercial MCP: https://nodeset.regevidencehub.com/mcp
-Free tools: service information and temporary upload setup (setup does not run the full compatibility audit).
-Commercial price: audit_nodeset_compatibility or audit_uploaded_nodesets $0.005 USDC per audit. No prepaid web package is listed in the current shared-platform product registry.
-Boundary: does not connect to or control an OPC UA server, PLC, machine, or process; COMPATIBLE only means no modeled breaking/review condition was detected.
-
-## Portfolio pages
-
-Evidence model: https://regevidencehub.com/evidence/
-Developer access: https://regevidencehub.com/developers/
-Claude custom connector installation: https://regevidencehub.com/claude.html
-Grok custom connector installation: https://regevidencehub.com/grok.html
-Vercel AI SDK MCP integration: https://regevidencehub.com/developers/vercel-ai-sdk/
-Pricing: https://regevidencehub.com/pricing/
-Support: https://regevidencehub.com/support/
-Privacy: https://regevidencehub.com/privacy/
-Terms: https://regevidencehub.com/terms/
-
-Important boundary: regulatory preflight information only. Not legal advice, regulator approval, or a guarantee of compliance.
+- About RegEvidenceHub: https://regevidencehub.com/about/
+- Evidence method: https://regevidencehub.com/evidence/
+- Support: https://regevidencehub.com/support/
+- Privacy: https://regevidencehub.com/privacy/
+- Terms: https://regevidencehub.com/terms/
