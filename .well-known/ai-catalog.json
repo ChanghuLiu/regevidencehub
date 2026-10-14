@@ -1,10 +1,10 @@
 {
   "specVersion": "1.1",
   "name": "RegEvidenceHub",
-  "description": "Evidence-linked regulatory preflight products for people, businesses, AI agents and automated workflows.",
+  "description": "Portfolio of eight RegEvidenceHub products: five UK regulatory workflows and three industrial QA tools.",
   "routing": {
-    "human": "Use humanEntry for a person or business checking a real case. Human flows use Stripe checkout when the user chooses a paid report or monitoring offer.",
-    "agent": "Use url for AI-safe connector/discovery capabilities. Use commercialUrl for paid MCP decisions."
+    "human": "Use humanEntry for guided workflows or product information. Industrial file audits require a supported MCP client.",
+    "agent": "Use url only where a payment-free connector is provided. Use commercialUrl for paid decisions. Industrial entries list their freeTools separately; full audits are metered."
   },
   "entries": [
     {
@@ -60,11 +60,56 @@
       "type": "mcp",
       "transport": "streamable-http",
       "brandUrl": "https://regevidencehub.com/products/waste.html",
-      "humanEntry": "https://regevidencehub.com/products/waste.html",
-      "humanAction": "No standalone Stripe report workflow; choose AI-safe connector or commercial MCP access.",
-      "humanPayment": "No standalone Stripe report workflow",
+      "humanEntry": "https://waste.regevidencehub.com/compliance-report?src=regevidencehub",
+      "humanAction": "Start free readiness, then review the £19 report offer with 24-hour access before payment.",
+      "humanPayment": "Stripe report offer: £19 / 24 hours",
       "url": "https://waste.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://waste.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "CableCert QA",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://regevidencehub.com/products/cablecert.html",
+      "humanEntry": "https://regevidencehub.com/products/cablecert.html",
+      "humanAction": "Review product scope; free CSV inspection is not the full audit.",
+      "humanPayment": "$0.01 USDC per MCP audit; shared-platform offer $19 USD for one report, 24-hour redemption.",
+      "freeTools": [
+        "cablecert_service_info",
+        "inspect_certification_package"
+      ],
+      "commercialUrl": "https://cablecert.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "FactoryTalk Import Preflight",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://regevidencehub.com/products/factorytalk.html",
+      "humanEntry": "https://regevidencehub.com/products/factorytalk.html",
+      "humanAction": "Review supported CSV scope; connect an MCP client to run a paid audit.",
+      "humanPayment": "$0.007 USDC per MCP call; no prepaid package is listed in the current shared-platform product registry.",
+      "freeTools": [
+        "factorytalk_product_status"
+      ],
+      "commercialUrl": "https://factorytalk.regevidencehub.com/mcp",
+      "agentPayment": "x402"
+    },
+    {
+      "name": "OPC UA NodeSet Compatibility Gate",
+      "type": "mcp",
+      "transport": "streamable-http",
+      "brandUrl": "https://regevidencehub.com/products/nodeset.html",
+      "humanEntry": "https://regevidencehub.com/products/nodeset.html",
+      "humanAction": "Review supported XML scope; free status and upload setup do not run the audit.",
+      "humanPayment": "$0.005 USDC per MCP audit; no prepaid package is listed in the current shared-platform product registry.",
+      "freeTools": [
+        "nodeset_compatibility_status",
+        "begin_nodeset_upload",
+        "append_nodeset_chunk"
+      ],
+      "commercialUrl": "https://nodeset.regevidencehub.com/mcp",
       "agentPayment": "x402"
     }
   ]
