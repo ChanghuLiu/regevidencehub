@@ -1,5 +1,64 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Evidence model — RegEvidenceHub</title><meta name="description" content="How RegEvidenceHub separates regulatory sources, source status and decision status."><link rel="canonical" href="https://regevidencehub.com/evidence/"><link rel="stylesheet" href="/assets/styles.css?v=20261014c"></head><body>
-<header class="site-header"><div class="container nav"><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><nav class="nav-links"><a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/support/">Support</a><a class="button" href="/developers/#connect">Connect with MCP</a></nav></div></header>
-<main><section class="page-hero"><div class="container"><span class="eyebrow">Evidence</span><h1>Evidence is part of the product</h1><p>RegEvidenceHub does not treat a regulatory webpage as a timeless rule. Decision-bearing sources are tracked separately from the rules derived from them.</p></div></section>
-<section class="section-tight"><div class="container prose"><p>When evidence changes, becomes unavailable, conflicts with another current source, or requires review, affected conclusions can be withheld instead of silently continuing with an outdated assumption.</p><div class="grid"><div class="card"><h3>Source provenance</h3><p>Where the regulatory fact came from and which official source supports the reviewed rule.</p></div><div class="card"><h3>Source status</h3><p>Whether the reviewed evidence remains usable, changed, unavailable, conflicting, or pending review.</p></div><div class="card"><h3>Decision status</h3><p>Whether the available evidence and supplied facts are sufficient for the requested conclusion.</p></div><div class="card"><h3>Fail-closed behavior</h3><p>Affected conclusions are withheld or routed to review when required evidence cannot safely support them.</p></div></div><h2 id="missing-information">When some details are missing</h2><p>Share the facts you know and label the rest as unknown. Do not fill gaps with guesses. Each product page lists the information and file types that its workflow supports.</p><div class="grid"><div class="card"><h3>1. Identify the gap</h3><p>A useful preflight should distinguish information required to continue from optional context, and explain briefly why a required fact matters.</p></div><div class="card"><h3>2. Ask only for what is needed</h3><p>Request the smallest set of missing facts that could change the next step. Keep details already supplied, and avoid requesting sensitive information unless the workflow needs it.</p></div><div class="card"><h3>3. Keep the result bounded</h3><p>Until required facts are available, treat the result as incomplete or for review. Do not present a route or status as a confirmed decision, and do not imply that unknown facts were verified.</p></div></div><p>For supported inputs, scope, and the appropriate next step, open the relevant <a href="/products/">product page</a>. Public AI-safe product information can link to these official product pages without inserting a purchase link into an AI tool response.</p><h2>What we do not claim</h2><p>Public availability of a source does not itself mean RegEvidenceHub owns or republishes that source content. The products are designed around structured facts, bounded evidence metadata, source links, and reviewed rule logic rather than wholesale republication of third-party pages or documents.</p><div class="callout"><strong>Important:</strong> RegEvidenceHub is not affiliated with or endorsed by the regulators, councils, departments, or public bodies whose official material may be referenced.</div></div></section></main>
-<footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Evidence-linked regulatory preflight for AI agents and automated workflows.</p></div><div class="footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/pricing/">Pricing</a></div><div class="footer-links"><strong>Company</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></div><div class="container footer-note">Not legal advice, regulator approval, or a guarantee of compliance.</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence method — RegEvidenceHub</title>
+  <meta name="description" content="How RegEvidenceHub handles official regulatory sources, user-supplied industrial evidence, source status, missing inputs, and bounded decisions.">
+  <link rel="canonical" href="https://regevidencehub.com/evidence/">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261014c">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/about/">About</a>
+      <a href="/evidence/" aria-current="page">Evidence method</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Evidence method</span>
+      <h1>Keep sources, evidence, and decisions distinct.</h1>
+      <p>This page explains how RegEvidenceHub organizes evidence. It is supplementary information, not a source of regulatory requirements or an official decision.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container prose">
+      <p>For regulatory workflows, a current council, GOV.UK, regulator, or other relevant public authority source remains the primary reference. RegEvidenceHub links requirements to the source material used for the reviewed rule and tracks source status separately from the result produced for supplied facts.</p>
+      <div class="grid">
+        <article class="card"><h3>Source provenance</h3><p>Shows where a regulatory fact came from and which authority source supports the reviewed rule.</p></article>
+        <article class="card"><h3>Source status</h3><p>Tracks whether reviewed evidence is usable, changed, unavailable, conflicting, or pending review.</p></article>
+        <article class="card"><h3>Decision status</h3><p>Indicates whether the available evidence and supplied facts support the requested preflight result.</p></article>
+        <article class="card"><h3>Fail-closed behavior</h3><p>Withholds affected conclusions or marks them for review when evidence cannot safely support them.</p></article>
+      </div>
+      <h2 id="missing-information">When information is missing</h2>
+      <p>Share the facts you know and label the rest as unknown. Do not fill gaps with guesses. A useful preflight identifies decision-relevant missing facts, asks only for what is needed, and keeps the result incomplete until those facts are available.</p>
+      <div class="grid">
+        <article class="card"><h3>1. Identify the gap</h3><p>Separate required facts from optional context and explain why a required fact matters.</p></article>
+        <article class="card"><h3>2. Ask only what is needed</h3><p>Request the smallest set of facts that could change the next step and avoid unnecessary sensitive data.</p></article>
+        <article class="card"><h3>3. Bound the result</h3><p>Keep the status incomplete or for review until required evidence is supplied; do not imply unknown facts were verified.</p></article>
+      </div>
+      <h2 id="industrial-evidence">Industrial QA evidence</h2>
+      <p>Industrial QA tools compare files and expectations supplied by the user—such as CSV exports, expected cable inventories, test limits, or OPC UA NodeSet XML—against documented structural checks. Results describe those checks and the supplied evidence. They do not establish manufacturer approval, standards certification, runtime commissioning, or product safety.</p>
+      <h2>What RegEvidenceHub does not claim</h2>
+      <p>RegEvidenceHub is an independent, privately operated service. It is not a regulator, council, government department, manufacturer, or standards body, and is not affiliated with or endorsed by those organizations. It does not issue official decisions or approvals. For regulatory requirements, use the cited authority’s own page as the primary source.</p>
+      <p>Public availability of a source does not mean RegEvidenceHub owns or republishes that source. The tools use bounded evidence metadata, source links, supplied facts, and reviewed rule logic rather than wholesale republication of third-party material.</p>
+      <p><a class="text-link" href="/about/">About RegEvidenceHub and its product areas →</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Independent evidence-linked workflow tools.</p></div>
+    <div class="footer-links"><strong>Information</strong><a href="/about/">About</a><a href="/evidence/">Evidence method</a></div>
+    <div class="footer-links"><strong>Company</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+  </div>
+  <div class="container footer-note">RegEvidenceHub does not issue official regulatory decisions, approvals, or certifications.</div>
+</footer>
+</body>
+</html>
