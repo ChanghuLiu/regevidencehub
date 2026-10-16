@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://regevidencehub.com/.well-known/mcp-tools.schema.json",
+  "title": "RegEvidenceHub first-party MCP tool discovery index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "publisher", "platform", "scope", "observation_count", "tool_definition_count", "observations", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "publisher": {"const": "Technologies RegEvidence inc."},
+    "platform": {"const": "RegEvidenceHub"},
+    "scope": {"const": "first_party_read_only_tool_discovery"},
+    "observation_count": {"type": "integer", "minimum": 1},
+    "tool_definition_count": {"type": "integer", "minimum": 1},
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["product_id", "product_name", "surface_id", "endpoint", "status_at_observation", "observed_at", "expires_at", "protocol_version", "schema_fingerprint_sha256", "tool_count", "tools"],
+        "properties": {
+          "product_id": {"enum": ["taxi", "cqc", "premises", "works", "waste", "cablecert", "factorytalk", "nodeset"]},
+          "product_name": {"type": "string", "minLength": 1},
+          "surface_id": {"enum": ["commercial", "ai_connector", "openai_connector"]},
+          "endpoint": {"type": "string", "format": "uri", "pattern": "^https://[^/]+/"},
+          "status_at_observation": {"const": "LIVE_OK"},
+          "observed_at": {"type": "string", "format": "date-time"},
+          "expires_at": {"type": "string", "format": "date-time"},
+          "protocol_version": {"type": "string", "minLength": 1},
+          "schema_fingerprint_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "tool_count": {"type": "integer", "minimum": 0},
+          "tools": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name", "title", "description", "input_schema", "input_schema_sha256", "output_schema", "output_schema_sha256", "billing_status"],
+              "properties": {
+                "name": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                "title": {"type": ["string", "null"]},
+                "description": {"type": "string"},
+                "input_schema": {"type": "object"},
+                "input_schema_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+                "output_schema": {"type": ["object", "null"]},
+                "output_schema_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+                "billing_status": {"const": "NOT_VERIFIED"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "limitations": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}}
+  }
+}

@@ -39,3 +39,8 @@ python3 scripts/validate-portfolio-taxonomy.py
 ```
 
 This is an explicit local release step, not an automatic website build. The catalog does not assert endpoint availability, authentication, pricing, tools, or client compatibility.
+
+
+## Read-only MCP tool discovery
+
+The public `/.well-known/mcp-tools.json` is built from a reviewed, bounded receipt set with `python3 scripts/build-mcp-tool-index.py`. It contains time-bounded first-party `initialize` / `tools/list` observations and tool schemas. Every billing status is `NOT_VERIFIED`; it is not an uptime, business-correctness, source-freshness, or client-compatibility claim. Use `python3 scripts/build-mcp-tool-index.py --check` to verify the checked-in output.
