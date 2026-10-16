@@ -15,6 +15,16 @@ assert all(entry.get("portfolioPlatform") == "RegEvidenceHub" for entry in entri
 counts = Counter(entry.get("portfolioLine") for entry in entries)
 assert counts == Counter({"UK Regulatory Readiness": 5, "Industrial Quality Assurance": 3}), counts
 
+machine_catalog = json.loads((ROOT / ".well-known/mcp-market.json").read_text(encoding="utf-8"))
+assert machine_catalog["publisher"] == "Technologies RegEvidence inc."
+assert machine_catalog["platform"] == "RegEvidenceHub"
+assert machine_catalog["product_count"] == 8
+generated_lines = {row["name"]: row["product_line_label"] for row in machine_catalog["products"]}
+assert generated_lines == {entry["name"]: entry["portfolioLine"] for entry in entries}
+assert all(row["review_state"] == "OWNER_REVIEW_REQUIRED" for row in machine_catalog["products"])
+assert all(surface["live_state"] == "NOT_REPROBED"
+           for row in machine_catalog["products"] for surface in row["surfaces"])
+
 expected = {entry["name"]: entry["portfolioLine"] for entry in entries}
 for path, collection in ((".well-known/mcp.json", "servers"), (".well-known/agent-card.json", "products")):
     value = json.loads((ROOT / path).read_text(encoding="utf-8"))
