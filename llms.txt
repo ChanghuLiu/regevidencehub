@@ -23,6 +23,16 @@ RegEvidenceHub maintains two product lines: UK Regulatory Readiness (five produc
 - England Works Watch — evidence-linked checks for defined Skilled Worker sponsor-change events using GOV.UK sources.
 - RegEvidenceHub Waste — England waste workflow checks for registration, Digital Waste Tracking readiness, permit changes, and official-source status.
 
+### Digital Waste Tracking reference pages
+
+These pages summarize specific operational questions for England receiving sites and link back to the relevant GOV.UK / legislation sources. Primary authority sources should remain the basis for current regulatory requirements.
+
+- Receipt readiness preflight overview: https://regevidencehub.com/digital-waste-tracking-preflight/
+- 2-working-day receiving-site deadline: https://regevidencehub.com/digital-waste-tracking-2-working-day-deadline/
+- Receiving-site data checklist: https://regevidencehub.com/digital-waste-tracking-receiving-site-checklist/
+- Submission-error timing and correction: https://regevidencehub.com/digital-waste-tracking-submission-error/
+- Software-provider PAT/exemption buyer checklist: https://regevidencehub.com/digital-waste-tracking-software-provider-checklist/
+
 ### Industrial Quality Assurance
 
 - CableCert QA — compares user-provided cable inventories and contractor CSV evidence against stated expectations and test limits.
