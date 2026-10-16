@@ -12,13 +12,13 @@
  const cell=(row,value)=>{const td=document.createElement('td');td.textContent=String(value??'Not recorded');row.append(td);return td};
  fetch('/.well-known/mcp-tools.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('HTTP '+response.status);return response.json()}).then(data=>{
   const observations=Array.isArray(data.observations)?data.observations:[];if(!observations.length)throw new Error('No observations were published');
-  const now=Date.now();body.replaceChildren();let fresh=0;
-  for(const item of observations){const row=document.createElement('tr'),expires=Date.parse(item.expires_at||''),observed=Date.parse(item.observed_at||''),isFresh=Number.isFinite(expires)&&expires>now,status=String(item.status_at_observation||'UNKNOWN');if(isFresh&&status==='LIVE_OK')fresh++;
+  const now=Date.now();body.replaceChildren();let unexpired=0,liveOk=0;
+  for(const item of observations){const row=document.createElement('tr'),expires=Date.parse(item.expires_at||''),observed=Date.parse(item.observed_at||''),isFresh=Number.isFinite(observed)&&observed<=now&&Number.isFinite(expires)&&expires>now&&expires>observed,status=String(item.status_at_observation||'UNKNOWN');if(isFresh)unexpired++;if(isFresh&&status==='LIVE_OK')liveOk++;
    cell(row,(item.product_name||item.product_id||'Product')+' / '+(item.surface_id||'surface'));
    const endpoint=cell(row,'');const code=document.createElement('code');try{const url=new URL(item.endpoint);if(url.protocol==='https:'&&(url.hostname.endsWith('.regevidencehub.com')||url.hostname==='regevidencehub.com')){code.textContent=url.hostname+url.pathname}else{code.textContent='Endpoint omitted'}}catch{code.textContent='Endpoint omitted'}endpoint.append(code);
-   cell(row,isFresh?status+' · within observation window':'STALE · last status '+status);cell(row,Number.isFinite(Number(item.tool_count))?Number(item.tool_count):'Not recorded');cell(row,item.billing_status||'NOT_VERIFIED');cell(row,date(item.observed_at));cell(row,date(item.expires_at));body.append(row);
+   cell(row,isFresh?status+' · observed within expiry window':'STALE · last status '+status);cell(row,Number.isFinite(Number(item.tool_count))?Number(item.tool_count):'Not recorded');cell(row,item.billing_status||'NOT_VERIFIED');cell(row,date(item.observed_at));cell(row,date(item.expires_at));body.append(row);
   }
-  summary.textContent=fresh+' of '+observations.length+' observations are within their published expiry window. Snapshot: '+date(data.generated_at||observations[0]?.observed_at)+' (UTC).';
+  summary.textContent=liveOk+' of '+observations.length+' surfaces last returned LIVE_OK; '+unexpired+' observations are within their published expiry window. Snapshot: '+date(data.generated_at||observations[0]?.observed_at)+' (UTC).';
  }).catch(error=>{body.replaceChildren();const row=document.createElement('tr'),message=document.createElement('td');message.colSpan=7;message.textContent='The public observation snapshot could not be loaded ('+String(error.message||'unavailable')+'). Open the JSON index to inspect the current published data.';row.append(message);body.append(row);summary.textContent='Observation status is unavailable; no endpoint status is inferred.'});
 })();
 </script>
