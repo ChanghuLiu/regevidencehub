@@ -31,10 +31,11 @@ python3 scripts/validate-portfolio-taxonomy.py
 
 This validates the existing eight-entry catalog and its five/three line split. It does not probe product endpoints or change publication state.
 
-The machine-readable `/.well-known/mcp-market.json` is exported from the v1.0.0-dev.2 Product Manifest and checked against its strict public allowlist schema. From the development baseline directory, regenerate it with:
+The machine-readable `/.well-known/mcp-market.json` is a taxonomy-only projection of `.well-known/ai-catalog.json`. It is checked against the v1.0.0-dev.2 Product Manifest export during development and can be regenerated in this repository with:
 
 ```bash
-PYTHONPATH=src python3 -m market_baseline.cli export-site --root . --site-root /path/to/regevidencehub
+python3 scripts/build-mcp-market-catalog.py
+python3 scripts/validate-portfolio-taxonomy.py
 ```
 
-This is an explicit local release step, not an automatic website build. The generated file intentionally labels product metadata `OWNER_REVIEW_REQUIRED` and all endpoint states `NOT_REPROBED` until reviewed evidence changes those states.
+This is an explicit local release step, not an automatic website build. The catalog does not assert endpoint availability, authentication, pricing, tools, or client compatibility.

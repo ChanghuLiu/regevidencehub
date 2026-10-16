@@ -19,7 +19,8 @@
       "commercialUrl": "https://taxi.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "UK Regulatory Readiness"
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "taxi"
     },
     {
       "name": "CQC Provider Compliance",
@@ -33,7 +34,8 @@
       "commercialUrl": "https://cqc.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "UK Regulatory Readiness"
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "cqc"
     },
     {
       "name": "UK Premises Licence Preflight",
@@ -47,7 +49,8 @@
       "commercialUrl": "https://premises.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "UK Regulatory Readiness"
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "premises"
     },
     {
       "name": "England Works Watch",
@@ -61,7 +64,8 @@
       "commercialUrl": "https://works.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "UK Regulatory Readiness"
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "works"
     },
     {
       "name": "RegEvidenceHub Waste",
@@ -75,7 +79,8 @@
       "commercialUrl": "https://waste.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "UK Regulatory Readiness"
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "waste"
     },
     {
       "name": "CableCert QA",
@@ -92,7 +97,8 @@
       "commercialUrl": "https://cablecert.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "Industrial Quality Assurance"
+      "portfolioLine": "Industrial Quality Assurance",
+      "productId": "cablecert"
     },
     {
       "name": "FactoryTalk Import Preflight",
@@ -108,7 +114,8 @@
       "commercialUrl": "https://factorytalk.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "Industrial Quality Assurance"
+      "portfolioLine": "Industrial Quality Assurance",
+      "productId": "factorytalk"
     },
     {
       "name": "OPC UA NodeSet Compatibility Gate",
@@ -126,7 +133,8 @@
       "commercialUrl": "https://nodeset.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "Industrial Quality Assurance"
+      "portfolioLine": "Industrial Quality Assurance",
+      "productId": "nodeset"
     }
   ],
   "portfolioNotes": [

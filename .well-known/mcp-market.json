@@ -1,200 +1,69 @@
 {
   "limitations": [
-    "Product metadata is pending owner review.",
-    "Live endpoint status and client compatibility are not asserted.",
-    "A listed payment boundary does not replace checking the current product price."
+    "This catalog describes product names and portfolio taxonomy only.",
+    "It makes no assertion about endpoint availability, authentication, pricing, tools, or client compatibility."
   ],
   "platform": "RegEvidenceHub",
   "product_count": 8,
   "products": [
     {
-      "job": "Reconcile owner expected link inventory with contractor certification CSV evidence.",
       "name": "CableCert QA",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "cablecert",
       "product_line": "industrial-quality-assurance",
       "product_line_label": "Industrial Quality Assurance",
-      "product_url": "https://cablecert.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://cablecert.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://cablecert.regevidencehub.com/"
     },
     {
-      "job": "Prepare an England provider registration, service change or statutory notification within supported evidence scope.",
       "name": "CQC Provider Compliance",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "cqc",
       "product_line": "uk-regulatory-readiness",
       "product_line_label": "UK Regulatory Readiness",
-      "product_url": "https://cqc.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://cqc.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        },
-        {
-          "endpoint": "https://cqc.regevidencehub.com/ai/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "payment_free",
-          "surface_id": "ai_connector",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://cqc.regevidencehub.com/"
     },
     {
-      "job": "Check supported FactoryTalk View tag and alarm CSV layouts before import.",
       "name": "FactoryTalk Import Preflight",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "factorytalk",
       "product_line": "industrial-quality-assurance",
       "product_line_label": "Industrial Quality Assurance",
-      "product_url": "https://factorytalk.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://factorytalk.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://factorytalk.regevidencehub.com/"
     },
     {
-      "job": "Compare NodeSet2 releases for structural changes affecting dependent clients and models.",
       "name": "OPC UA NodeSet Compatibility Gate",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "nodeset",
       "product_line": "industrial-quality-assurance",
       "product_line_label": "Industrial Quality Assurance",
-      "product_url": "https://nodeset.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://nodeset.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://nodeset.regevidencehub.com/"
     },
     {
-      "job": "Check supported licensing triggers, local-policy coverage and missing application facts.",
       "name": "UK Premises Licence Preflight",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "premises",
       "product_line": "uk-regulatory-readiness",
       "product_line_label": "UK Regulatory Readiness",
-      "product_url": "https://premises.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://premises.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        },
-        {
-          "endpoint": "https://premises.regevidencehub.com/ai/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "payment_free",
-          "surface_id": "ai_connector",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://premises.regevidencehub.com/"
     },
     {
-      "job": "Check supported authority requirements and missing facts before a taxi or private-hire licensing application.",
       "name": "UK Taxi PHV Licensing",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "taxi",
       "product_line": "uk-regulatory-readiness",
       "product_line_label": "UK Regulatory Readiness",
-      "product_url": "https://taxi.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://taxi.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        },
-        {
-          "endpoint": "https://taxi.regevidencehub.com/ai/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "payment_free",
-          "surface_id": "ai_connector",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://taxi.regevidencehub.com/"
     },
     {
-      "job": "Preflight supported England waste duties, registration, tracking readiness and permit changes.",
       "name": "RegEvidenceHub Waste",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "waste",
       "product_line": "uk-regulatory-readiness",
       "product_line_label": "UK Regulatory Readiness",
-      "product_url": "https://waste.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://waste.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        },
-        {
-          "endpoint": "https://waste.regevidencehub.com/ai/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "payment_free",
-          "surface_id": "ai_connector",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://waste.regevidencehub.com/"
     },
     {
-      "job": "Assess supported sponsor-duty change impacts and keep a dated evidence checkpoint.",
       "name": "England Works Watch",
-      "pricing_url": "https://regevidencehub.com/pricing/",
       "product_id": "works",
       "product_line": "uk-regulatory-readiness",
       "product_line_label": "UK Regulatory Readiness",
-      "product_url": "https://works.regevidencehub.com/",
-      "review_state": "OWNER_REVIEW_REQUIRED",
-      "surfaces": [
-        {
-          "endpoint": "https://works.regevidencehub.com/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "mixed_free_and_paid",
-          "surface_id": "commercial",
-          "transport": "streamable_http"
-        },
-        {
-          "endpoint": "https://works.regevidencehub.com/ai/mcp",
-          "live_state": "NOT_REPROBED",
-          "payment_boundary": "payment_free",
-          "surface_id": "ai_connector",
-          "transport": "streamable_http"
-        }
-      ]
+      "product_url": "https://works.regevidencehub.com/"
     }
   ],
   "publisher": "Technologies RegEvidence inc.",
-  "schema_version": "1.0.0"
+  "schema_version": "1.0.0",
+  "scope": "portfolio_taxonomy_only"
 }
