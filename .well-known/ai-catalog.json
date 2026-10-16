@@ -1,7 +1,7 @@
 {
   "specVersion": "1.1",
   "name": "RegEvidenceHub",
-  "description": "Portfolio of eight RegEvidenceHub products: five UK regulatory workflows and three industrial QA tools.",
+  "description": "Technologies RegEvidence inc. portfolio catalog: RegEvidenceHub has five UK Regulatory Readiness products and three Industrial Quality Assurance products.",
   "routing": {
     "human": "Use humanEntry for guided workflows or product information. Industrial file audits require a supported MCP client.",
     "agent": "Use url only where a payment-free connector is provided. Use commercialUrl for paid decisions. Industrial entries list their freeTools separately; full audits are metered."
@@ -17,7 +17,10 @@
       "humanPayment": "Stripe checkout after readiness",
       "url": "https://taxi.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://taxi.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "taxi"
     },
     {
       "name": "CQC Provider Compliance",
@@ -29,7 +32,10 @@
       "humanPayment": "Stripe checkout; price confirmed before payment",
       "url": "https://cqc.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://cqc.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "cqc"
     },
     {
       "name": "UK Premises Licence Preflight",
@@ -41,7 +47,10 @@
       "humanPayment": "Stripe checkout",
       "url": "https://premises.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://premises.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "premises"
     },
     {
       "name": "England Works Watch",
@@ -53,7 +62,10 @@
       "humanPayment": "Stripe checkout",
       "url": "https://works.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://works.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "works"
     },
     {
       "name": "RegEvidenceHub Waste",
@@ -65,7 +77,10 @@
       "humanPayment": "Stripe report offer: £19 / 24 hours",
       "url": "https://waste.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://waste.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness",
+      "productId": "waste"
     },
     {
       "name": "CableCert QA",
@@ -80,7 +95,10 @@
         "inspect_certification_package"
       ],
       "commercialUrl": "https://cablecert.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance",
+      "productId": "cablecert"
     },
     {
       "name": "FactoryTalk Import Preflight",
@@ -94,7 +112,10 @@
         "factorytalk_product_status"
       ],
       "commercialUrl": "https://factorytalk.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance",
+      "productId": "factorytalk"
     },
     {
       "name": "OPC UA NodeSet Compatibility Gate",
@@ -110,7 +131,14 @@
         "append_nodeset_chunk"
       ],
       "commercialUrl": "https://nodeset.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance",
+      "productId": "nodeset"
     }
+  ],
+  "portfolioNotes": [
+    "AgentTrustLab is a separate platform brand and is not counted among these eight RegEvidenceHub products.",
+    "Prices and endpoint capabilities remain product-specific; consult each product entry and page."
   ]
 }

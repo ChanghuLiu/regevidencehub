@@ -1,6 +1,6 @@
 {
   "name": "RegEvidenceHub",
-  "description": "Eight bounded products: five UK regulatory preflight workflows and three industrial QA tools. Free connector tools are identified separately from metered commercial audits.",
+  "description": "Eight bounded RegEvidenceHub products in the Technologies RegEvidence inc. portfolio: five UK Regulatory Readiness products and three Industrial Quality Assurance tools. AgentTrustLab is a separate evaluation platform.",
   "url": "https://regevidencehub.com/",
   "capabilities": {
     "portfolioDiscovery": true,
@@ -12,7 +12,7 @@
     "remoteMcp": true
   },
   "routing": {
-    "human": "Use humanEntry for product information or a guided human workflow. Industrial products currently use an MCP client for file audits.",
+    "human": "Use humanEntry for product information or a guided human workflow. The portfolio has UK Regulatory Readiness and Industrial Quality Assurance lines. Industrial products currently use an MCP client for file audits.",
     "agent": "Use mcp for the five payment-free regulatory connectors. Use commercialMcp for paid decision calls. Industrial products expose free information/status/setup tools and separately metered audit tools."
   },
   "products": [
@@ -22,7 +22,9 @@
       "humanEntry": "https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub",
       "humanAction": "Start a free licensing readiness check",
       "mcp": "https://taxi.regevidencehub.com/ai/mcp",
-      "commercialMcp": "https://taxi.regevidencehub.com/mcp"
+      "commercialMcp": "https://taxi.regevidencehub.com/mcp",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "CQC Provider Compliance",
@@ -30,7 +32,9 @@
       "humanEntry": "https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub",
       "humanAction": "Start a free statutory-notification readiness check",
       "mcp": "https://cqc.regevidencehub.com/ai/mcp",
-      "commercialMcp": "https://cqc.regevidencehub.com/mcp"
+      "commercialMcp": "https://cqc.regevidencehub.com/mcp",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "UK Premises Licence Preflight",
@@ -38,7 +42,9 @@
       "humanEntry": "https://premises.regevidencehub.com/licensing-report?src=regevidencehub",
       "humanAction": "Start a structured premises-licensing report",
       "mcp": "https://premises.regevidencehub.com/ai/mcp",
-      "commercialMcp": "https://premises.regevidencehub.com/mcp"
+      "commercialMcp": "https://premises.regevidencehub.com/mcp",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "England Works Watch",
@@ -46,7 +52,9 @@
       "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub",
       "humanAction": "Create a Sponsor Decision Evidence Check — £49 for a dated GOV.UK evidence checkpoint plus 30-day private re-check access; no subscription or alerts.",
       "mcp": "https://works.regevidencehub.com/ai/mcp",
-      "commercialMcp": "https://works.regevidencehub.com/mcp"
+      "commercialMcp": "https://works.regevidencehub.com/mcp",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "RegEvidenceHub Waste",
@@ -55,7 +63,9 @@
       "humanAction": "Start a free structured readiness check, then review the £19 England Waste Compliance Preflight Report offer with 24-hour access before payment.",
       "mcp": "https://waste.regevidencehub.com/ai/mcp",
       "humanPayment": "Stripe report offer: £19, 24-hour access",
-      "commercialMcp": "https://waste.regevidencehub.com/mcp"
+      "commercialMcp": "https://waste.regevidencehub.com/mcp",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "CableCert QA",
@@ -68,7 +78,9 @@
         "inspect_certification_package"
       ],
       "commercialMcp": "https://cablecert.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance"
     },
     {
       "name": "FactoryTalk Import Preflight",
@@ -80,7 +92,9 @@
         "factorytalk_product_status"
       ],
       "commercialMcp": "https://factorytalk.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance"
     },
     {
       "name": "OPC UA NodeSet Compatibility Gate",
@@ -94,8 +108,11 @@
         "append_nodeset_chunk"
       ],
       "commercialMcp": "https://nodeset.regevidencehub.com/mcp",
-      "agentPayment": "x402"
+      "agentPayment": "x402",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance"
     }
   ],
-  "safety": "Regulatory and industrial preflight information only; not legal advice, regulator approval, engineering certification, operational safety approval, or a guarantee of compliance."
+  "safety": "Regulatory and industrial preflight information only; not legal advice, regulator approval, engineering certification, operational safety approval, or a guarantee of compliance.",
+  "portfolioCompany": "Technologies RegEvidence inc."
 }

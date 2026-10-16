@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://regevidencehub.com/.well-known/mcp-market.schema.json",
+  "title": "RegEvidenceHub public portfolio taxonomy catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "publisher", "platform", "scope", "product_count", "products", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "publisher": {"const": "Technologies RegEvidence inc."},
+    "platform": {"const": "RegEvidenceHub"},
+    "scope": {"const": "portfolio_taxonomy_only"},
+    "product_count": {"const": 8},
+    "products": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["product_id", "name", "product_line", "product_line_label", "product_url"],
+        "properties": {
+          "product_id": {"enum": ["taxi", "cqc", "premises", "works", "waste", "cablecert", "factorytalk", "nodeset"]},
+          "name": {"type": "string", "minLength": 1},
+          "product_line": {"enum": ["uk-regulatory-readiness", "industrial-quality-assurance"]},
+          "product_line_label": {"enum": ["UK Regulatory Readiness", "Industrial Quality Assurance"]},
+          "product_url": {"type": "string", "format": "uri", "pattern": "^https://[^/]+\\.regevidencehub\\.com/$"}
+        }
+      }
+    },
+    "limitations": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}
+  }
+}

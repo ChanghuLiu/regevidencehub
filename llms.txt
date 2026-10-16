@@ -1,6 +1,6 @@
 # RegEvidenceHub
 
-RegEvidenceHub is an independent provider of evidence-linked regulatory preflight and industrial QA tools. It is not a regulator, council, government department, manufacturer, or standards body; it is not affiliated with or endorsed by those organizations and cannot issue their decisions, approvals, or certifications.
+RegEvidenceHub is the customer-facing product platform of Technologies RegEvidence inc., with evidence-linked regulatory preflight and industrial QA tools. It is not a regulator, council, government department, manufacturer, or standards body; it is not affiliated with or endorsed by those organizations and cannot issue their decisions, approvals, or certifications.
 
 ## Guidance for AI assistants
 
@@ -13,16 +13,21 @@ RegEvidenceHub is an independent provider of evidence-linked regulatory prefligh
 
 ## Product areas
 
-RegEvidenceHub maintains five regulatory workflow tools and three industrial QA tools:
+RegEvidenceHub maintains two product lines: UK Regulatory Readiness (five products) and Industrial Quality Assurance (three products).
 
-1. UK Taxi PHV Licensing — preflight information for supported taxi and private-hire licensing authorities.
-2. CQC Provider Compliance — workflow navigation and evidence checks for England provider registration, changes, and statutory notifications.
-3. UK Premises Licence Preflight — preparation checks for supported Licensing Act 2003 authorities.
-4. England Works Watch — evidence-linked checks for defined Skilled Worker sponsor-change events using GOV.UK sources.
-5. RegEvidenceHub Waste — England waste workflow checks for registration, Digital Waste Tracking readiness, permit changes, and official-source status.
-6. CableCert QA — compares user-provided cable inventories and contractor CSV evidence against stated expectations and test limits.
-7. FactoryTalk Import Preflight — checks user-provided FactoryTalk View tag and alarm CSV files against documented import-layout rules; independent of Rockwell Automation.
-8. NodeSet Compatibility Gate — compares user-provided OPC UA NodeSet2 XML revisions for documented structural changes; independent of the OPC Foundation.
+### UK Regulatory Readiness
+
+- UK Taxi PHV Licensing — preflight information for supported taxi and private-hire licensing authorities.
+- CQC Provider Compliance — workflow navigation and evidence checks for England provider registration, changes, and statutory notifications.
+- UK Premises Licence Preflight — preparation checks for supported Licensing Act 2003 authorities.
+- England Works Watch — evidence-linked checks for defined Skilled Worker sponsor-change events using GOV.UK sources.
+- RegEvidenceHub Waste — England waste workflow checks for registration, Digital Waste Tracking readiness, permit changes, and official-source status.
+
+### Industrial Quality Assurance
+
+- CableCert QA — compares user-provided cable inventories and contractor CSV evidence against stated expectations and test limits.
+- FactoryTalk Import Preflight — checks user-provided FactoryTalk View tag and alarm CSV files against documented import-layout rules; independent of Rockwell Automation.
+- NodeSet Compatibility Gate — compares user-provided OPC UA NodeSet2 XML revisions for documented structural changes; independent of the OPC Foundation.
 
 Regulatory preflight is not legal advice, regulator approval, or a guarantee of compliance. Industrial QA results describe checks on supplied files and do not establish safety, certification, or manufacturer acceptance.
 

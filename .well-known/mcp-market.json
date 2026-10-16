@@ -1,0 +1,69 @@
+{
+  "limitations": [
+    "This catalog describes product names and portfolio taxonomy only.",
+    "It makes no assertion about endpoint availability, authentication, pricing, tools, or client compatibility."
+  ],
+  "platform": "RegEvidenceHub",
+  "product_count": 8,
+  "products": [
+    {
+      "name": "CableCert QA",
+      "product_id": "cablecert",
+      "product_line": "industrial-quality-assurance",
+      "product_line_label": "Industrial Quality Assurance",
+      "product_url": "https://cablecert.regevidencehub.com/"
+    },
+    {
+      "name": "CQC Provider Compliance",
+      "product_id": "cqc",
+      "product_line": "uk-regulatory-readiness",
+      "product_line_label": "UK Regulatory Readiness",
+      "product_url": "https://cqc.regevidencehub.com/"
+    },
+    {
+      "name": "FactoryTalk Import Preflight",
+      "product_id": "factorytalk",
+      "product_line": "industrial-quality-assurance",
+      "product_line_label": "Industrial Quality Assurance",
+      "product_url": "https://factorytalk.regevidencehub.com/"
+    },
+    {
+      "name": "OPC UA NodeSet Compatibility Gate",
+      "product_id": "nodeset",
+      "product_line": "industrial-quality-assurance",
+      "product_line_label": "Industrial Quality Assurance",
+      "product_url": "https://nodeset.regevidencehub.com/"
+    },
+    {
+      "name": "UK Premises Licence Preflight",
+      "product_id": "premises",
+      "product_line": "uk-regulatory-readiness",
+      "product_line_label": "UK Regulatory Readiness",
+      "product_url": "https://premises.regevidencehub.com/"
+    },
+    {
+      "name": "UK Taxi PHV Licensing",
+      "product_id": "taxi",
+      "product_line": "uk-regulatory-readiness",
+      "product_line_label": "UK Regulatory Readiness",
+      "product_url": "https://taxi.regevidencehub.com/"
+    },
+    {
+      "name": "RegEvidenceHub Waste",
+      "product_id": "waste",
+      "product_line": "uk-regulatory-readiness",
+      "product_line_label": "UK Regulatory Readiness",
+      "product_url": "https://waste.regevidencehub.com/"
+    },
+    {
+      "name": "England Works Watch",
+      "product_id": "works",
+      "product_line": "uk-regulatory-readiness",
+      "product_line_label": "UK Regulatory Readiness",
+      "product_url": "https://works.regevidencehub.com/"
+    }
+  ],
+  "publisher": "Technologies RegEvidence inc.",
+  "schema_version": "1.0.0",
+  "scope": "portfolio_taxonomy_only"
+}
