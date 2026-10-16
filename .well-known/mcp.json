@@ -1,6 +1,6 @@
 {
   "name": "RegEvidenceHub",
-  "description": "Directory of all eight RegEvidenceHub remote MCP products. Five regulatory products include separate free connector endpoints; industrial audit endpoints are metered.",
+  "description": "Technologies RegEvidence inc. portfolio directory for eight RegEvidenceHub MCP products across UK Regulatory Readiness and Industrial Quality Assurance.",
   "servers": [
     {
       "name": "UK Taxi PHV Licensing",
@@ -8,7 +8,9 @@
       "url": "https://taxi.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://taxi.regevidencehub.com/mcp",
       "humanEntry": "https://taxi.regevidencehub.com/licensing-preflight?src=regevidencehub",
-      "payment": "commercial MCP calls may be metered; see product pricing"
+      "payment": "commercial MCP calls may be metered; see product pricing",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "CQC Provider Compliance",
@@ -16,7 +18,9 @@
       "url": "https://cqc.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://cqc.regevidencehub.com/mcp",
       "humanEntry": "https://cqc.regevidencehub.com/statutory-notification-check?src=regevidencehub",
-      "payment": "commercial MCP calls may be metered; see product pricing"
+      "payment": "commercial MCP calls may be metered; see product pricing",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "UK Premises Licence Preflight",
@@ -24,7 +28,9 @@
       "url": "https://premises.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://premises.regevidencehub.com/mcp",
       "humanEntry": "https://premises.regevidencehub.com/licensing-report?src=regevidencehub",
-      "payment": "commercial MCP calls may be metered; see product pricing"
+      "payment": "commercial MCP calls may be metered; see product pricing",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "England Works Watch",
@@ -32,7 +38,9 @@
       "url": "https://works.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://works.regevidencehub.com/mcp",
       "humanEntry": "https://works.regevidencehub.com/monitoring-report?src=regevidencehub",
-      "payment": "commercial MCP calls may be metered; see product pricing"
+      "payment": "commercial MCP calls may be metered; see product pricing",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "RegEvidenceHub Waste",
@@ -40,28 +48,36 @@
       "url": "https://waste.regevidencehub.com/ai/mcp",
       "commercialUrl": "https://waste.regevidencehub.com/mcp",
       "humanEntry": "https://regevidencehub.com/products/waste.html",
-      "payment": "commercial MCP calls may be metered; see product pricing"
+      "payment": "commercial MCP calls may be metered; see product pricing",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "UK Regulatory Readiness"
     },
     {
       "name": "CableCert QA",
       "transport": "streamable-http",
       "url": "https://cablecert.regevidencehub.com/mcp",
       "productPage": "https://regevidencehub.com/products/cablecert.html",
-      "payment": "free information/inspection tools; $0.01 USDC per full audit; $19 one-report platform offer"
+      "payment": "free information/inspection tools; $0.01 USDC per full audit; $19 one-report platform offer",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance"
     },
     {
       "name": "FactoryTalk Import Preflight",
       "transport": "streamable-http",
       "url": "https://factorytalk.regevidencehub.com/mcp",
       "productPage": "https://regevidencehub.com/products/factorytalk.html",
-      "payment": "free status tool; $0.007 USDC per audit call; no prepaid web package listed"
+      "payment": "free status tool; $0.007 USDC per audit call; no prepaid web package listed",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance"
     },
     {
       "name": "OPC UA NodeSet Compatibility Gate",
       "transport": "streamable-http",
       "url": "https://nodeset.regevidencehub.com/mcp",
       "productPage": "https://regevidencehub.com/products/nodeset.html",
-      "payment": "free status/upload setup tools; $0.005 USDC per audit; no prepaid web package listed"
+      "payment": "free status/upload setup tools; $0.005 USDC per audit; no prepaid web package listed",
+      "portfolioPlatform": "RegEvidenceHub",
+      "portfolioLine": "Industrial Quality Assurance"
     }
   ],
   "links": {
@@ -70,5 +86,6 @@
     "evidence": "https://regevidencehub.com/evidence/",
     "pricing": "https://regevidencehub.com/pricing/",
     "support": "https://regevidencehub.com/support/"
-  }
+  },
+  "portfolioCompany": "Technologies RegEvidence inc."
 }

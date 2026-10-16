@@ -20,3 +20,13 @@ Static customer-facing portfolio site for RegEvidenceHub.
 5. After DNS resolves, enable **Enforce HTTPS** in GitHub Pages settings.
 
 Product subdomains remain hosted by their existing production services.
+
+## Local portfolio taxonomy check
+
+After changing the eight-product catalog or product-line labels, run:
+
+```bash
+python3 scripts/validate-portfolio-taxonomy.py
+```
+
+This validates the existing eight-entry catalog and its five/three line split. It does not probe product endpoints or change publication state.
