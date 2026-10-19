@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /directhire/
+Disallow: /
+Sitemap: https://regevidencehub.com/sitemap.xml

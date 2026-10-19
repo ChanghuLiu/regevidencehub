@@ -1,0 +1,122 @@
+{
+  "configVersion": 1,
+  "timestamp": 1792441563506,
+  "index": "/directhire/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/directhire/index.html",
+        "/directhire/main-DH4XF3RR.js",
+        "/directhire/manifest.webmanifest",
+        "/directhire/seo.css",
+        "/directhire/styles-34R463MC.css"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/directhire/index.html": "d5053c38d7119f8fb5a4c33fd7d4b9469c49fa84",
+    "/directhire/main-DH4XF3RR.js": "05e2388016f093db3a8b00398e8ca04b550d24ff",
+    "/directhire/manifest.webmanifest": "21663596c06539f09dc9ca24dd964d14ef39d766",
+    "/directhire/seo.css": "0c4bebefea5ba8c2788aa34f485c49f3f4c68516",
+    "/directhire/styles-34R463MC.css": "21cbe930ddd8b2a565198e0488bff91d442a8615"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/interest\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/interest\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/canada-direct-hire\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/canada-direct-hire\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/pops-direct-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/pops-direct-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/oec-direct-hire-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/oec-direct-hire-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/mwo-toronto-direct-hire\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/mwo-toronto-direct-hire\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/mwo-vancouver-direct-hire\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/mwo-vancouver-direct-hire\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/direct-hire-clearance-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/direct-hire-clearance-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/direct-hire-document-checklist-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/direct-hire-document-checklist-canada\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/events\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/directhire\\/events\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
