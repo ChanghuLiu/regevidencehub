@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1792441563506,
+  "timestamp": 1792443008089,
   "index": "/directhire/index.html",
   "assetGroups": [
     {
@@ -25,7 +25,7 @@
     "/directhire/index.html": "d5053c38d7119f8fb5a4c33fd7d4b9469c49fa84",
     "/directhire/main-DH4XF3RR.js": "05e2388016f093db3a8b00398e8ca04b550d24ff",
     "/directhire/manifest.webmanifest": "21663596c06539f09dc9ca24dd964d14ef39d766",
-    "/directhire/seo.css": "0c4bebefea5ba8c2788aa34f485c49f3f4c68516",
+    "/directhire/seo.css": "739d64aa11bdaa863587ce6324e497089bb0b40a",
     "/directhire/styles-34R463MC.css": "21cbe930ddd8b2a565198e0488bff91d442a8615"
   },
   "navigationUrls": [
