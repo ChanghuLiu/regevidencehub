@@ -64,6 +64,7 @@
       window.gtag?.("consent", "update", { analytics_storage: "denied" });
       clearAnalyticsCookies();
     }
+    window.dispatchEvent(new CustomEvent("ga4-analytics-consent-change", { detail: { choice } }));
   };
 
   const showPreferences = (focus = false) => {
