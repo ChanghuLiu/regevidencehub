@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1792444912990,
+  "timestamp": 1792504457058,
   "index": "/directhire/index.html",
   "assetGroups": [
     {
@@ -15,18 +15,18 @@
         "/directhire/main-GAZTXLYD.js",
         "/directhire/manifest.webmanifest",
         "/directhire/seo.css",
-        "/directhire/styles-WJP6NZW3.css"
+        "/directhire/styles-7XNKYAWN.css"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/directhire/index.html": "cfdd8c8a40999651bf4d95b03fa2b0b7e6f56868",
+    "/directhire/index.html": "33f99e7d9ef4b35c7e046221f24344cf05e39842",
     "/directhire/main-GAZTXLYD.js": "85b17c5fafd4d3b8583182835b8a5f581e1632c2",
     "/directhire/manifest.webmanifest": "21663596c06539f09dc9ca24dd964d14ef39d766",
     "/directhire/seo.css": "739d64aa11bdaa863587ce6324e497089bb0b40a",
-    "/directhire/styles-WJP6NZW3.css": "c0a94b74cad3c5dfdd4a9c0746d726202d8b60ac"
+    "/directhire/styles-7XNKYAWN.css": "94d225a6476c9a0906eefd4568267a1197e2d6f6"
   },
   "navigationUrls": [
     {
