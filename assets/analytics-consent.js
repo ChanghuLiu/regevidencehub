@@ -10,6 +10,7 @@
   const consentKey = "ga4-analytics-consent-v1";
   const cookieDomain = isAgentTrustLab ? "agenttrustlab.com" : "regevidencehub.com";
   const funnelProducts = new Set(["works_monitoring", "premises_report"]);
+  const funnelPrefix = (product) => product === "works_monitoring" ? "works" : "premises";
   let analyticsLoaded = false;
 
   const readCookie = () => {
@@ -62,16 +63,16 @@
     document.querySelectorAll("[data-ga4-funnel-product]").forEach((form) => {
       const product = form.getAttribute("data-ga4-funnel-product");
       if (!funnelProducts.has(product)) return;
-      window.gtag("event", "report_form_view", { event_scope: "paid_report_funnel", product_id: product });
+      window.gtag("event", `${funnelPrefix(product)}_report_form_view`, { event_scope: "paid_report_funnel", product_id: product });
       let started = false;
       form.addEventListener("focusin", () => {
         if (readConsent() !== "granted" || started) return;
         started = true;
-        window.gtag("event", "report_form_start", { event_scope: "paid_report_funnel", product_id: product });
+        window.gtag("event", `${funnelPrefix(product)}_report_form_start`, { event_scope: "paid_report_funnel", product_id: product });
       }, { once: true });
       form.addEventListener("submit", () => {
         if (readConsent() !== "granted") return;
-        window.gtag("event", "report_checkout_attempt", { event_scope: "paid_report_funnel", product_id: product });
+        window.gtag("event", `${funnelPrefix(product)}_checkout_attempt`, { event_scope: "paid_report_funnel", product_id: product });
       });
     });
     document.querySelectorAll("[data-ga4-funnel-cta]").forEach((element) => {
@@ -79,12 +80,12 @@
       if (!funnelProducts.has(product)) return;
       element.addEventListener("click", () => {
         if (readConsent() !== "granted") return;
-        window.gtag("event", "product_cta_click", { event_scope: "paid_report_funnel", product_id: product });
+        window.gtag("event", `${funnelPrefix(product)}_cta_click`, { event_scope: "paid_report_funnel", product_id: product });
       });
     });
     const confirmedProduct = document.body?.getAttribute("data-ga4-confirmed-product");
     if (funnelProducts.has(confirmedProduct)) {
-      window.gtag("event", "paid_report_displayed", {
+      window.gtag("event", `${funnelPrefix(confirmedProduct)}_paid_report_displayed`, {
         event_scope: "paid_report_funnel",
         product_id: confirmedProduct
       });
