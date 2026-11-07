@@ -60,8 +60,15 @@
       page_referrer: document.referrer ? safePageLocation(document.referrer) : "",
       page_title: document.title
     });
-    document.querySelectorAll("[data-ga4-funnel-product]").forEach((form) => {
-      const product = form.getAttribute("data-ga4-funnel-product");
+    document.querySelectorAll("form").forEach((form) => {
+      let product = form.getAttribute("data-ga4-funnel-product");
+      if (!product && host === "works.regevidencehub.com") {
+        try {
+          if (new URL(form.action, window.location.origin).pathname === "/monitoring-report/checkout") {
+            product = "works_monitoring";
+          }
+        } catch (_error) { /* Ignore invalid form actions. */ }
+      }
       if (!funnelProducts.has(product)) return;
       window.gtag("event", `${funnelPrefix(product)}_report_form_view`, { event_scope: "paid_report_funnel", product_id: product });
       let started = false;
