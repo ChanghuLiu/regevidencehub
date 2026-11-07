@@ -104,7 +104,12 @@
       ad_personalization: "denied"
     });
     window.gtag("js", new Date());
-    window.gtag("set", { site_platform: platform, content_group: platform });
+    window.gtag("set", {
+      site_platform: platform,
+      content_group: platform,
+      page_location: safePageLocation(window.location.href),
+      page_referrer: document.referrer ? safePageLocation(document.referrer) : ""
+    });
     window.gtag("consent", "update", { analytics_storage: "granted" });
     window.gtag("config", measurementId, {
       allow_google_signals: false,
