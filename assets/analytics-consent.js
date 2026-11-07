@@ -65,11 +65,12 @@
       window.gtag("event", "report_form_view", { event_scope: "paid_report_funnel", product_id: product });
       let started = false;
       form.addEventListener("focusin", () => {
-        if (started) return;
+        if (readConsent() !== "granted" || started) return;
         started = true;
         window.gtag("event", "report_form_start", { event_scope: "paid_report_funnel", product_id: product });
       }, { once: true });
       form.addEventListener("submit", () => {
+        if (readConsent() !== "granted") return;
         window.gtag("event", "report_checkout_attempt", { event_scope: "paid_report_funnel", product_id: product });
       });
     });
@@ -77,6 +78,7 @@
       const product = element.getAttribute("data-ga4-funnel-cta");
       if (!funnelProducts.has(product)) return;
       element.addEventListener("click", () => {
+        if (readConsent() !== "granted") return;
         window.gtag("event", "product_cta_click", { event_scope: "paid_report_funnel", product_id: product });
       });
     });
