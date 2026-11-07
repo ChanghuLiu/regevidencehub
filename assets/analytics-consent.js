@@ -10,7 +10,6 @@
   const consentKey = "ga4-analytics-consent-v1";
   const cookieDomain = isAgentTrustLab ? "agenttrustlab.com" : "regevidencehub.com";
   const funnelProducts = new Set(["works_monitoring", "premises_report"]);
-  const funnelEvents = new Set(["product_cta_click", "report_form_view", "report_form_start", "report_checkout_attempt", "paid_report_displayed"]);
   let analyticsLoaded = false;
 
   const readCookie = () => {
@@ -191,15 +190,15 @@
     if (focus) accept.focus();
   };
 
-  const footer = document.querySelector("footer");
-  if (footer && !document.getElementById("ga4-preferences-button")) {
+  const preferenceHost = document.querySelector("footer") || document.body;
+  if (!document.getElementById("ga4-preferences-button")) {
     const preferences = document.createElement("button");
     preferences.id = "ga4-preferences-button";
     preferences.type = "button";
     preferences.textContent = "Cookie preferences";
     preferences.setAttribute("aria-label", "Change optional analytics preferences");
     preferences.addEventListener("click", () => showPreferences(true));
-    footer.appendChild(preferences);
+    preferenceHost.appendChild(preferences);
   }
 
   const choice = readConsent();
