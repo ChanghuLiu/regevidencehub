@@ -11,7 +11,7 @@
       "CC-003",
       "CC-004"
     ],
-    "source_file": "synthetic-contractor-results.csv",
+    "source_file": "cablecert-contractor-results.csv",
     "csv": "Cable ID,Result,Test Limit\nCC-001,PASS,Cat6 Permanent Link\nCC-002,FAIL,Cat6 Permanent Link\nCC-002,FAIL,Cat6 Permanent Link\nCC-999,PASS,Cat6 Permanent Link",
     "expected_test_limit": "Cat6 Permanent Link"
   },
@@ -39,7 +39,7 @@
         "detail": null,
         "evidence": [
           {
-            "source_file": "synthetic-contractor-results.csv",
+            "source_file": "cablecert-contractor-results.csv",
             "source_row": 5
           }
         ]
@@ -50,11 +50,11 @@
         "detail": "FAIL->FAIL",
         "evidence": [
           {
-            "source_file": "synthetic-contractor-results.csv",
+            "source_file": "cablecert-contractor-results.csv",
             "source_row": 3
           },
           {
-            "source_file": "synthetic-contractor-results.csv",
+            "source_file": "cablecert-contractor-results.csv",
             "source_row": 4
           }
         ]
@@ -65,11 +65,11 @@
         "detail": "explicit submitted failure",
         "evidence": [
           {
-            "source_file": "synthetic-contractor-results.csv",
+            "source_file": "cablecert-contractor-results.csv",
             "source_row": 3
           },
           {
-            "source_file": "synthetic-contractor-results.csv",
+            "source_file": "cablecert-contractor-results.csv",
             "source_row": 4
           }
         ]

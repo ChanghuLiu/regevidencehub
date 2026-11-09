@@ -30,7 +30,7 @@
 
     <article class="card sample-input-card">
       <div class="sample-section-heading"><div><span class="eyebrow">Input 1</span><h2>Owner’s expected Cable IDs</h2></div><a class="text-link" href="/assets/samples/cablecert-expected-ids.csv" download>Download expected list (CSV)</a></div>
-      <p>These four IDs define which links should appear in the contractor’s evidence.</p>
+      <p>These four IDs were passed as the expected ID list (one per line in the browser form). The CSV download is a reference copy, not a separate upload requirement.</p>
       <p class="sample-code-list"><code>CC-001</code><code>CC-002</code><code>CC-003</code><code>CC-004</code></p>
     </article>
 
@@ -50,9 +50,9 @@
       <div class="table-wrap"><table><thead><tr><th>Finding</th><th>Record</th><th>Input evidence</th></tr></thead><tbody>
         <tr><th scope="row">Missing expected ID</th><td><code>CC-003</code></td><td>No matching CSV row</td></tr>
         <tr><th scope="row">Missing expected ID</th><td><code>CC-004</code></td><td>No matching CSV row</td></tr>
-        <tr><th scope="row">Unexpected ID</th><td><code>CC-999</code></td><td><code>synthetic-contractor-results.csv</code>, row 5</td></tr>
-        <tr><th scope="row">Duplicate or retest sequence</th><td><code>CC-002</code> · FAIL → FAIL</td><td><code>synthetic-contractor-results.csv</code>, rows 3 and 4</td></tr>
-        <tr><th scope="row">Explicit failed result</th><td><code>CC-002</code></td><td><code>synthetic-contractor-results.csv</code>, rows 3 and 4</td></tr>
+        <tr><th scope="row">Unexpected ID</th><td><code>CC-999</code></td><td><code>cablecert-contractor-results.csv</code>, row 5</td></tr>
+        <tr><th scope="row">Duplicate or retest sequence</th><td><code>CC-002</code> · FAIL → FAIL</td><td><code>cablecert-contractor-results.csv</code>, rows 3 and 4</td></tr>
+        <tr><th scope="row">Explicit failed result</th><td><code>CC-002</code></td><td><code>cablecert-contractor-results.csv</code>, rows 3 and 4</td></tr>
       </tbody></table></div>
       <p class="sample-review-note"><strong>What this means:</strong> the source records contain two FAIL results for CC-002. The repeated rows are flagged; the checker does not decide that one replaces the other or infer a PASS.</p>
     </section>
