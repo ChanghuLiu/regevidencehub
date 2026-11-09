@@ -2,16 +2,22 @@
 .info-page { background:#f7f6f1; color:#1d2b40; }
 .info-page .site-header { background:rgba(247,246,241,.96); }
 .info-page .nav-links { gap:clamp(12px,1.8vw,24px); flex-wrap:wrap; }
-.info-page .nav-links a { color:#41536b; font-size:.92rem; font-weight:600; text-decoration:none; }
-.info-page .nav-links a:hover,.info-page .nav-links a[aria-current="page"] { color:#315fd1; }
+.info-page .site-header .nav-links a { color:#41536b; font-size:.92rem; font-weight:600; text-decoration:none; }
+.info-page .site-header .nav-links a:hover,.info-page .site-header .nav-links a[aria-current="page"] { color:#315fd1; }
+.info-page .brand { color:#1d2b40; }
 .info-page .page-hero { padding:56px 0 42px; background:linear-gradient(130deg,#eef2ff 0%,#f7f6f1 68%); }
 .info-page .page-hero .container,.info-page .section-tight .container { max-width:1160px; }
 .info-page .eyebrow { color:#5272d8; font-size:.76rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
-.info-page h1 { max-width:800px; margin:10px 0 14px; font-size:clamp(2.2rem,5vw,3.5rem); line-height:1.08; letter-spacing:-.045em; }
-.info-page h2 { margin:0 0 12px; font-size:clamp(1.45rem,2.5vw,1.9rem); letter-spacing:-.025em; }
-.info-page h3 { letter-spacing:-.015em; }
+.info-page h1 { max-width:800px; margin:10px 0 14px; color:#1d2b40; font-size:clamp(2.2rem,5vw,3.5rem); line-height:1.08; letter-spacing:-.045em; }
+.info-page h2 { margin:30px 0 12px; color:#1d2b40; font-size:clamp(1.45rem,2.5vw,1.9rem); letter-spacing:-.025em; }
+.info-page h3 { margin:0 0 8px; color:#1d2b40; letter-spacing:-.015em; }
 .info-page .page-hero p,.info-page .section-intro { max-width:760px; color:#63758e; font-size:1.05rem; line-height:1.7; }
 .info-page .section-tight { padding:36px 0; }
+.info-page .info-lead { max-width:840px; margin:0 0 20px; color:#53647b; font-size:1.04rem; line-height:1.65; }
+.info-page .info-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:18px 0 30px; }
+.info-page .info-grid .card { min-width:0; padding:22px; border:1px solid #d9dfdf; border-radius:14px; background:#fff; box-shadow:0 4px 14px rgba(29,43,64,.04); }
+.info-page .info-grid .card p { margin:0; color:#63758e; line-height:1.6; }
+.info-page .policy-note { margin:16px 0 20px; padding:17px 20px; border-left:4px solid #5d76d6; border-radius:0 12px 12px 0; background:#edf1fb; color:#34445b; line-height:1.65; }
 .info-page .info-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
 .info-page .button { border-radius:10px; }
 .info-page .table-wrap { overflow-x:auto; border:1px solid #d9dfdf; border-radius:14px; background:#fff; }
@@ -25,11 +31,10 @@
 .product-link-grid strong { color:#1d2b40; font-size:1.08rem; }
 .product-link-grid small { color:#63758e; font-size:.93rem; line-height:1.55; }
 .client-guide-row { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:18px 0 34px; padding:14px 18px; border:1px solid #dce3f4; border-radius:12px; background:#f0f3fc; }
-.client-guide-row a,.info-page a:not(.button) { color:#315fd1; }
 .machine-readable { margin:26px 0 0; padding:16px 18px; border:1px solid #d9dfdf; border-radius:12px; background:#fff; }
 .machine-readable summary { cursor:pointer; color:#1d2b40; font-weight:700; }
 .info-summary { display:flex; justify-content:space-between; align-items:center; gap:18px; padding:18px 22px; border-radius:14px; background:#edf1fb; }
 .info-summary p { margin:0; line-height:1.6; }
-@media(max-width:850px) { .product-link-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media(max-width:600px) { .info-page .page-hero { padding:38px 0 30px; } .info-page .section-tight { padding:28px 0; } .product-link-grid { grid-template-columns:1fr; } .product-link-grid a { min-height:unset; } .info-summary { align-items:flex-start; flex-direction:column; } .info-page th,.info-page td { padding:11px 12px; } }
+@media(max-width:850px) { .info-page .info-grid,.product-link-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .info-page .page-hero { padding:38px 0 30px; } .info-page .section-tight { padding:28px 0; } .info-page .info-grid,.product-link-grid { grid-template-columns:1fr; } .info-page .info-grid .card,.product-link-grid a { min-height:unset; } .info-summary { align-items:flex-start; flex-direction:column; } .info-page th,.info-page td { padding:11px 12px; } }
 @media(prefers-reduced-motion:reduce) { .product-link-grid a { transition:none; } .product-link-grid a:hover { transform:none; } }
