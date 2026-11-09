@@ -26,7 +26,7 @@ NodeSet's upload creation/append tools write temporary memory. Its uploaded audi
 
 ## Listing and reviewer materials
 
-Use product documentation and privacy URLs, a working support contact, the existing product icon and accurate scope descriptions. Public support: launchcircle.server@gmail.com. Shared publisher website: https://regevidencehub.com/.
+Use product documentation and privacy URLs, a working support contact, the existing product icon and accurate scope descriptions. Public support: selena@regevidencehub.com. Shared publisher website: https://regevidencehub.com/.
 The public installation guide is https://regevidencehub.com/claude.html. Five regulatory endpoints exclude commercial checkout/payment flows. The industrial candidates retain their existing commercial audit boundary; do not describe them as universally free.
 
 ## Remaining gates
