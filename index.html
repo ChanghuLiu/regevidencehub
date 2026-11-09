@@ -32,18 +32,18 @@
         <p class="cf-hero-note">Clear scope. Traceable findings. A person decides what they mean.</p>
       </div>
       <article class="cf-report-preview" id="sample-report" aria-labelledby="sample-title">
-        <div class="cf-report-top"><span class="cf-label">Sample report</span><span class="cf-sample-badge">Synthetic CSV</span></div>
-        <h2 id="sample-title">CableCert · file inspection preview</h2>
-        <p class="cf-report-intro">Example input: two cable rows and three expected columns.</p>
-        <div class="cf-file-line"><span aria-hidden="true">▤</span><span><strong>sample-cable-cert.csv</strong><small>2 rows · 3 columns</small></span><span class="cf-file-type">CSV</span></div>
+        <div class="cf-report-top"><span class="cf-label">Sample report</span><span class="cf-sample-badge">Public source example</span></div>
+        <h2 id="sample-title">CableCert · evidence row</h2>
+        <p class="cf-report-intro">A source-derived example from a published Fluke test report.</p>
+        <div class="cf-file-line"><span aria-hidden="true">▤</span><span><strong>CE-50P</strong><small>Blue Jeans Cable · report page 1</small></span><span class="cf-file-type">PDF</span></div>
         <div class="cf-mapping">
-          <div><span>Input column</span><span>Recognized as</span></div>
-          <p><code>Cable ID</code><span>→</span><strong>Cable ID</strong></p>
-          <p><code>Result</code><span>→</span><strong>Test status</strong></p>
-          <p><code>Test Limit</code><span>→</span><strong>Test limit</strong></p>
+          <div><span>Source field</span><span>Recorded value</span></div>
+          <p><code>Cable ID</code><span>→</span><strong>CE-50P</strong></p>
+          <p><code>Result</code><span>→</span><strong>FAIL</strong></p>
+          <p><code>Test limit</code><span>→</span><strong>TIA Patch Cord Cat6 15.0m</strong></p>
         </div>
-        <div class="cf-result"><span class="cf-result-mark" aria-hidden="true">✓</span><p><strong>3 of 3 headers mapped</strong><small>No unrecognized headers in this sample.</small></p></div>
-        <p class="cf-boundary">This is a free header-inspection example, not a completed cable audit. A full project report also needs the owner’s expected Cable IDs; a qualified person reviews acceptance.</p>
+        <div class="cf-result"><span class="cf-result-mark" aria-hidden="true">!</span><p><strong>Explicit FAIL in the source</strong><small>The result is preserved; no PASS is inferred.</small></p></div>
+        <p class="cf-boundary">Source-derived summary, not a customer upload or a native CSV. <a href="https://www.bluejeanscable.com/articles/fluke/CE-50P.pdf" target="_blank" rel="noopener">Open the public Fluke report ↗</a>. A qualified person decides acceptance.</p>
       </article>
     </div>
   </section>
