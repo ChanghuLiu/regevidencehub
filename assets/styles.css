@@ -404,3 +404,11 @@ tr:last-child td { border-bottom: 0; }
 .product-grid-3 .hero-actions { margin-top: auto; }
 @media (max-width: 900px) { .product-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 680px) { .product-grid-3 { grid-template-columns: 1fr; } }
+
+.product-grid-3 .product-card-actions { display: grid; gap: 12px; margin-top: auto; }
+.product-grid-3 .product-card-actions > .button { justify-self: start; }
+.product-grid-3 .product-card-links { display: grid; grid-template-columns: repeat(2, max-content); gap: 8px 18px; align-items: center; }
+@media (max-width: 680px) {
+  .product-grid-3 .product-card-actions > .button { justify-self: stretch; width: 100%; }
+  .product-grid-3 .product-card-links { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
