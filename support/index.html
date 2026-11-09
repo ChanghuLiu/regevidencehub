@@ -1,30 +1,92 @@
-<!doctype html><html lang="en"><head>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=20261025"><link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?v=20261025"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261025"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Support — RegEvidenceHub</title><meta name="description" content="RegEvidenceHub support for AI/MCP integration, product questions, and privacy requests."><link rel="canonical" href="https://regevidencehub.com/support/"><link rel="stylesheet" href="/assets/styles.css?v=20261016a">
-  <meta property="og:title" content="Support — RegEvidenceHub">
-  <meta property="og:description" content="RegEvidenceHub support for AI/MCP integration, product questions, and privacy requests.">
-  <meta property="og:url" content="https://regevidencehub.com/support/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Support — RegEvidenceHub">
-  <meta name="twitter:description" content="RegEvidenceHub support for AI/MCP integration, product questions, and privacy requests.">
-</head><body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header"><div class="container nav"><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><nav class="nav-links"><a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/support/">Support &amp; Contact</a><a class="button" href="/developers/#connect">Connect with MCP</a></nav></div></header>
-<main id="main-content" tabindex="-1"><section class="page-hero"><div class="container"><span class="eyebrow">Support</span><h1>Integration and product support</h1><p>For AI/MCP integration issues, source-status questions, product-scope questions, or privacy requests, contact the RegEvidenceHub support channel below.</p></div></section>
-<section class="section-tight"><div class="container grid">
-<div class="card"><h3>Contact Technologies RegEvidence Inc.</h3><p>Use this form for product, technical, privacy, partnership, or company enquiries. Your message is sent to our support inbox and is not stored on the website.</p>
-<form id="business-inquiry-form" action="https://api.regevidencehub.com/v1/business-inquiries" method="post" style="display:grid;gap:14px;max-width:640px">
-<label>Name<input name="name" required maxlength="120" autocomplete="name" style="display:block;width:100%;margin-top:5px;padding:11px"></label>
-<label>Work email<input name="email" type="email" required maxlength="254" autocomplete="email" style="display:block;width:100%;margin-top:5px;padding:11px"></label>
-<label>Organization (optional)<input name="organization" maxlength="160" autocomplete="organization" style="display:block;width:100%;margin-top:5px;padding:11px"></label>
-<label>Enquiry type<select name="topic" required style="display:block;width:100%;margin-top:5px;padding:11px"><option value="">Choose one</option><option>Product enquiry</option><option>Business or partnership</option><option>Technical support</option><option>Privacy request</option><option>Other</option></select></label>
-<label>How can we help?<textarea name="message" required minlength="10" maxlength="3000" rows="6" style="display:block;width:100%;margin-top:5px;padding:11px"></textarea></label>
-<label aria-hidden="true" style="position:absolute;left:-10000px">Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label><input type="hidden" name="source_site" value="regevidencehub.com">
-<p id="business-inquiry-status" role="status" aria-live="polite"></p><button class="button" type="submit" style="justify-self:start">Send enquiry</button>
-</form><p>Do not include passwords, private keys, payment details, patient records, full care files, or other confidential information.</p><p>Prefer email? <a href="mailto:launchcircle.server@gmail.com">launchcircle.server@gmail.com</a></p>
-<script>(()=>{const f=document.getElementById('business-inquiry-form'),s=document.getElementById('business-inquiry-status');let requestKey='',lastBody='';f.addEventListener('submit',async e=>{e.preventDefault();const b=f.querySelector('button'),body=JSON.stringify(Object.fromEntries(new FormData(f)));if(body!==lastBody){lastBody=body;requestKey=crypto.randomUUID();}b.disabled=true;s.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'content-type':'application/json','Idempotency-Key':requestKey},body});const d=await r.json();if(!r.ok)throw Error();s.textContent='Thank you. Your enquiry has been sent to our support inbox. Reference: '+d.reference+'.';f.reset();lastBody='';requestKey='';}catch(_){s.textContent='We could not submit the form. Please email launchcircle.server@gmail.com.';}finally{b.disabled=false;}})})();</script></div>
-<div class="card"><h3>Security</h3><p>Never send private keys, seed phrases, passwords, payment credentials, patient records, full care files, or unrelated confidential material to support or to a RegEvidenceHub MCP tool.</p></div>
-</div>
-<div class="callout"><strong>Product status:</strong> each product publishes health/status information on its product domain. Maintainer profile: <a href="https://github.com/ChanghuLiu">github.com/ChanghuLiu</a>.</div>
-</section></main>
-<footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Evidence-linked regulatory preflight for AI agents and automated workflows.</p></div><div class="footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/developers/">Developers</a><a href="/evidence/">Evidence</a></div><div class="footer-links"><strong>Technologies RegEvidence Inc.</strong><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></div><div class="container footer-note">Not legal advice, regulator approval, or a guarantee of compliance.</div></footer><script src="/assets/analytics-consent.js?v=20261019-1" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=20261025"><link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?v=20261025"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261025">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How can we help? — RegEvidenceHub Support</title>
+  <meta name="description" content="Get help with RegEvidenceHub products, reports, MCP setup, or privacy questions. Choose a topic and contact our support team.">
+  <link rel="canonical" href="https://regevidencehub.com/support/">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261016a">
+  <style>
+    .support-hero { padding: 54px 0 40px; background: linear-gradient(135deg,#eef3ff,#f8f7f2 70%); }
+    .support-hero h1 { margin: 10px 0 12px; font-size: clamp(2.1rem,4vw,3.1rem); letter-spacing:-.045em; }
+    .support-hero p { max-width: 620px; margin:0; color:#5f6d80; font-size:1.04rem; line-height:1.65; }
+    .support-layout { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr); gap:22px; align-items:start; }
+    .support-card { padding:26px; border:1px solid #e0e5eb; border-radius:16px; background:#fff; box-shadow:0 8px 28px rgba(30,50,80,.045); }
+    .support-card h2 { margin:0 0 7px; font-size:1.25rem; }
+    .support-card > p { color:#627085; line-height:1.6; }
+    .support-start { display:grid; gap:10px; margin:19px 0 22px; }
+    .support-start a { display:flex; justify-content:space-between; gap:16px; align-items:center; padding:13px 15px; border:1px solid #e4e8ed; border-radius:11px; color:#1b2a41; text-decoration:none; }
+    .support-start a:hover { border-color:#9db2f4; background:#f7f9ff; }
+    .support-start small { display:block; margin-top:3px; color:#69778a; font-size:.82rem; }
+    .support-start b { color:#4164c5; white-space:nowrap; }
+    .support-form { display:grid; gap:13px; }
+    .support-form label { display:grid; gap:5px; color:#26364c; font-size:.9rem; font-weight:650; }
+    .support-form input,.support-form select,.support-form textarea { width:100%; padding:11px 12px; border:1px solid #cfd6df; border-radius:8px; background:#fff; color:#1b2a41; font:inherit; }
+    .support-form input:focus,.support-form select:focus,.support-form textarea:focus { outline:3px solid #dbe5ff; border-color:#5578d9; }
+    .support-form button { justify-self:start; min-height:44px; padding:0 18px; }
+    .support-status { min-height:1.4em; margin:0; color:#365c41; font-size:.9rem; }
+    .support-note { padding:13px 14px; border-radius:9px; background:#f2f5f8; color:#566579; font-size:.85rem; line-height:1.55; }
+    .support-aside { display:grid; gap:16px; }
+    .support-aside .support-card { padding:22px; }
+    .support-aside h2 { font-size:1.05rem; }
+    .support-aside p,.support-aside li { color:#627085; font-size:.9rem; line-height:1.6; }
+    .support-aside ul { padding-left:20px; }
+    @media(max-width:760px) { .support-hero {padding:38px 0 28px}.support-layout {grid-template-columns:1fr}.support-card {padding:21px}.support-start a {align-items:flex-start}.support-start b {font-size:.82rem} }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><div class="container nav">
+  <a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a>
+  <nav class="nav-links" aria-label="Primary"><a href="/products/">Products</a><a href="/pricing/">Pricing</a><a href="/developers/#industrial-tools">MCP setup</a><a href="/support/" aria-current="page">Support</a></nav>
+</div></header>
+<main id="main-content" tabindex="-1">
+  <section class="support-hero"><div class="container"><span class="eyebrow">We’re here to help</span><h1>How can we help?</h1><p>Choose a topic below or send us a message. We’ll help you find the right next step.</p></div></section>
+  <section class="section-tight"><div class="container support-layout">
+    <div class="support-card">
+      <h2>Send us a message</h2>
+      <p>Tell us what you’re trying to do and where you got stuck.</p>
+      <form class="support-form" id="business-inquiry-form" action="https://api.regevidencehub.com/v1/business-inquiries" method="post">
+        <label>Your name<input name="name" required maxlength="120" autocomplete="name"></label>
+        <label>Email for our reply<input name="email" type="email" required maxlength="254" autocomplete="email"></label>
+        <label>What do you need help with?
+          <select name="topic" required><option value="">Choose a topic</option><option>Product question</option><option>Report or payment</option><option>Claude or MCP setup</option><option>Technical issue</option><option>Privacy request</option><option>Something else</option></select>
+        </label>
+        <label>Your message<textarea name="message" required minlength="10" maxlength="3000" rows="5" placeholder="A short description is enough. Please don’t include confidential files or credentials."></textarea></label>
+        <label aria-hidden="true" style="position:absolute;left:-10000px">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="source_site" value="regevidencehub.com">
+        <p id="business-inquiry-status" class="support-status" role="status" aria-live="polite"></p>
+        <button class="button" type="submit">Send message</button>
+      </form>
+      <p class="support-note">Please don’t send passwords, private keys, payment credentials, patient records, or confidential project files.</p>
+      <p>Prefer email? <a href="mailto:launchcircle.server@gmail.com">Email our support team</a>.</p>
+    </div>
+    <aside class="support-aside">
+      <div class="support-card">
+        <h2>Quick help</h2>
+        <div class="support-start">
+          <a href="/products/"><span><strong>Choose a product</strong><small>See what each tool checks</small></span><b>Browse products →</b></a>
+          <a href="/claude.html"><span><strong>Connect Claude</strong><small>Follow the short setup guide</small></span><b>View guide →</b></a>
+          <a href="/pricing/"><span><strong>Understand pricing</strong><small>Compare reports and MCP calls</small></span><b>See pricing →</b></a>
+        </div>
+      </div>
+      <div class="support-card">
+        <h2>Before you contact us</h2>
+        <ul><li>Tell us which product you’re using.</li><li>Describe what you expected and what happened.</li><li>Include the page or tool name. Never include secrets.</li></ul>
+        <p>For service availability, open the product page and follow its status link.</p>
+      </div>
+    </aside>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container footer-grid">
+  <div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Focused checks, clear next steps, and helpful support.</p></div>
+  <div class="footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/pricing/">Pricing</a><a href="/developers/#industrial-tools">MCP setup</a></div>
+  <div class="footer-links"><strong>Need help?</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+</div><div class="container footer-note">RegEvidenceHub does not provide legal advice, regulator approval, engineering certification, or a guarantee of compliance.</div></footer>
+<script>
+(()=>{const f=document.getElementById('business-inquiry-form'),s=document.getElementById('business-inquiry-status');let requestKey='',lastBody='';f.addEventListener('submit',async e=>{e.preventDefault();if(!f.reportValidity())return;const b=f.querySelector('button'),body=JSON.stringify(Object.fromEntries(new FormData(f)));if(body!==lastBody){lastBody=body;requestKey=crypto.randomUUID();}b.disabled=true;s.textContent='Sending your message…';try{const r=await fetch(f.action,{method:'POST',headers:{'content-type':'application/json','Idempotency-Key':requestKey},body});const d=await r.json();if(!r.ok)throw Error();s.textContent='Thanks — your message has been sent. Reference: '+d.reference+'.';f.reset();lastBody='';requestKey='';}catch(_){s.textContent='We couldn’t send the form right now. Please email launchcircle.server@gmail.com.';}finally{b.disabled=false;}})})();
+</script>
+<script src="/assets/analytics-consent.js?v=20261019-1" defer></script>
+</body></html>
