@@ -61,7 +61,7 @@
         <button class="button" type="submit">Send message</button>
       </form>
       <p class="support-note">Please don’t send passwords, private keys, payment credentials, patient records, or confidential project files.</p>
-      <p>Prefer email? <a href="mailto:launchcircle.server@gmail.com">Email our support team</a>.</p>
+      <p>Prefer email? <a href="mailto:selena@regevidencehub.com">Email our support team</a>.</p>
     </div>
     <aside class="support-aside">
       <div class="support-card">
@@ -86,7 +86,7 @@
   <div class="footer-links"><strong>Need help?</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
 </div><div class="container footer-note">RegEvidenceHub does not provide legal advice, regulator approval, engineering certification, or a guarantee of compliance.</div></footer>
 <script>
-(()=>{const f=document.getElementById('business-inquiry-form'),s=document.getElementById('business-inquiry-status');let requestKey='',lastBody='';f.addEventListener('submit',async e=>{e.preventDefault();if(!f.reportValidity())return;const b=f.querySelector('button'),body=JSON.stringify(Object.fromEntries(new FormData(f)));if(body!==lastBody){lastBody=body;requestKey=crypto.randomUUID();}b.disabled=true;s.textContent='Sending your message…';try{const r=await fetch(f.action,{method:'POST',headers:{'content-type':'application/json','Idempotency-Key':requestKey},body});const d=await r.json();if(!r.ok)throw Error();s.textContent='Thanks — your message has been sent. Reference: '+d.reference+'.';f.reset();lastBody='';requestKey='';}catch(_){s.textContent='We couldn’t send the form right now. Please email launchcircle.server@gmail.com.';}finally{b.disabled=false;}})})();
+(()=>{const f=document.getElementById('business-inquiry-form'),s=document.getElementById('business-inquiry-status');let requestKey='',lastBody='';f.addEventListener('submit',async e=>{e.preventDefault();if(!f.reportValidity())return;const b=f.querySelector('button'),body=JSON.stringify(Object.fromEntries(new FormData(f)));if(body!==lastBody){lastBody=body;requestKey=crypto.randomUUID();}b.disabled=true;s.textContent='Sending your message…';try{const r=await fetch(f.action,{method:'POST',headers:{'content-type':'application/json','Idempotency-Key':requestKey},body});const d=await r.json();if(!r.ok)throw Error();s.textContent='Thanks — your message has been sent. Reference: '+d.reference+'.';f.reset();lastBody='';requestKey='';}catch(_){s.textContent='We couldn’t send the form right now. Please email selena@regevidencehub.com.';}finally{b.disabled=false;}})})();
 </script>
 <script src="/assets/analytics-consent.js?v=20261019-1" defer></script>
 </body></html>
