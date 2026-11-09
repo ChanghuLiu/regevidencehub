@@ -38,3 +38,53 @@
 @media(max-width:850px) { .info-page .info-grid,.product-link-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:600px) { .info-page .page-hero { padding:38px 0 30px; } .info-page .section-tight { padding:28px 0; } .info-page .info-grid,.product-link-grid { grid-template-columns:1fr; } .info-page .info-grid .card,.product-link-grid a { min-height:unset; } .info-summary { align-items:flex-start; flex-direction:column; } .info-page th,.info-page td { padding:11px 12px; } }
 @media(prefers-reduced-motion:reduce) { .product-link-grid a { transition:none; } .product-link-grid a:hover { transform:none; } }
+
+/* About page: branded editorial landing page. */
+.about-page { background:#f5f4ef; }
+.about-page .site-header .nav-links a { color:#41536b; }
+.about-page .about-hero { position:relative; overflow:hidden; padding:78px 0 74px; color:#fff; background:radial-gradient(ellipse at 82% 0%,rgba(76,105,187,.34),transparent 38%),linear-gradient(122deg,#15243a 0%,#202f49 62%,#293a59 100%); }
+.about-page .about-hero::after { position:absolute; right:-140px; bottom:-280px; width:560px; height:560px; border:1px solid rgba(255,255,255,.09); border-radius:50%; content:""; pointer-events:none; }
+.about-hero-layout { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,1.45fr) minmax(280px,.7fr); gap:clamp(36px,8vw,110px); align-items:center; }
+.about-page .about-eyebrow,.about-page .about-card-label { color:#aebfff; font-size:.75rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.about-page .about-hero h1 { max-width:720px; margin:18px 0 20px; color:#fff; font-size:clamp(3rem,6.6vw,5.6rem); line-height:.99; letter-spacing:-.065em; }
+.about-page .about-hero-copy > p { max-width:650px; margin:0; color:#d4dced; font-size:clamp(1.05rem,1.8vw,1.25rem); line-height:1.7; }
+.about-actions { display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin-top:30px; }
+.about-page .about-primary-action { min-height:48px; padding:0 20px; border-color:#fff; background:#fff; color:#17263d!important; }
+.about-page .about-text-action { color:#fff!important; font-weight:700; text-decoration:none; }
+.about-page .about-text-action span { margin-left:5px; }
+.about-overview { padding:28px; border:1px solid rgba(255,255,255,.18); border-radius:18px; background:rgba(255,255,255,.075); box-shadow:0 24px 60px rgba(5,14,29,.18); backdrop-filter:blur(8px); }
+.about-overview-label { color:#c3d0f8; font-size:.74rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.about-page .about-overview h2 { margin:10px 0 24px; color:#fff; font-size:1.55rem; line-height:1.25; letter-spacing:-.025em; }
+.about-stat { display:flex; align-items:baseline; gap:14px; padding:13px 0; border-top:1px solid rgba(255,255,255,.15); }
+.about-stat strong { min-width:46px; color:#fff; font-size:1.8rem; letter-spacing:-.04em; }
+.about-stat span,.about-overview > p { color:#d2dbea; }
+.about-overview > p { margin:14px 0 0; font-size:.92rem; line-height:1.55; }
+.about-section { padding:68px 0 74px!important; }
+.about-section-heading { max-width:690px; margin-bottom:27px; }
+.about-section-heading .eyebrow { margin-bottom:8px; }
+.about-section-heading h2 { margin:0 0 10px; font-size:clamp(2rem,4vw,3rem); line-height:1.1; letter-spacing:-.045em; }
+.about-section-heading p { margin:0; color:#68778a; font-size:1.02rem; line-height:1.65; }
+.about-product-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.about-product-card { position:relative; display:flex; min-height:300px; flex-direction:column; align-items:flex-start; padding:26px; overflow:hidden; border:1px solid #dfe2df; border-radius:16px; background:#fbfbf7; box-shadow:0 8px 26px rgba(21,36,58,.045); }
+.about-product-card::before { position:absolute; top:0; left:0; width:100%; height:4px; background:#6178dc; content:""; }
+.about-regulatory::before { background:#58a594; }
+.about-industrial::before { background:#d69a5a; }
+.about-card-number { position:absolute; top:18px; right:22px; color:#d9deea; font-size:2.2rem; font-weight:800; letter-spacing:-.05em; }
+.about-product-card .about-card-label { margin:10px 0 18px; color:#6475ba; font-size:.67rem; letter-spacing:.11em; }
+.about-product-card h3 { margin:0 0 12px; font-size:1.32rem; line-height:1.25; }
+.about-product-card p { margin:0 0 24px; color:#68778a; font-size:.95rem; line-height:1.65; }
+.about-product-card a { margin-top:auto; color:#3154bf!important; font-size:.92rem; font-weight:750; text-decoration:none; }
+.about-product-card a span { margin-left:5px; }
+.about-principles { padding:68px 0 76px; background:#eceff6; }
+.about-principles .about-section-heading { margin-bottom:28px; }
+.about-principle-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.about-principle-grid article { padding:23px 24px; border:1px solid #d9deea; border-radius:14px; background:rgba(255,255,255,.74); }
+.about-principle-grid article > span { color:#5d73d0; font-size:.78rem; font-weight:850; letter-spacing:.1em; }
+.about-principle-grid h3 { margin:12px 0 8px; font-size:1.12rem; }
+.about-principle-grid p { margin:0; color:#68778a; font-size:.94rem; line-height:1.6; }
+.about-independence { display:grid; grid-template-columns:minmax(160px,.35fr) 1fr; gap:24px; margin-top:24px; padding:20px 22px; border-left:4px solid #7284d6; border-radius:0 12px 12px 0; background:#e2e7f2; }
+.about-independence strong { color:#253650; }
+.about-independence p { margin:0; color:#5e6c80; font-size:.91rem; line-height:1.65; }
+@media(max-width:850px) { .about-hero-layout { grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr); gap:28px; } .about-product-grid,.about-principle-grid { grid-template-columns:1fr; } .about-product-card { min-height:unset; } }
+@media(max-width:620px) { .about-page .about-hero { padding:54px 0 50px; } .about-hero-layout { grid-template-columns:1fr; } .about-overview { max-width:440px; } .about-section,.about-principles { padding:48px 0!important; } .about-independence { grid-template-columns:1fr; gap:8px; } }
+@media(prefers-reduced-motion:reduce) { .about-page * { scroll-behavior:auto; } }
