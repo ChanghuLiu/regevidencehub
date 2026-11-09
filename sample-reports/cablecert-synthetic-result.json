@@ -1,0 +1,81 @@
+{
+  "sample": "CableCert QA sample report",
+  "label": "Sample report · synthetic data",
+  "generated_utc": "2026-11-09",
+  "service": "CableCert QA payment-disabled test service",
+  "service_version": "0.2.4",
+  "inputs": {
+    "expected_ids": [
+      "CC-001",
+      "CC-002",
+      "CC-003",
+      "CC-004"
+    ],
+    "source_file": "synthetic-contractor-results.csv",
+    "csv": "Cable ID,Result,Test Limit\nCC-001,PASS,Cat6 Permanent Link\nCC-002,FAIL,Cat6 Permanent Link\nCC-002,FAIL,Cat6 Permanent Link\nCC-999,PASS,Cat6 Permanent Link",
+    "expected_test_limit": "Cat6 Permanent Link"
+  },
+  "result": {
+    "expected_count": 4,
+    "submitted_unique": 3,
+    "exception_count": 5,
+    "acceptance_status": "REVIEW_REQUIRED",
+    "exceptions": [
+      {
+        "type": "MISSING",
+        "cable_id": "CC-003",
+        "detail": null,
+        "evidence": []
+      },
+      {
+        "type": "MISSING",
+        "cable_id": "CC-004",
+        "detail": null,
+        "evidence": []
+      },
+      {
+        "type": "UNEXPECTED",
+        "cable_id": "CC-999",
+        "detail": null,
+        "evidence": [
+          {
+            "source_file": "synthetic-contractor-results.csv",
+            "source_row": 5
+          }
+        ]
+      },
+      {
+        "type": "DUPLICATE_OR_RETEST",
+        "cable_id": "CC-002",
+        "detail": "FAIL->FAIL",
+        "evidence": [
+          {
+            "source_file": "synthetic-contractor-results.csv",
+            "source_row": 3
+          },
+          {
+            "source_file": "synthetic-contractor-results.csv",
+            "source_row": 4
+          }
+        ]
+      },
+      {
+        "type": "FAILED_RESULT",
+        "cable_id": "CC-002",
+        "detail": "explicit submitted failure",
+        "evidence": [
+          {
+            "source_file": "synthetic-contractor-results.csv",
+            "source_row": 3
+          },
+          {
+            "source_file": "synthetic-contractor-results.csv",
+            "source_row": 4
+          }
+        ]
+      }
+    ],
+    "malformed": [],
+    "boundary": "Evidence QA only. Human/qualified reviewer decides acceptance; no TIA compliance claim."
+  }
+}

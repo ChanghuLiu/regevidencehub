@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CableCert Sample Report — Synthetic Data | RegEvidenceHub</title>
+  <meta name="description" content="A reproducible CableCert QA sample using synthetic cable IDs and CSV rows. See missing, duplicate, unexpected, and failed records with source-row references.">
+  <link rel="canonical" href="https://regevidencehub.com/sample-reports/cablecert-synthetic.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261016a">
+  <link rel="stylesheet" href="/assets/customer-first.css?v=20261109-proof-logo">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><div class="container nav">
+  <a class="brand" href="/" aria-label="RegEvidenceHub home"><img class="brand-logo" src="/assets/brand/regevidencehub-logo.webp?v=20261109-transparent" alt="RegEvidenceHub"></a>
+  <nav class="desktop-nav" aria-label="Primary"><a href="/products/">Products</a><a href="/evidence/">How checks work</a><a href="/pricing/">Pricing</a><a href="/support/">Support</a><a href="/developers/">Developers</a><a href="/about/">About</a></nav>
+  <details class="site-menu"><summary aria-label="Open navigation menu">Menu <span aria-hidden="true">☰</span></summary><nav class="nav-links" aria-label="Primary"><a href="/products/">Products</a><a href="/evidence/">How checks work</a><a href="/pricing/">Pricing</a><a href="/support/">Support</a><a href="/developers/">Developers</a><a href="/about/">About</a></nav></details>
+</div></header>
+<main id="main-content" tabindex="-1">
+  <section class="page-hero"><div class="container sample-hero">
+    <span class="eyebrow">Sample report · synthetic data</span>
+    <h1>Find the cable records that need a closer look.</h1>
+    <p>This example compares a four-ID expected list with a contractor CSV. It shows the exact CableCert findings and the source rows behind them. No customer project or customer file was used.</p>
+    <div class="hero-actions"><a class="button" href="/products/cablecert.html">See CableCert and prepare a report</a><a class="button secondary" href="/pricing/#industrial-packages">View the $19 USD report offer</a></div>
+  </div></section>
+
+  <section class="section-tight"><div class="container sample-report-wrap">
+    <div class="sample-status" role="status"><div><span class="sample-status-label">Check result</span><strong>Review required</strong></div><div><span class="sample-status-label">Expected IDs</span><strong>4</strong></div><div><span class="sample-status-label">Unique IDs in CSV</span><strong>3</strong></div><div><span class="sample-status-label">Findings</span><strong>5</strong></div></div>
+    <p class="sample-method">Generated on 9 November 2026 by the payment-disabled CableCert QA test service (service version 0.2.4). The checker was given the expected ID list, the CSV below, and the expected test limit “Cat6 Permanent Link.” This did not create a customer case or use a paid audit. <a href="/sample-reports/cablecert-synthetic-result.json" download>Download the exact checker result (JSON)</a>.</p>
+
+    <article class="card sample-input-card">
+      <div class="sample-section-heading"><div><span class="eyebrow">Input 1</span><h2>Owner’s expected Cable IDs</h2></div><a class="text-link" href="/assets/samples/cablecert-expected-ids.csv" download>Download expected list (CSV)</a></div>
+      <p>These four IDs define which links should appear in the contractor’s evidence.</p>
+      <p class="sample-code-list"><code>CC-001</code><code>CC-002</code><code>CC-003</code><code>CC-004</code></p>
+    </article>
+
+    <article class="card sample-input-card">
+      <div class="sample-section-heading"><div><span class="eyebrow">Input 2</span><h2>Contractor CSV records</h2></div><a class="text-link" href="/assets/samples/cablecert-contractor-results.csv" download>Download contractor CSV</a></div>
+      <p>Source row numbers below include the CSV header on row 1, matching the returned provenance.</p>
+      <div class="table-wrap"><table><thead><tr><th>Source row</th><th>Cable ID</th><th>Result</th><th>Test limit</th></tr></thead><tbody>
+        <tr><td>2</td><td>CC-001</td><td>PASS</td><td>Cat6 Permanent Link</td></tr>
+        <tr class="sample-row-alert"><td>3</td><td>CC-002</td><td>FAIL</td><td>Cat6 Permanent Link</td></tr>
+        <tr class="sample-row-alert"><td>4</td><td>CC-002</td><td>FAIL</td><td>Cat6 Permanent Link</td></tr>
+        <tr class="sample-row-alert"><td>5</td><td>CC-999</td><td>PASS</td><td>Cat6 Permanent Link</td></tr>
+      </tbody></table></div>
+    </article>
+
+    <section class="sample-findings" aria-labelledby="sample-findings-title">
+      <div class="sample-section-heading"><div><span class="eyebrow">What CableCert found</span><h2 id="sample-findings-title">Five findings, tied to the supplied records</h2></div><p>The unmatched Cable ID and repeated FAIL stay visible as separate issues for review.</p></div>
+      <div class="table-wrap"><table><thead><tr><th>Finding</th><th>Record</th><th>Input evidence</th></tr></thead><tbody>
+        <tr><th scope="row">Missing expected ID</th><td><code>CC-003</code></td><td>No matching CSV row</td></tr>
+        <tr><th scope="row">Missing expected ID</th><td><code>CC-004</code></td><td>No matching CSV row</td></tr>
+        <tr><th scope="row">Unexpected ID</th><td><code>CC-999</code></td><td><code>synthetic-contractor-results.csv</code>, row 5</td></tr>
+        <tr><th scope="row">Duplicate or retest sequence</th><td><code>CC-002</code> · FAIL → FAIL</td><td><code>synthetic-contractor-results.csv</code>, rows 3 and 4</td></tr>
+        <tr><th scope="row">Explicit failed result</th><td><code>CC-002</code></td><td><code>synthetic-contractor-results.csv</code>, rows 3 and 4</td></tr>
+      </tbody></table></div>
+      <p class="sample-review-note"><strong>What this means:</strong> the source records contain two FAIL results for CC-002. The repeated rows are flagged; the checker does not decide that one replaces the other or infer a PASS.</p>
+    </section>
+
+    <article class="card sample-next-step">
+      <span class="eyebrow">Suggested next step</span><h2>Ask for the records needed to resolve each finding.</h2>
+      <ol>
+        <li>Request evidence for the expected links <code>CC-003</code> and <code>CC-004</code>, or confirm why they are absent.</li>
+        <li>Ask the contractor whether rows 3 and 4 for <code>CC-002</code> are duplicate exports or a retest, and resolve the recorded FAIL.</li>
+        <li>Confirm whether <code>CC-999</code> belongs to this project or should be excluded.</li>
+        <li>Review a corrected CSV against the expected list. A qualified person decides whether the evidence meets project requirements.</li>
+      </ol>
+    </article>
+
+    <section class="sample-limits">
+      <h2>What this check covers</h2>
+      <p>CableCert compares the supplied CSV with the expected Cable IDs. It can flag missing and unexpected IDs, repeated or retest records, explicit failed results, owner-supplied test-limit mismatches, and the source file and row for findings.</p>
+      <div class="sample-limit-grid">
+        <article><h3>Input and retention</h3><p>The browser report accepts CSV files up to 5 MB and the owner’s expected ID list. Raw CSV is processed in memory and is not intentionally saved. If a customer chooses the paid browser report, the report result is kept available for up to 24 hours to reopen the case.</p></article>
+        <article><h3>Limits</h3><p>This example uses a synthetic CSV, not a PDF. CableCert does not certify installation, determine standards compliance or safety, or accept contractor work. It flags evidence; it does not decide whether a repeated row is a valid retest or whether the project is accepted.</p></article>
+      </div>
+    </section>
+
+    <div class="sample-cta"><div><strong>$19 USD</strong><span>One project report · available for up to 24 hours · no automatic renewal</span></div><a class="button" href="https://cablecert.regevidencehub.com/start">Prepare a CableCert report</a></div>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container cf-footer-grid">
+  <div><a class="brand" href="/" aria-label="RegEvidenceHub home"><img class="brand-logo" src="/assets/brand/regevidencehub-logo.webp?v=20261109-transparent" alt="RegEvidenceHub"></a><p>Checks that show what needs attention and where it came from.</p><p class="cf-company">Technologies RegEvidence inc.</p></div>
+  <div class="cf-footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/evidence/">How checks work</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a></div>
+  <div class="cf-footer-links"><strong>Help &amp; information</strong><a href="/support/">Support</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:selena@regevidencehub.com">selena@regevidencehub.com</a></div>
+</div><div class="container cf-footer-bottom"><p>Results are limited to the stated checks. A qualified person decides whether project requirements are met.</p></div></footer>
+<script src="/assets/analytics-consent.js?v=20261019-1" defer></script>
+</body></html>

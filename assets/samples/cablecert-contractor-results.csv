@@ -1,0 +1,5 @@
+Cable ID,Result,Test Limit
+CC-001,PASS,Cat6 Permanent Link
+CC-002,FAIL,Cat6 Permanent Link
+CC-002,FAIL,Cat6 Permanent Link
+CC-999,PASS,Cat6 Permanent Link

@@ -8,14 +8,14 @@
   <meta name="description" content="Choose a focused UK regulatory or industrial file check. See the inputs, findings, evidence, price and next step before you begin.">
   <link rel="canonical" href="https://regevidencehub.com/">
   <meta property="og:title" content="RegEvidenceHub — Clear checks for real work"><meta property="og:description" content="Find a focused check for UK regulatory preparation or industrial files. Know what it checks and what happens next."><meta property="og:type" content="website"><meta property="og:url" content="https://regevidencehub.com/">
-  <link rel="stylesheet" href="/assets/styles.css?v=20261016a"><link rel="stylesheet" href="/assets/home.css?v=20261109b"><link rel="stylesheet" href="/assets/customer-first.css?v=20261109-logo">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261016a"><link rel="stylesheet" href="/assets/home.css?v=20261109b"><link rel="stylesheet" href="/assets/customer-first.css?v=20261109-proof-logo">
   <meta name="twitter:card" content="summary"><meta name="twitter:title" content="RegEvidenceHub — Clear checks for real work"><meta name="twitter:description" content="Find a focused check and see its inputs, evidence, price, and next step.">
 </head>
 <body class="home-page customer-home">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="/"><img class="brand-logo" src="/assets/brand/regevidencehub-logo.webp" alt="RegEvidenceHub"></a>
+    <a class="brand" href="/"><img class="brand-logo" src="/assets/brand/regevidencehub-logo.webp?v=20261109-transparent" alt="RegEvidenceHub"></a>
     <nav class="desktop-nav" aria-label="Primary">
       <a href="/products/">Products</a><a href="/evidence/">How checks work</a><a href="/pricing/">Pricing</a><a href="/support/">Support</a><a href="/developers/">Developers</a><a href="/about/">About</a>
     </nav><details class="site-menu"><summary aria-label="Open navigation menu">Menu <span aria-hidden="true">☰</span></summary><nav class="nav-links" aria-label="Primary">
@@ -27,25 +27,24 @@
   <section class="cf-hero">
     <div class="container cf-hero-grid">
       <div class="cf-hero-copy">
-        <p class="cf-eyebrow">Evidence-linked checks for real work</p>
+        <p class="cf-eyebrow">Practical checks for real projects</p>
         <h1>Know what to prepare.<br><span>See what needs attention.</span></h1>
-        <p class="cf-lede">Choose a focused check for a UK regulatory task or an industrial file. Review its inputs, findings, price, and limits before you start.</p>
+        <p class="cf-lede">Choose a check for a UK regulatory task or an industrial file. See what information it needs, what it can find, and what it costs before you begin.</p>
         <div class="cf-actions"><a class="button" href="#choose">Find the right product</a><a class="button secondary" href="#sample-report">View a sample report</a></div>
-        <p class="cf-hero-note">Clear scope. Traceable findings. A person decides what they mean.</p>
+        <p class="cf-hero-note">Clear scope. Findings tied to your inputs. A person decides what they mean.</p>
       </div>
       <article class="cf-report-preview" id="sample-report" aria-labelledby="sample-title">
-        <div class="cf-report-top"><span class="cf-label">Sample report</span><span class="cf-sample-badge">Public source example</span></div>
-        <h2 id="sample-title">CableCert · evidence row</h2>
-        <p class="cf-report-intro">A source-derived example from a published Fluke test report.</p>
-        <div class="cf-file-line"><span aria-hidden="true">▤</span><span><strong>CE-50P</strong><small>Blue Jeans Cable · report page 1</small></span><span class="cf-file-type">PDF</span></div>
-        <div class="cf-mapping">
-          <div><span>Source field</span><span>Recorded value</span></div>
-          <p><code>Cable ID</code><span>→</span><strong>CE-50P</strong></p>
-          <p><code>Result</code><span>→</span><strong>FAIL</strong></p>
-          <p><code>Test limit</code><span>→</span><strong>TIA Patch Cord Cat6 15.0m</strong></p>
+        <div class="cf-report-top"><span class="cf-label">Sample report · synthetic data</span><span class="cf-sample-badge">CableCert QA check</span></div>
+        <h2 id="sample-title">Five findings to review</h2>
+        <p class="cf-report-intro">4 expected IDs · 3 unique IDs in the CSV · report status: <strong>Review required</strong></p>
+        <div class="cf-synthetic-findings" aria-label="Five findings: two missing IDs, one unexpected ID, one duplicate or retest sequence, one failed result">
+          <div><span class="cf-finding-count">2</span><span><strong>Missing expected IDs</strong><small>CC-003 and CC-004</small></span></div>
+          <div><span class="cf-finding-count">1</span><span><strong>Unexpected ID</strong><small>CC-999 · row 5</small></span></div>
+          <div><span class="cf-finding-count">1</span><span><strong>Repeated or retest record</strong><small>CC-002 · rows 3 and 4</small></span></div>
+          <div><span class="cf-finding-count cf-finding-alert">1</span><span><strong>Explicit test failure</strong><small>CC-002 · rows 3 and 4</small></span></div>
         </div>
-        <div class="cf-result cf-result-warning"><span class="cf-result-mark" aria-hidden="true">!</span><p><strong>Explicit FAIL in the source</strong><small>The result is preserved; no PASS is inferred.</small></p></div>
-        <p class="cf-boundary">Source-derived summary, not a customer upload or a native CSV. <a href="https://www.bluejeanscable.com/articles/fluke/CE-50P.pdf" target="_blank" rel="noopener">Open the public Fluke report ↗</a>. A qualified person decides acceptance.</p>
+        <p class="cf-boundary">Generated from a synthetic owner list and contractor CSV using CableCert’s payment-disabled test service. Each record is traceable to an input row; no customer file or PDF was processed.</p>
+        <a class="button cf-sample-link" href="/sample-reports/cablecert-synthetic.html">Open the full sample report <span aria-hidden="true">→</span></a>
       </article>
     </div>
   </section>
@@ -60,7 +59,7 @@
             <li><a href="/products/taxi.html"><strong>Taxi &amp; private-hire licensing</strong><span>Check supported authority requirements and missing applicant facts.</span></a><small>Free readiness · £19 report if eligible</small></li>
             <li><a href="/products/cqc.html"><strong>CQC provider compliance</strong><span>Prepare statutory-notification details and supporting information.</span></a><small>Free readiness · £29 report if eligible</small></li>
             <li><a href="/products/premises.html"><strong>Premises licence preflight</strong><span>Review licensing triggers and supported local-policy signals.</span></a><small>£19 report form</small></li>
-            <li><a href="/products/works.html"><strong>England Works Watch</strong><span>Create a dated sponsor-guidance checkpoint for human review.</span></a><small>£49 · one private 30-day checkpoint</small></li>
+            <li><a href="/products/works.html"><strong>England Works Watch</strong><span>Save a dated copy of key UK sponsor guidance and re-check it for 30 days.</span></a><small>£49 · one report plus private re-checks</small></li>
             <li><a href="/products/waste.html"><strong>Waste compliance</strong><span>Check England waste routes, registration, tracking, or permit changes.</span></a><small>Free readiness · £19 report · 24-hour access</small></li>
           </ul>
           <a class="cf-group-link" href="/products/#regulatory">Compare regulatory products <span aria-hidden="true">→</span></a>
@@ -72,7 +71,7 @@
             <li><a href="/products/factorytalk.html"><strong>FactoryTalk Import Preflight</strong><span>Check tag, digital-alarm, and analog-alarm CSV layouts.</span></a><small>$6.99 USD · 1,000 checks · valid 365 days</small></li>
             <li><a href="/products/nodeset.html"><strong>NodeSet Compatibility Gate</strong><span>Compare old and proposed OPC UA NodeSet2 XML revisions.</span></a><small>$4.99 USD · 1,000 audits · valid 365 days</small></li>
           </ul>
-          <p class="cf-channel-note">Browser report packages are separate from commercial MCP usage, billed per call in USDC. Exact MCP rates are listed on each product page.</p>
+          <p class="cf-channel-note">Developer tool calls have separate per-use pricing in USDC. See the developer section on the Pricing page for those technical options.</p>
           <a class="cf-group-link" href="/products/#industrial">Compare industrial tools <span aria-hidden="true">→</span></a>
         </article>
       </div>
@@ -93,13 +92,13 @@
 
   <section class="cf-operations section">
     <div class="container cf-operations-grid">
-      <article><p class="cf-eyebrow">File handling</p><h2>Check the product’s data terms before uploading.</h2><p>File retention depends on the product and workflow. For CableCert, raw CSV content is processed in memory; a paid browser report’s normalized result is available for up to 24 hours. Other products may use different handling, described on their own pages.</p><a href="/products/cablecert.html">CableCert scope and data handling →</a></article>
+      <article><p class="cf-eyebrow">File handling</p><h2>Check how your files are handled before you upload.</h2><p>Each product has its own data terms. For CableCert, the original CSV is processed in memory and is not intentionally saved. If you buy the browser report, its result is available to reopen for up to 24 hours. Other products describe their own handling on their product pages.</p><a href="/products/cablecert.html">CableCert input and data details →</a></article>
       <article><p class="cf-eyebrow">Operated by</p><h2>Technologies RegEvidence inc.</h2><p>We build independent preparation and file-checking tools. We are not a regulator or standards body, and our results do not issue official approvals or engineering certification.</p><a href="mailto:selena@regevidencehub.com">Email support: selena@regevidencehub.com</a></article>
     </div>
   </section>
 </main>
 <footer class="site-footer"><div class="container cf-footer-grid">
-  <div><a class="brand" href="/"><img class="brand-logo" src="/assets/brand/regevidencehub-logo.webp" alt="RegEvidenceHub"></a><p>Evidence-linked checks for regulatory preparation and industrial files.</p><p class="cf-company">Technologies RegEvidence inc.</p></div>
+  <div><a class="brand" href="/"><img class="brand-logo" src="/assets/brand/regevidencehub-logo.webp?v=20261109-transparent" alt="RegEvidenceHub"></a><p>Checks that show what needs attention and where it came from.</p><p class="cf-company">Technologies RegEvidence inc.</p></div>
   <div class="cf-footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/evidence/">How checks work</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a></div>
   <div class="cf-footer-links"><strong>Help &amp; information</strong><a href="/support/">Support</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:selena@regevidencehub.com">selena@regevidencehub.com</a></div>
 </div><div class="container cf-footer-bottom"><p>Results are bounded to the stated checks. Regulatory decisions and engineering acceptance remain with the relevant authority or qualified person.</p></div></footer>
