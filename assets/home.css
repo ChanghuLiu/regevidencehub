@@ -202,3 +202,12 @@
   .home-page .home-group-heading { grid-template-columns:36px 1fr; gap:12px; }
   .home-page .home-group-heading>p { grid-column:2; }
 }
+
+/* Keep the primary directory action obvious and reachable beside the hero illustration. */
+.home-primary-browse { display:inline-flex; align-items:center; min-height:44px; padding:0 14px; border:1px solid rgba(210,220,241,.55); border-radius:8px; }
+.home-primary-browse:hover { background:rgba(255,255,255,.1); }
+.home-hero-visual { cursor:pointer; }
+.home-visual-cta { display:inline-flex; align-items:center; gap:8px; }
+@media(max-width:680px) {
+  .home-primary-browse { min-height:42px; padding:0 11px; }
+}

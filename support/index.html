@@ -40,7 +40,7 @@
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header"><div class="container nav">
   <a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a>
-  <nav class="nav-links" aria-label="Primary"><a href="/about/">About</a><a href="/products/">Products</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a><a href="/support/" aria-current="page">Support</a></nav>
+  <nav class="nav-links" aria-label="Primary"><a href="/about/">About</a><a href="/products/">Products</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a><a href="/support/" aria-current="page">Support &amp; Contact</a></nav>
 </div></header>
 <main id="main-content" tabindex="-1">
   <section class="support-hero"><div class="container"><span class="eyebrow">We’re here to help</span><h1>How can we help?</h1><p>Choose a topic below or send us a message. We’ll help you find the right next step.</p></div></section>
@@ -83,7 +83,7 @@
 <footer class="site-footer"><div class="container footer-grid">
   <div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Focused checks, clear next steps, and helpful support.</p></div>
   <div class="footer-links"><strong>Explore</strong><a href="/about/">About</a><a href="/products/">Products</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a></div>
-  <div class="footer-links"><strong>Need help?</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+  <div class="footer-links"><strong>Need help?</strong><a href="/support/">Support &amp; Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
 </div><div class="container footer-note">RegEvidenceHub does not provide legal advice, regulator approval, engineering certification, or a guarantee of compliance.</div></footer>
 <script>
 (()=>{const f=document.getElementById('business-inquiry-form'),s=document.getElementById('business-inquiry-status');let requestKey='',lastBody='';f.addEventListener('submit',async e=>{e.preventDefault();if(!f.reportValidity())return;const b=f.querySelector('button'),body=JSON.stringify(Object.fromEntries(new FormData(f)));if(body!==lastBody){lastBody=body;requestKey=crypto.randomUUID();}b.disabled=true;s.textContent='Sending your message…';try{const r=await fetch(f.action,{method:'POST',headers:{'content-type':'application/json','Idempotency-Key':requestKey},body});const d=await r.json();if(!r.ok)throw Error();s.textContent='Thanks — your message has been sent. Reference: '+d.reference+'.';f.reset();lastBody='';requestKey='';}catch(_){s.textContent='We couldn’t send the form right now. Please email selena@regevidencehub.com.';}finally{b.disabled=false;}})})();
