@@ -181,7 +181,7 @@
     const inner = document.createElement("div");
     inner.className = "ga4-inner";
     const message = document.createElement("p");
-    message.append("We use optional Google Analytics to understand site visits and a small set of anonymous product-funnel milestones. The same measurement ID covers RegEvidenceHub and Agent Trust Lab; activity is labeled by platform. Funnel events contain only a fixed product ID and event name, never form answers, contact details, or case facts. Analytics runs only if you allow it. ");
+    message.append("Optional Google Analytics helps us understand site visits and a small set of product steps. The same measurement ID covers RegEvidenceHub and Agent Trust Lab. We never send form answers, contact details, or case facts. Analytics runs only if you allow it. ");
     const privacyLink = document.createElement("a");
     privacyLink.href = privacyUrl;
     privacyLink.textContent = "Privacy details";

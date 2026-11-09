@@ -35,12 +35,15 @@
     .support-aside ul { padding-left:20px; }
     @media(max-width:760px) { .support-hero {padding:38px 0 28px}.support-layout {grid-template-columns:1fr}.support-card {padding:21px}.support-start a {align-items:flex-start}.support-start b {font-size:.82rem} }
   </style>
+  <link rel="stylesheet" href="/assets/customer-first.css?v=20261109">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header"><div class="container nav">
   <a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a>
-  <nav class="nav-links" aria-label="Primary"><a href="/about/">About</a><a href="/products/">Products</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a><a href="/support/">Support</a></nav>
+  <details class="site-menu"><summary aria-label="Open navigation menu">Menu <span aria-hidden="true">☰</span></summary><nav class="nav-links" aria-label="Primary">
+<a href="/products/">Products</a><a href="/evidence/">How checks work</a><a href="/pricing/">Pricing</a><a href="/support/" aria-current="page">Support</a><a href="/developers/">Developers</a><a href="/about/">About</a>
+</nav></details>
 </div></header>
 <main id="main-content" tabindex="-1">
   <section class="support-hero"><div class="container"><span class="eyebrow">We’re here to help</span><h1>How can we help?</h1><p>Choose a topic below or send us a message. We’ll help you find the right next step.</p></div></section>
@@ -80,11 +83,11 @@
     </aside>
   </div></section>
 </main>
-<footer class="site-footer"><div class="container footer-grid">
-  <div><a class="brand" href="/"><span class="brand-mark">REH</span>RegEvidenceHub</a><p>Focused checks, clear next steps, and helpful support.</p></div>
-  <div class="footer-links"><strong>Explore</strong><a href="/about/">About</a><a href="/products/">Products</a><a href="/evidence/">Evidence</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a></div>
-  <div class="footer-links"><strong>Need help?</strong><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
-</div><div class="container footer-note">RegEvidenceHub does not provide legal advice, regulator approval, engineering certification, or a guarantee of compliance.</div></footer>
+<footer class="site-footer"><div class="container cf-footer-grid">
+  <div><a class="brand" href="/"><span class="brand-mark">REH</span><span>RegEvidenceHub</span></a><p>Evidence-linked checks for regulatory preparation and industrial files.</p><p class="cf-company">Technologies RegEvidence inc.</p></div>
+  <div class="cf-footer-links"><strong>Explore</strong><a href="/products/">Products</a><a href="/evidence/">How checks work</a><a href="/pricing/">Pricing</a><a href="/developers/">Developers</a></div>
+  <div class="cf-footer-links"><strong>Help &amp; information</strong><a href="/support/">Support</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:selena@regevidencehub.com">selena@regevidencehub.com</a></div>
+</div><div class="container cf-footer-bottom"><p>Results are bounded to the stated checks. Regulatory decisions and engineering acceptance remain with the relevant authority or qualified person.</p></div></footer>
 <script>
 (()=>{const f=document.getElementById('business-inquiry-form'),s=document.getElementById('business-inquiry-status');let requestKey='',lastBody='';f.addEventListener('submit',async e=>{e.preventDefault();if(!f.reportValidity())return;const b=f.querySelector('button'),body=JSON.stringify(Object.fromEntries(new FormData(f)));if(body!==lastBody){lastBody=body;requestKey=crypto.randomUUID();}b.disabled=true;s.textContent='Sending your message…';try{const r=await fetch(f.action,{method:'POST',headers:{'content-type':'application/json','Idempotency-Key':requestKey},body});const d=await r.json();if(!r.ok)throw Error();s.textContent='Thanks — your message has been sent. Reference: '+d.reference+'.';f.reset();lastBody='';requestKey='';}catch(_){s.textContent='We couldn’t send the form right now. Please email selena@regevidencehub.com.';}finally{b.disabled=false;}})})();
 </script>
