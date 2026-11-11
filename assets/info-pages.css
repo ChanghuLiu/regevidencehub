@@ -1,6 +1,6 @@
 /* Shared layouts for the editorial and developer pages. */
 .info-page { background:#f7f6f1; color:#1d2b40; }
-.info-page .site-header { background:rgba(247,246,241,.96); }
+.info-page .site-header { background:#06152b; border-bottom-color:#18385a; }
 .info-page .nav-links { gap:clamp(12px,1.8vw,24px); flex-wrap:wrap; }
 .info-page .site-header .nav-links a { color:#41536b; font-size:.92rem; font-weight:600; text-decoration:none; }
 .info-page .site-header .nav-links a:hover,.info-page .site-header .nav-links a[aria-current="page"] { color:#315fd1; }
