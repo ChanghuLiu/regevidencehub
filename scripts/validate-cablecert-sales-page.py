@@ -35,6 +35,10 @@ for deliverable in (
 for term in ("$19 USD", "one report execution", "24 hours to reopen", "no automatic renewal"):
     assert term in product, f"product page missing current offer term: {term}"
 assert "sign in to bind the case to your account" in product
+assert "Automated MCP pay-per-call (x402) is currently disabled" in product
+assert "no $0.01 USDC charge can be made" in product
+assert "https://cablecert.regevidencehub.com/.well-known/x402" in product
+assert "The $19 browser report is a separate offer" in product
 assert "Sample report" in sample and "fictional project scenario" in sample
 assert "Every Cable ID, result, timestamp and setup label in this example is synthetic" in sample
 assert "No customer project, third-party test results, account or payment was used" in sample
