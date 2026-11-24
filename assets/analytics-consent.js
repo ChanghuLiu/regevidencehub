@@ -86,12 +86,20 @@
         window.gtag("event", `${funnelPrefix(product)}_checkout_attempt`, { event_scope: "paid_report_funnel", product_id: product });
       });
     });
-    document.querySelectorAll('a[href^="https://cablecert.regevidencehub.com/start"]').forEach((element) => {
-      const product = "cablecert_report";
+    const bindFunnelCta = (element, product) => {
+      if (!funnelProducts.has(product)) return;
       element.addEventListener("click", () => {
         if (readConsent() !== "granted") return;
         window.gtag("event", `${funnelPrefix(product)}_cta_click`, { event_scope: "paid_report_funnel", product_id: product });
       });
+    };
+    // Keep existing product CTA tracking intact while adding the CableCert entry.
+    document.querySelectorAll("[data-ga4-funnel-cta]").forEach((element) => {
+      bindFunnelCta(element, element.getAttribute("data-ga4-funnel-cta"));
+    });
+    document.querySelectorAll('a[href^="https://cablecert.regevidencehub.com/start"]').forEach((element) => {
+      // An explicitly tagged CTA is already bound by the generic handler.
+      if (!element.hasAttribute("data-ga4-funnel-cta")) bindFunnelCta(element, "cablecert_report");
     });
     const confirmedProduct = document.body?.getAttribute("data-ga4-confirmed-product");
     if (funnelProducts.has(confirmedProduct)) {
