@@ -9,8 +9,12 @@
   const privacyUrl = isAgentTrustLab ? "https://agenttrustlab.com/privacy" : "https://regevidencehub.com/privacy/";
   const consentKey = "ga4-analytics-consent-v1";
   const cookieDomain = isAgentTrustLab ? "agenttrustlab.com" : "regevidencehub.com";
-  const funnelProducts = new Set(["works_monitoring", "premises_report"]);
-  const funnelPrefix = (product) => product === "works_monitoring" ? "works" : "premises";
+  const funnelProducts = new Set(["works_monitoring", "premises_report", "cablecert_report"]);
+  const funnelPrefix = (product) => ({
+    works_monitoring: "works",
+    premises_report: "premises",
+    cablecert_report: "cablecert"
+  })[product];
   let analyticsLoaded = false;
 
   const readCookie = () => {

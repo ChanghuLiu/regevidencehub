@@ -1,0 +1,35 @@
+name: Validate CableCert funnel entry
+
+on:
+  pull_request:
+    paths:
+      - "assets/analytics-consent.js"
+      - "products/cablecert.html"
+      - "sample-reports/cablecert-synthetic.html"
+      - "scripts/validate-cablecert-funnel-events.py"
+      - ".github/workflows/validate-cablecert-funnel.yml"
+  push:
+    branches: [main]
+    paths:
+      - "assets/analytics-consent.js"
+      - "scripts/validate-cablecert-funnel-events.py"
+      - ".github/workflows/validate-cablecert-funnel.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check consent-gated event and CTA wiring
+        run: |
+          python scripts/validate-cablecert-funnel-events.py
+          node --check assets/analytics-consent.js
