@@ -32,5 +32,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+      - name: Install artifact validation parsers
+        run: python -m pip install "openpyxl>=3.1,<4" "pypdf>=5,<8"
       - name: Validate CableCert offer, sample and local downloads
         run: python scripts/validate-cablecert-sales-page.py
