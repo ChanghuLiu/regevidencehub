@@ -86,9 +86,8 @@
         window.gtag("event", `${funnelPrefix(product)}_checkout_attempt`, { event_scope: "paid_report_funnel", product_id: product });
       });
     });
-    document.querySelectorAll("[data-ga4-funnel-cta]").forEach((element) => {
-      const product = element.getAttribute("data-ga4-funnel-cta");
-      if (!funnelProducts.has(product)) return;
+    document.querySelectorAll('a[href^="https://cablecert.regevidencehub.com/start"]').forEach((element) => {
+      const product = "cablecert_report";
       element.addEventListener("click", () => {
         if (readConsent() !== "granted") return;
         window.gtag("event", `${funnelPrefix(product)}_cta_click`, { event_scope: "paid_report_funnel", product_id: product });

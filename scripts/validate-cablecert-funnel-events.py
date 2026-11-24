@@ -14,7 +14,7 @@ assert 'cablecert_report: "cablecert"' in script
 assert '`${funnelPrefix(product)}_cta_click`' in script
 assert 'event_scope: "paid_report_funnel"' in script
 assert 'if (readConsent() !== "granted") return;' in script
-assert sum(page.count('data-ga4-funnel-cta="cablecert_report"') for page in pages) == 3
+assert sum(page.count('href="https://cablecert.regevidencehub.com/start"') for page in pages) == 3
 for page in pages:
     assert 'analytics-consent.js' in page
 print("CABLECERT_FUNNEL_ENTRY_EVENT=PASS")
