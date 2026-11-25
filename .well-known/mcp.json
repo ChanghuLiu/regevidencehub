@@ -1,6 +1,6 @@
 {
   "name": "RegEvidenceHub",
-  "description": "Technologies RegEvidence inc. portfolio directory for eight RegEvidenceHub MCP products across UK Regulatory Readiness and Industrial Quality Assurance.",
+  "description": "Technologies RegEvidence inc. portfolio directory for seven RegEvidenceHub MCP products across UK Regulatory Readiness and Industrial Quality Assurance.",
   "servers": [
     {
       "name": "UK Taxi PHV Licensing",
@@ -58,15 +58,6 @@
       "url": "https://cablecert.regevidencehub.com/mcp",
       "productPage": "https://regevidencehub.com/products/cablecert.html",
       "payment": "free information/inspection tools; $0.01 USDC per full audit; $19 one-report platform offer",
-      "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "Industrial Quality Assurance"
-    },
-    {
-      "name": "FactoryTalk Import Preflight",
-      "transport": "streamable-http",
-      "url": "https://factorytalk.regevidencehub.com/mcp",
-      "productPage": "https://regevidencehub.com/products/factorytalk.html",
-      "payment": "free status tool; $0.007 USDC per audit call; no prepaid web package listed",
       "portfolioPlatform": "RegEvidenceHub",
       "portfolioLine": "Industrial Quality Assurance"
     },

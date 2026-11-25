@@ -18,7 +18,6 @@ A custom connector, a third-party directory request, an OpenAI review and an Ant
 | RegEvidenceHub — UK Sponsor Change | https://works.regevidencehub.com/ai/mcp | Public AI endpoint; payment-free and read-only | 4 |
 | RegEvidenceHub Waste | https://waste.regevidencehub.com/ai/mcp | Public AI endpoint; payment-free and read-only | 9 |
 | RegEvidenceHub CableCert | https://cablecert.regevidencehub.com/mcp | Discovery/status without authentication; commercial audit/reviewer access needs verification | 3 |
-| FactoryTalk Import Preflight | https://factorytalk.regevidencehub.com/mcp | Discovery/status without authentication; commercial audit/reviewer access needs verification | 2 |
 | OPC UA NodeSet Gate | https://nodeset.regevidencehub.com/ai/mcp | Discovery/status without authentication; commercial audit/reviewer access needs verification | 5 |
 
 Oct 1 discovery checked 36 tools. Every tool has a title in its annotations and boolean readOnlyHint, destructiveHint and openWorldHint fields. This is metadata evidence, not proof that every tool has run in Claude.
@@ -33,7 +32,7 @@ The public installation guide is https://regevidencehub.com/claude.html. Five re
 
 1. Publisher access: last observed Claude account was Free. Confirm a paid plan before portal submission.
 2. Run each exposed tool in Claude; retain actual prompts, tool arguments and outcomes. Do not attest from tools/list, an OpenAI result or a Grok connection alone.
-3. Reuse and verify each product icon. Existing FactoryTalk and NodeSet directory PNGs are 512 × 512; other assets must be obtained from their existing releases.
+3. Reuse and verify each active product icon; other assets must be obtained from their existing releases.
 4. Establish reviewer access for commercial audits without changing paid execution policy or making a self-funded payment to manufacture evidence.
 5. Complete company/identity and the portal's actual category selections. The authorized publisher must complete policy/terms acknowledgments.
 6. For the no-auth regulatory surfaces, explain that no test login is required; do not invent credentials.
@@ -132,20 +131,6 @@ First reviewer prompt: Show the England scope and supported waste-operation role
 Structured-cabling certification evidence QA from contractor CSV exports. Inspect available fields, reconcile expected cable IDs, identify missing/unexpected links, trace duplicate or retest lineage and compare an owner-supplied expected test limit. It reports evidence exceptions with source provenance; it does not certify cabling, determine TIA compliance, establish safety or accept contractor work. Audit access may require payment under the commercial endpoint.
 
 First reviewer prompt: Inspect a CSV with Cable ID, Test Summary and Test Limit columns and identify the available evidence fields.
-
-### 7. FactoryTalk Import Preflight
-
-- Proposed slug: factorytalk-import-preflight
-- One-liner: Check FactoryTalk View tag and alarm CSV import contracts before import.
-- Documentation: https://factorytalk.regevidencehub.com/
-- Privacy: https://factorytalk.regevidencehub.com/privacy
-- Support: https://factorytalk.regevidencehub.com/support
-- Behavior: read_only
-- Access: Discovery/status is no-auth; commercial audit/payment and reviewer access require final verification. No settlement/payment performed.
-
-Deterministic static checks for supported FactoryTalk View tag, digital-alarm and analog-alarm CSV import layouts. Reports schema markers, record-shape errors, required-field issues, duplicate names and bounded alarm-contract findings. It does not connect to a PLC/HMI, import files, validate runtime behavior, commission equipment or certify machine safety. Audit access may require payment under the commercial endpoint.
-
-First reviewer prompt: Check a supported official FactoryTalk View tag CSV before import.
 
 ### 8. OPC UA NodeSet Gate
 

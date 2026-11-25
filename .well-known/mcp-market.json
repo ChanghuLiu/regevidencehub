@@ -4,7 +4,7 @@
     "It makes no assertion about endpoint availability, authentication, pricing, tools, or client compatibility."
   ],
   "platform": "RegEvidenceHub",
-  "product_count": 8,
+  "product_count": 7,
   "products": [
     {
       "name": "CableCert QA",
@@ -19,13 +19,6 @@
       "product_line": "uk-regulatory-readiness",
       "product_line_label": "UK Regulatory Readiness",
       "product_url": "https://cqc.regevidencehub.com/"
-    },
-    {
-      "name": "FactoryTalk Import Preflight",
-      "product_id": "factorytalk",
-      "product_line": "industrial-quality-assurance",
-      "product_line_label": "Industrial Quality Assurance",
-      "product_url": "https://factorytalk.regevidencehub.com/"
     },
     {
       "name": "OPC UA NodeSet Compatibility Gate",

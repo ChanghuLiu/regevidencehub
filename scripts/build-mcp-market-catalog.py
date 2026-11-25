@@ -15,7 +15,6 @@ EXPECTED_HOSTS = {
     "works": "works.regevidencehub.com",
     "waste": "waste.regevidencehub.com",
     "cablecert": "cablecert.regevidencehub.com",
-    "factorytalk": "factorytalk.regevidencehub.com",
     "nodeset": "nodeset.regevidencehub.com",
 }
 LINE_LABELS = {
@@ -32,8 +31,8 @@ def build() -> dict:
     source = json.loads((ROOT / ".well-known/ai-catalog.json").read_text(encoding="utf-8"))
     entries = source.get("entries", [])
     ids = [row.get("productId") for row in entries]
-    if len(entries) != 8 or set(ids) != set(EXPECTED_HOSTS) or len(set(ids)) != 8:
-        raise ValueError("AI catalog must contain the eight unique canonical product IDs")
+    if len(entries) != 7 or set(ids) != set(EXPECTED_HOSTS) or len(set(ids)) != 7:
+        raise ValueError("AI catalog must contain the seven active unique canonical product IDs")
     products = []
     for row in sorted(entries, key=lambda item: item["productId"]):
         pid = row["productId"]
@@ -52,14 +51,14 @@ def build() -> dict:
         })
     if sum(p["product_line"] == "uk-regulatory-readiness" for p in products) != 5:
         raise ValueError("Expected five UK Regulatory Readiness products")
-    if sum(p["product_line"] == "industrial-quality-assurance" for p in products) != 3:
-        raise ValueError("Expected three Industrial Quality Assurance products")
+    if sum(p["product_line"] == "industrial-quality-assurance" for p in products) != 2:
+        raise ValueError("Expected two active Industrial Quality Assurance products")
     return {
         "schema_version": "1.0.0",
         "publisher": "Technologies RegEvidence inc.",
         "platform": "RegEvidenceHub",
         "scope": "portfolio_taxonomy_only",
-        "product_count": 8,
+        "product_count": 7,
         "products": products,
         "limitations": [
             "This catalog describes product names and portfolio taxonomy only.",
@@ -80,7 +79,7 @@ def main() -> int:
         print("MCP_MARKET_CATALOG=PASS")
         return 0
     target.write_text(output, encoding="utf-8")
-    print(f"MCP_MARKET_CATALOG=GENERATED products=8 path={target.relative_to(ROOT)}")
+    print(f"MCP_MARKET_CATALOG=GENERATED products=7 path={target.relative_to(ROOT)}")
     return 0
 
 
