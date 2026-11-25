@@ -1,0 +1,38 @@
+name: Validate sales page
+
+on:
+  pull_request:
+    paths:
+      - "products/cablecert.html"
+      - "sample-reports/**"
+      - "scripts/validate-cablecert-sales-page.py"
+      - ".github/workflows/validate-sales-page.yml"
+      - "scripts/build-mcp-market-catalog.py"
+      - "scripts/build-mcp-tool-index.py"
+      - "scripts/validate-portfolio-taxonomy.py"
+      - ".well-known/**"
+      - "products/index.html"
+      - "index.html"
+  push:
+    branches: [main]
+    paths:
+      - "products/cablecert.html"
+      - "sample-reports/**"
+      - "scripts/validate-cablecert-sales-page.py"
+      - ".github/workflows/validate-sales-page.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install artifact validation parsers
+        run: python -m pip install "openpyxl>=3.1,<4" "pypdf>=5,<8"
+      - name: Validate CableCert offer, sample and local downloads
+        run: python scripts/validate-cablecert-sales-page.py

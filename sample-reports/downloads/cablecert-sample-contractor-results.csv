@@ -1,0 +1,7 @@
+Cable ID,Test Summary,Test Limit,Date / Time
+CC-SYN-001,PASS,Synthetic example only,2026-11-24 09:00
+CC-SYN-002,FAIL,Synthetic example only,2026-11-24 09:10
+CC-SYN-002,PASS,Synthetic example only,2026-11-24 09:25
+CC-SYN-003,PASS,Synthetic example only,2026-11-24 09:30
+CC-SYN-004,PASS,Synthetic example only,2026-11-24 09:35
+CC-SYN-005,PASS,Synthetic example only,2026-11-24 09:40
