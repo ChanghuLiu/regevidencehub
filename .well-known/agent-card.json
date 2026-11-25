@@ -1,6 +1,6 @@
 {
   "name": "RegEvidenceHub",
-  "description": "Eight bounded RegEvidenceHub products in the Technologies RegEvidence inc. portfolio: five UK Regulatory Readiness products and three Industrial Quality Assurance tools. AgentTrustLab is a separate evaluation platform.",
+  "description": "Seven active RegEvidenceHub products in the Technologies RegEvidence inc. portfolio: five UK Regulatory Readiness products and two Industrial Quality Assurance tools. AgentTrustLab is a separate evaluation platform.",
   "url": "https://regevidencehub.com/",
   "capabilities": {
     "portfolioDiscovery": true,
@@ -78,20 +78,6 @@
         "inspect_certification_package"
       ],
       "commercialMcp": "https://cablecert.regevidencehub.com/mcp",
-      "agentPayment": "x402",
-      "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "Industrial Quality Assurance"
-    },
-    {
-      "name": "FactoryTalk Import Preflight",
-      "url": "https://regevidencehub.com/products/factorytalk.html",
-      "humanEntry": "https://regevidencehub.com/products/factorytalk.html",
-      "humanAction": "Review the supported CSV scope and connect an MCP client; the free status tool does not validate files.",
-      "humanPayment": "Commercial MCP: $0.007 USDC per audit call; no prepaid package is listed in the current shared-platform product registry.",
-      "freeTools": [
-        "factorytalk_product_status"
-      ],
-      "commercialMcp": "https://factorytalk.regevidencehub.com/mcp",
       "agentPayment": "x402",
       "portfolioPlatform": "RegEvidenceHub",
       "portfolioLine": "Industrial Quality Assurance"

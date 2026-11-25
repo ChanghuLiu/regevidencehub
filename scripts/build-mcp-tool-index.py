@@ -14,8 +14,9 @@ HOSTS = {
     "taxi": "taxi.regevidencehub.com", "cqc": "cqc.regevidencehub.com",
     "premises": "premises.regevidencehub.com", "works": "works.regevidencehub.com",
     "waste": "waste.regevidencehub.com", "cablecert": "cablecert.regevidencehub.com",
-    "factorytalk": "factorytalk.regevidencehub.com", "nodeset": "nodeset.regevidencehub.com",
+    "nodeset": "nodeset.regevidencehub.com",
 }
+RETIRED_PRODUCT_IDS = frozenset({"factorytalk"})
 PATHS = {"commercial": "/mcp", "ai_connector": "/ai/mcp", "openai_connector": "/openai/mcp"}
 
 
@@ -32,6 +33,9 @@ def build() -> dict:
     seen_surfaces = set()
     for receipt in source.get("receipts", []):
         pid, sid = receipt["product_id"], receipt["surface_id"]
+        # Keep dated source receipts for audit history, but never republish a retired product.
+        if pid in RETIRED_PRODUCT_IDS:
+            continue
         if pid not in HOSTS or sid not in PATHS or receipt.get("status") != "LIVE_OK":
             raise ValueError("Unknown product/surface or unsuccessful receipt")
         parsed = urlsplit(receipt["endpoint"])
@@ -85,8 +89,8 @@ def build() -> dict:
             "tool_count": len(tools),
             "tools": tools,
         })
-    if len(observations) != 14 or sum(row["tool_count"] for row in observations) != 80:
-        raise ValueError("Expected the reviewed 14-surface / 80-tool receipt set")
+    if len(observations) != 12 or sum(row["tool_count"] for row in observations) != 72:
+        raise ValueError("Expected the reviewed 12-active-surface / 72-tool receipt set")
     observations.sort(key=lambda row: (row["product_id"], row["surface_id"]))
     return {
         "schema_version": "1.0.0",
@@ -117,7 +121,7 @@ def main() -> int:
         print("MCP_TOOL_INDEX=PASS")
         return 0
     target.write_text(rendered, encoding="utf-8")
-    print(f"MCP_TOOL_INDEX=GENERATED surfaces=14 tools=80 path={target.relative_to(ROOT)}")
+    print(f"MCP_TOOL_INDEX=GENERATED surfaces=12 tools=72 path={target.relative_to(ROOT)}")
     return 0
 
 

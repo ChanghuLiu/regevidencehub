@@ -36,7 +36,6 @@ These pages summarize specific operational questions for England receiving sites
 ### Industrial Quality Assurance
 
 - CableCert QA — compares user-provided cable inventories and contractor CSV evidence against stated expectations and test limits.
-- FactoryTalk Import Preflight — checks user-provided FactoryTalk View tag and alarm CSV files against documented import-layout rules; independent of Rockwell Automation.
 - NodeSet Compatibility Gate — compares user-provided OPC UA NodeSet2 XML revisions for documented structural changes; independent of the OPC Foundation.
 
 Regulatory preflight is not legal advice, regulator approval, or a guarantee of compliance. Industrial QA results describe checks on supplied files and do not establish safety, certification, or manufacturer acceptance.

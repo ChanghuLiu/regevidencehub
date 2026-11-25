@@ -1,7 +1,7 @@
 {
   "specVersion": "1.1",
   "name": "RegEvidenceHub",
-  "description": "Technologies RegEvidence inc. portfolio catalog: RegEvidenceHub has five UK Regulatory Readiness products and three Industrial Quality Assurance products.",
+  "description": "Technologies RegEvidence inc. portfolio catalog: RegEvidenceHub has five UK Regulatory Readiness products and two Industrial Quality Assurance products.",
   "routing": {
     "human": "Use humanEntry for guided workflows or product information. Industrial file audits require a supported MCP client.",
     "agent": "Use url only where a payment-free connector is provided. Use commercialUrl for paid decisions. Industrial entries list their freeTools separately; full audits are metered."
@@ -101,23 +101,6 @@
       "productId": "cablecert"
     },
     {
-      "name": "FactoryTalk Import Preflight",
-      "type": "mcp",
-      "transport": "streamable-http",
-      "brandUrl": "https://regevidencehub.com/products/factorytalk.html",
-      "humanEntry": "https://regevidencehub.com/products/factorytalk.html",
-      "humanAction": "Review supported CSV scope; connect an MCP client to run a paid audit.",
-      "humanPayment": "$0.007 USDC per MCP call; no prepaid package is listed in the current shared-platform product registry.",
-      "freeTools": [
-        "factorytalk_product_status"
-      ],
-      "commercialUrl": "https://factorytalk.regevidencehub.com/mcp",
-      "agentPayment": "x402",
-      "portfolioPlatform": "RegEvidenceHub",
-      "portfolioLine": "Industrial Quality Assurance",
-      "productId": "factorytalk"
-    },
-    {
       "name": "OPC UA NodeSet Compatibility Gate",
       "type": "mcp",
       "transport": "streamable-http",
@@ -138,7 +121,6 @@
     }
   ],
   "portfolioNotes": [
-    "AgentTrustLab is a separate platform brand and is not counted among these eight RegEvidenceHub products.",
     "Prices and endpoint capabilities remain product-specific; consult each product entry and page."
   ]
 }
